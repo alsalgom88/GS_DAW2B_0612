@@ -162,23 +162,119 @@
     <!-- 3️⃣ Guia pas a pas -->
     <section class="card hidden" id="page3">
       <h2>🧩 Guia pas a pas</h2>
+
+      <p>
+        Aquesta guia t’ajudarà a construir la teva aplicació en dues fases. Comença amb una versió bàsica amb
+        <code>alert()</code>, <code>prompt()</code> i <code>console.log()</code>, i després passa a la versió amb HTML i
+        DOM.
+        És molt important entendre primer la lògica abans d’afegir la interfície web.
+      </p>
+
+      <h3>🚦 Fase 1 — Un sol venedor (variables simples)</h3>
+      <p>
+        En aquesta primera fase només treballaràs amb un venedor per practicar les variables, operadors i condicions.
+        Encara no faràs servir arrays ni HTML, només JavaScript bàsic.
+      </p>
+
       <ol>
-        <li><strong>Variables i càlculs:</strong> declara <code>COMISSIO = 0.1</code> i guarda els venedors en un array.
-          Calcula <code>totalComissio = vendes * COMISSIO</code> i comprova si <code>vendes &gt;= objectiu</code>.</li>
-        <li><strong>Validació:</strong> comprova que el nom no estigui buit i que <code>vendes</code> i
-          <code>objectiu</code> siguin nombres positius.
+        <li><strong>Declara les variables:</strong> crea <code>nom</code>, <code>vendes</code> i <code>objectiu</code>
+          amb
+          <code>let</code> o <code>const</code>. Afegeix també la constant <code>COMISSIO = 0.1</code> per calcular el
+          10%.
         </li>
-        <li><strong>Array i bucles:</strong> guarda cada venedor com un objecte
-          <code>{ nom, vendes, objectiu, totalComissio, supera }</code> i recorre l’array amb <code>for...of</code>.
+        <li><strong>Demanar dades:</strong> fes servir <code>prompt()</code> per llegir el nom, vendes i objectiu.
+          <br>Recorda convertir els números amb <code>Number()</code>.
         </li>
-        <li><strong>Resum:</strong> mostra mitjana de vendes i de comissions, i quants venedors han superat l’objectiu.
+        <li><strong>Validació:</strong> comprova que el nom no estigui buit i que les vendes i l’objectiu siguin números
+          positius.
+          Si hi ha error, mostra un <code>alert("❌ Dades incorrectes")</code>.
         </li>
+        <li><strong>Calcula la comissió:</strong> multiplica les vendes per la constant.
+          <br><em>Pista:</em> <code>totalComissio = vendes * COMISSIO;</code>
+        </li>
+        <li><strong>Comprova l’objectiu:</strong> usa una condició per saber si el venedor ha superat o no l’objectiu.
+          <br><em>Pista:</em> <code>if (vendes &gt;= objectiu)</code>
+        </li>
+        <li><strong>Mostra el resultat:</strong> utilitza <code>alert()</code> o <code>console.log()</code> per mostrar
+          el nom,
+          la comissió i si ha superat l’objectiu.</li>
       </ol>
+
+      <div class="tip-box">
+        💡 <strong>Truc:</strong> si et surt “NaN”, vol dir que no has convertit correctament una dada amb
+        <code>Number()</code>.
+      </div>
+
+      <h3>🧩 Fase 1.5 — Diversos venedors (array i bucle)</h3>
+      <p>
+        Quan ja et funcioni amb un venedor, passa al nivell següent: guarda <strong>diversos venedors</strong> en un
+        array i
+        repeteix el procés dins un bucle.
+      </p>
+
+      <ol>
+        <li><strong>Crea un array buit:</strong> <code>const venedors = [];</code></li>
+        <li><strong>Demanar quants venedors vols introduir:</strong> usa un <code>prompt()</code> i guarda el resultat
+          en una
+          variable <code>total</code>.</li>
+        <li><strong>Fes un bucle <code>for</code>:</strong> dins del bucle demana el nom, vendes i objectiu de cada
+          venedor,
+          valida les dades i calcula la seva comissió.</li>
+        <li><strong>Crea un objecte per cada venedor:</strong>
+          <br><em>Pista:</em> <code>{ nom, vendes, objectiu, totalComissio, supera }</code>
+        </li>
+        <li><strong>Desa’l a l’array:</strong> <code>venedors.push(venedor)</code></li>
+        <li><strong>Recorre l’array amb <code>for...of</code>:</strong> mostra cada venedor i fes les sumes per calcular
+          la
+          mitjana de vendes i de comissió.</li>
+      </ol>
+
+      <div class="tip-box">
+        💡 <strong>Recorda:</strong> per calcular la mitjana, divideix el total entre
+        <code>venedors.length</code>. Usa <code>.toFixed(2)</code> per limitar els decimals.
+      </div>
+
+      <h3>💻 Fase 2 — Integració amb HTML i DOM</h3>
+      <p>
+        Ara toca fer la versió visual. El mateix codi que abans, però integrat dins una pàgina web amb formularis i
+        missatges al navegador.
+      </p>
+
+      <ul>
+        <li><strong>HTML:</strong> crea inputs per al nom, vendes i objectiu, i dos botons (“Afegir venedor” i “Mostrar
+          resum”).</li>
+        <li><strong>Lectura de dades:</strong> en lloc de <code>prompt()</code>, utilitza
+          <code>document.querySelector('#nom').value</code>.
+        </li>
+        <li><strong>Missatges:</strong> mostra errors i resultats dins d’un <code>&lt;div id="missatge"&gt;</code> i
+          <code>&lt;div id="sortida"&gt;</code>.
+        </li>
+        <li><strong>Guarda cada venedor</strong> dins l’array igual que abans.</li>
+        <li><strong>Fes servir funcions:</strong> per separar les accions de “Afegir” i “Mostrar resum”.</li>
+        <li><strong>Validació:</strong> si falta alguna dada, mostra el missatge d’error en vermell.</li>
+      </ul>
+
+      <div class="tip-box">
+        💬 <strong>Consell:</strong> prova tres casos diferents: correcte, límit (vendes = objectiu) i error (vendes
+        negatives o nom buit). Això t’ajudarà a comprovar que la teva validació funciona bé.
+      </div>
+
+      <h3>📊 Resultat esperat</h3>
+      <p>
+        Quan acabis, la teva aplicació hauria de permetre:
+      </p>
+      <ul>
+        <li>Introduir les dades de venedors una per una.</li>
+        <li>Mostrar missatges d’error o confirmació segons el cas.</li>
+        <li>Veure un resum amb la mitjana de vendes, comissions i quants han superat l’objectiu.</li>
+      </ul>
+
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <button onclick="nextPage()">➡️ Següent</button>
       </div>
     </section>
+
 
     <!-- 4️⃣ Estructura d'entrega -->
     <section class="card hidden" id="page4">
@@ -414,77 +510,80 @@ function mostrarMissatge(text, esError = false) {
 
 
     <!-- 7️⃣ Checklist final abans d’enviar -->
-<section class="card hidden" id="page7">
-  <h2>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-         fill="#00a8a8" width="30" height="30"
-         style="vertical-align: middle; margin-right: 8px;">
-      <path d="M6 2v20h2v-6h10l2 2 2-2V2H6zm12 12H8V4h10v10z"/>
-    </svg>
-    ✅ Checklist abans d’enviar
-  </h2>
+    <section class="card hidden" id="page7">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00a8a8" width="30" height="30"
+          style="vertical-align: middle; margin-right: 8px;">
+          <path d="M6 2v20h2v-6h10l2 2 2-2V2H6zm12 12H8V4h10v10z" />
+        </svg>
+        ✅ Checklist abans d’enviar
+      </h2>
 
-  <p>
-    Abans de comprimir i entregar el teu projecte, revisa atentament cada punt d’aquesta llista.  
-    <strong>Tots</strong> són obligatoris i formen part de la qualificació final.  
-    Marca’ls mentalment o amb una ✅ quan els tinguis completats.
-  </p>
+      <p>
+        Abans de comprimir i entregar el teu projecte, revisa atentament cada punt d’aquesta llista.
+        <strong>Tots</strong> són obligatoris i formen part de la qualificació final.
+        Marca’ls mentalment o amb una ✅ quan els tinguis completats.
+      </p>
 
-  <ul class="checklist">
-    <li><strong>‘use strict’;</strong> al principi de <code>main.js</code>  
-      ➤ És obligatori per assegurar bones pràctiques i evitar errors silenciosos.  
-      Activa el mode estricte de JavaScript, que ajuda a detectar variables no declarades i altres problemes comuns.</li>
+      <ul class="checklist">
+        <li><strong>‘use strict’;</strong> al principi de <code>main.js</code>
+          ➤ És obligatori per assegurar bones pràctiques i evitar errors silenciosos.
+          Activa el mode estricte de JavaScript, que ajuda a detectar variables no declarades i altres problemes comuns.
+        </li>
 
-    <li><strong>Cap <code>var</code> ni <code>==</code></strong>  
-      ➤ Fes servir només <code>let</code> i <code>const</code> per a variables, i <code>===</code> / <code>!==</code> per comparacions estrictes.  
-      Això garanteix un codi modern, segur i predictible.</li>
+        <li><strong>Cap <code>var</code> ni <code>==</code></strong>
+          ➤ Fes servir només <code>let</code> i <code>const</code> per a variables, i <code>===</code> /
+          <code>!==</code> per comparacions estrictes.
+          Això garanteix un codi modern, segur i predictible.</li>
 
-    <li><strong>Validacions mostrades al DOM</strong>  
-      ➤ Els errors s’han de mostrar a la pàgina (amb <code>innerText</code> o <code>textContent</code>), no amb <code>alert()</code>.  
-      Els missatges han de ser clars i ajudar a l’usuari a corregir les dades d’entrada.</li>
+        <li><strong>Validacions mostrades al DOM</strong>
+          ➤ Els errors s’han de mostrar a la pàgina (amb <code>innerText</code> o <code>textContent</code>), no amb
+          <code>alert()</code>.
+          Els missatges han de ser clars i ajudar a l’usuari a corregir les dades d’entrada.</li>
 
-    <li><strong>Prova almenys tres casos:</strong>  
-      <ul>
-        <li>✔️ <em>Cas correcte</em>: totes les dades vàlides, resultat esperat.</li>
-        <li>⚠️ <em>Cas límit</em>: valors mínims (0, buits, iguals a l’objectiu).</li>
-        <li>❌ <em>Cas d’error</em>: dades negatives o camp buit, s’ha de mostrar missatge d’error.</li>
+        <li><strong>Prova almenys tres casos:</strong>
+          <ul>
+            <li>✔️ <em>Cas correcte</em>: totes les dades vàlides, resultat esperat.</li>
+            <li>⚠️ <em>Cas límit</em>: valors mínims (0, buits, iguals a l’objectiu).</li>
+            <li>❌ <em>Cas d’error</em>: dades negatives o camp buit, s’ha de mostrar missatge d’error.</li>
+          </ul>
+          ➤ D’aquesta manera comproves que el teu codi és robust i cobreix totes les situacions possibles.
+        </li>
+
+        <li><strong>HTML i CSS validats sense errors</strong>
+          ➤ Verifica el teu HTML amb el <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>
+          i el CSS amb el <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a>.
+          Si hi ha avisos (warnings), revisa’ls i corregeix-los abans d’enviar.</li>
+
+        <li><strong><code>notes.txt</code> escrit amb reflexió tècnica</strong>
+          ➤ Ha de contenir almenys 6 línies amb:
+          <ul>
+            <li>Un error o dificultat trobada i com l’has resolt.</li>
+            <li>Una explicació breu de la importància de validar.</li>
+            <li>Un exemple concret de coerció de tipus del teu codi.</li>
+          </ul>
+          Escriu-ho amb paraules teves: no cal perfecció, sinó comprensió.
+        </li>
       </ul>
-      ➤ D’aquesta manera comproves que el teu codi és robust i cobreix totes les situacions possibles.
-    </li>
 
-    <li><strong>HTML i CSS validats sense errors</strong>  
-      ➤ Verifica el teu HTML amb el <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>  
-      i el CSS amb el <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a>.  
-      Si hi ha avisos (warnings), revisa’ls i corregeix-los abans d’enviar.</li>
+      <p class="nota">
+        🧩 <strong>Verifica:</strong> comprova que tots els fitxers (HTML, CSS, JS, notes.txt) estan dins de la mateixa
+        carpeta abans de comprimir.
+      </p>
 
-    <li><strong><code>notes.txt</code> escrit amb reflexió tècnica</strong>  
-      ➤ Ha de contenir almenys 6 línies amb:
-      <ul>
-        <li>Un error o dificultat trobada i com l’has resolt.</li>
-        <li>Una explicació breu de la importància de validar.</li>
-        <li>Un exemple concret de coerció de tipus del teu codi.</li>
-      </ul>
-      Escriu-ho amb paraules teves: no cal perfecció, sinó comprensió.
-    </li>
-  </ul>
+      <p class="nota" style="border-top: 2px solid #00a8a8; padding-top: 10px;">
+        🏁 <strong>Final del projecte!</strong><br>
+        Quan tot estigui llest, crea un arxiu ZIP amb el nom:<br>
+        <code>ExamenNF2_2DAWB_CognomNom.zip</code><br>
+        (Exemple: <code>ExamenNF2_2DAWB_FerrerClara.zip</code>)<br><br>
+        ✅ Revisa dues vegades abans d’enviar — un bon programador sempre comprova fins a l’últim detall!
+      </p>
 
-  <p class="nota">
-    🧩 <strong>Verifica:</strong> comprova que tots els fitxers (HTML, CSS, JS, notes.txt) estan dins de la mateixa carpeta abans de comprimir.
-  </p>
-
-  <p class="nota" style="border-top: 2px solid #00a8a8; padding-top: 10px;">
-    🏁 <strong>Final del projecte!</strong><br>
-    Quan tot estigui llest, crea un arxiu ZIP amb el nom:<br>
-    <code>ExamenNF2_2DAWB_CognomNom.zip</code><br>
-    (Exemple: <code>ExamenNF2_2DAWB_FerrerClara.zip</code>)<br><br>
-    ✅ Revisa dues vegades abans d’enviar — un bon programador sempre comprova fins a l’últim detall!
-  </p>
-
-  <div class="buttons">
-    <button onclick="prevPage()">⬅️ Enrere</button>
-    <span></span>
-  </div>
-</section>
+      <div class="buttons">
+        <button onclick="prevPage()">⬅️ Enrere</button>
+        <span></span>
+      </div>
+    </section>
 
   </main>
 
