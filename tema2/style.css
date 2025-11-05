@@ -1,0 +1,16 @@
+@import url('../../style.css');
+
+main {
+  text-align: left;
+}
+
+ul.text-left {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}

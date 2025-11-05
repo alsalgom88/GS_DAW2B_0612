@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examen NF2 — 2DAW B | Sintaxi bàsica de JavaScript</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <img src="logo.png" alt="Logo del centre" class="logo">
     <h1>💼 Examen pràctic — NF2 (2DAW B)</h1>
     <p>Sintaxi bàsica de JavaScript · Mòdul 0612 — DWC</p>
+    <div style="text-align:center; margin: 20px;">
+      <a href="../index.html" class="btn">⬅️ Tornar al Tema 2</a>
+    </div>
   </header>
 
   <main class="container">
@@ -19,7 +24,8 @@
     <section class="card" id="page1">
       <h2>🎯 Objectiu general</h2>
       <p>
-        Desenvolupar una miniaplicació web que permeti <strong>gestionar les vendes setmanals</strong> d’un equip comercial,
+        Desenvolupar una miniaplicació web que permeti <strong>gestionar les vendes setmanals</strong> d’un equip
+        comercial,
         aplicant la sintaxi bàsica de JavaScript: declaració de variables i constants, operadors, condicions, bucles,
         tractament d’errors i bones pràctiques de codi.
       </p>
@@ -40,7 +46,8 @@
         <li>❌ No es permet l’ús d’intel·ligències artificials, fòrums o codi copiat.</li>
         <li>✅ Pots consultar documentació de referència:
           <ul>
-            <li><a href="https://developer.mozilla.org/ca/docs/Web/JavaScript" target="_blank">MDN Web Docs — JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/ca/docs/Web/JavaScript" target="_blank">MDN Web Docs —
+                JavaScript</a></li>
             <li><a href="https://validator.w3.org/" target="_blank">W3C Validator (HTML)</a></li>
             <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a></li>
             <li><a href="https://eslint.org/play/" target="_blank">ESLint Play (bones pràctiques)</a></li>
@@ -66,10 +73,16 @@
     <section class="card hidden" id="page3">
       <h2>🧩 Guia pas a pas</h2>
       <ol>
-        <li><strong>Variables i càlculs:</strong> declara <code>COMISSIO = 0.1</code> i guarda els venedors en un array. Calcula <code>totalComissio = vendes * COMISSIO</code> i comprova si <code>vendes &gt;= objectiu</code>.</li>
-        <li><strong>Validació:</strong> comprova que el nom no estigui buit i que <code>vendes</code> i <code>objectiu</code> siguin nombres positius.</li>
-        <li><strong>Array i bucles:</strong> guarda cada venedor com un objecte <code>{ nom, vendes, objectiu, totalComissio, supera }</code> i recorre l’array amb <code>for...of</code>.</li>
-        <li><strong>Resum:</strong> mostra mitjana de vendes i de comissions, i quants venedors han superat l’objectiu.</li>
+        <li><strong>Variables i càlculs:</strong> declara <code>COMISSIO = 0.1</code> i guarda els venedors en un array.
+          Calcula <code>totalComissio = vendes * COMISSIO</code> i comprova si <code>vendes &gt;= objectiu</code>.</li>
+        <li><strong>Validació:</strong> comprova que el nom no estigui buit i que <code>vendes</code> i
+          <code>objectiu</code> siguin nombres positius.
+        </li>
+        <li><strong>Array i bucles:</strong> guarda cada venedor com un objecte
+          <code>{ nom, vendes, objectiu, totalComissio, supera }</code> i recorre l’array amb <code>for...of</code>.
+        </li>
+        <li><strong>Resum:</strong> mostra mitjana de vendes i de comissions, i quants venedors han superat l’objectiu.
+        </li>
       </ol>
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
@@ -88,7 +101,8 @@
 </code></pre>
       <p class="nota">
         💡 Entrega un únic fitxer ZIP amb aquesta estructura. <br>
-        El fitxer <code>notes.txt</code> ha d’explicar un error trobat, per què cal validar, i un exemple de coerció de tipus.
+        El fitxer <code>notes.txt</code> ha d’explicar un error trobat, per què cal validar, i un exemple de coerció de
+        tipus.
       </p>
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
@@ -159,12 +173,36 @@ function mostrarMissatge(text, esError = false) {
     <section class="card hidden" id="page6">
       <h2>📊 Rúbrica d’avaluació (10 punts)</h2>
       <table border="1" cellpadding="6" cellspacing="0">
-        <tr><th>Codi</th><th>Criteri</th><th>Punts</th></tr>
-        <tr><td>C1</td><td>Variables i càlculs correctes; conversions de tipus adequades</td><td>3</td></tr>
-        <tr><td>C2</td><td>Validació robusta i missatges d’error clars al DOM</td><td>3</td></tr>
-        <tr><td>C3</td><td>Array d’objectes, recorregut i resum</td><td>2</td></tr>
-        <tr><td>C4</td><td>Bones pràctiques (‘use strict’, camelCase, comentaris)</td><td>1</td></tr>
-        <tr><td>C5</td><td>notes.txt amb reflexió personal tècnica</td><td>1</td></tr>
+        <tr>
+          <th>Codi</th>
+          <th>Criteri</th>
+          <th>Punts</th>
+        </tr>
+        <tr>
+          <td>C1</td>
+          <td>Variables i càlculs correctes; conversions de tipus adequades</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>C2</td>
+          <td>Validació robusta i missatges d’error clars al DOM</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>C3</td>
+          <td>Array d’objectes, recorregut i resum</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>C4</td>
+          <td>Bones pràctiques (‘use strict’, camelCase, comentaris)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>C5</td>
+          <td>notes.txt amb reflexió personal tècnica</td>
+          <td>1</td>
+        </tr>
       </table>
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
@@ -183,7 +221,9 @@ function mostrarMissatge(text, esError = false) {
         <li>HTML i CSS validats sense errors</li>
         <li><code>notes.txt</code> escrit amb reflexió tècnica</li>
       </ul>
-      <p class="nota">Quan tot estigui llest, comprimeix la carpeta i entrega <strong>ExamenNF2_2DAWB_CognomNom.zip</strong>.</p>
+      <p class="nota">Quan tot estigui llest, comprimeix la carpeta i entrega
+        <strong>ExamenNF2_2DAWB_CognomNom.zip</strong>.
+      </p>
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <span></span>
@@ -193,4 +233,5 @@ function mostrarMissatge(text, esError = false) {
 
   <script src="main.js"></script>
 </body>
+
 </html>
