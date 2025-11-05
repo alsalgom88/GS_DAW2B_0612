@@ -1,5 +1,18 @@
 'use strict';
+// Mostra només la secció seleccionada
+const links = document.querySelectorAll('ul li a[href^="#sec"]');
+const cards = document.querySelectorAll('.card');
 
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    cards.forEach(card => card.classList.add('hidden')); // amaga totes
+    target.classList.remove('hidden'); // mostra la seleccionada
+    setTimeout(() => target.classList.add('visible'), 50); // animació suau
+    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+  });
+});
 // 🌈 Suavitzat del desplaçament per als enllaços interns
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
