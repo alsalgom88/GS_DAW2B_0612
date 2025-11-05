@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo centre" class="logo">
+    <img src="../assets/logo.png" alt="Logo centre" class="logo">
     <div>
       <h1>🧩 Tema 2 — Sintaxi bàsica de JavaScript</h1>
       <p>DAW2B · Mòdul 0612 — Desenvolupament Web en Entorn Client</p>
@@ -17,20 +17,108 @@
   </header>
 
   <main class="container">
-    <h2>🎯 Objectius del tema</h2>
-    <p>Dominar la sintaxi bàsica del llenguatge JavaScript per crear scripts senzills que
-    s’executin correctament al navegador. Inclou variables, operadors, condicions, bucles i bones pràctiques.</p>
+    <section class="intro">
+      <h2>🎯 Objectius del tema</h2>
+      <p>
+        Dominar la <strong>sintaxi bàsica de JavaScript</strong> per escriure codi clar, funcional i ben estructurat.
+        A través d’exemples pràctics, aprendràs a crear <em>scripts senzills</em> que s’executin correctament al navegador,
+        aplicant les bases del llenguatge: variables, operadors, condicions, bucles i bones pràctiques de codi.
+      </p>
+      <blockquote class="nota">💡 "Un bon codi és com una bona conversa: clar, lògic i sense malentesos."</blockquote>
+    </section>
 
-    <h2>📘 Continguts</h2>
-    <ul class="text-left">
-      <li>Variables, constants i tipus de dades</li>
-      <li>Operadors i conversions de tipus</li>
-      <li>Estructures condicionals (<code>if</code>, <code>switch</code>)</li>
-      <li>Bucles (<code>for</code>, <code>while</code>)</li>
-      <li>Bones pràctiques i comentaris (JSDoc)</li>
-    </ul>
+    <section id="continguts">
+      <h2>📘 Continguts del tema</h2>
+      <ul>
+        <li><a href="#sec21">2.1 · Variables, constants i tipus de dades</a></li>
+        <li><a href="#sec22">2.2 · Operadors (aritmètics, lògics, de comparació i assignació)</a></li>
+        <li><a href="#sec23">2.3 · Estructures de decisió (<code>if</code>, <code>else</code>, <code>switch</code>)</a></li>
+        <li><a href="#sec24">2.4 · Estructures iteratives (<code>for</code>, <code>while</code>, <code>do while</code>)</a></li>
+        <li><a href="#sec25">2.5 · Comentaris, bones pràctiques i estil de codi (JSDoc)</a></li>
+      </ul>
+    </section>
+
+    <section id="sec21">
+      <h2>2.1 · Variables, constants i tipus de dades</h2>
+      <p>
+        Aprendrem a declarar variables i constants utilitzant <code>let</code> i <code>const</code>, així com a identificar
+        els principals <strong>tipus de dades</strong> de JavaScript: <code>string</code>, <code>number</code>,
+        <code>boolean</code>, <code>object</code>, <code>null</code> i <code>undefined</code>.
+      </p>
+      <p>
+        També veurem com fer conversions de tipus, per exemple transformar un text en número amb <code>parseInt()</code> o
+        <code>Number()</code>, i com comprovar el tipus d’una variable amb <code>typeof</code>.
+      </p>
+      <blockquote class="tip">🧠 Recorda: usa <strong>const</strong> sempre que no necessitis reassignar el valor!</blockquote>
+    </section>
+
+    <section id="sec22">
+      <h2>2.2 · Operadors</h2>
+      <p>
+        Els operadors són els símbols que permeten fer càlculs o comparacions dins del teu codi.
+        Treballarem amb:
+      </p>
+      <ul>
+        <li><strong>Aritmètics:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+        <li><strong>De comparació:</strong> <code>==</code>, <code>===</code>, <code>!=</code>, <code><</code>, <code>></code></li>
+        <li><strong>Lògics:</strong> <code>&&</code> (i), <code>||</code> (o), <code>!</code> (no)</li>
+        <li><strong>D’assignació:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</li>
+      </ul>
+      <p>
+        Farem exercicis per entendre com el navegador interpreta aquestes operacions
+        i com es poden combinar per obtenir resultats complexos.
+      </p>
+    </section>
+
+    <section id="sec23">
+      <h2>2.3 · Estructures de decisió</h2>
+      <p>
+        Les estructures condicionals permeten al programa <strong>prendre decisions</strong> en funció de certes condicions.
+        Treballarem amb <code>if</code>, <code>else if</code>, <code>else</code> i l’estructura <code>switch</code>.
+      </p>
+      <p>
+        Aprendràs a validar dades d’usuari i mostrar resultats diferents segons l’entrada amb exemples pràctics com:
+        <em>"Si la nota és major o igual a 5, mostra 'Aprovat', altrament 'Suspès'."</em>
+      </p>
+      <blockquote class="nota">🎬 "El teu codi també pot decidir per si mateix… si tu l’ensenyes com!"</blockquote>
+    </section>
+
+    <section id="sec24">
+      <h2>2.4 · Estructures iteratives</h2>
+      <p>
+        Amb els bucles podem <strong>repetir instruccions</strong> múltiples vegades sense reescriure-les.
+        Aprendrem a utilitzar:
+      </p>
+      <ul>
+        <li><code>for</code> — repeticions controlades amb un comptador.</li>
+        <li><code>while</code> — repeticions mentre es compleixi una condició.</li>
+        <li><code>do...while</code> — repeticions que s’executen almenys una vegada.</li>
+      </ul>
+      <p>
+        Crearem petits programes de càlcul i validació automàtica, aplicant bucles per millorar l’eficiència del codi.
+      </p>
+    </section>
+
+    <section id="sec25">
+      <h2>2.5 · Comentaris i bones pràctiques</h2>
+      <p>
+        La claredat del codi és essencial. Farem servir <code>//</code> per comentaris d’una línia i <code>/* ... */</code>
+        per blocs. També introduirem la documentació amb <strong>JSDoc</strong> per descriure funcions i paràmetres.
+      </p>
+      <p>
+        Parlarem d’estil: noms en <code>camelCase</code>, ús correcte d’indentació, i preferència per <code>const</code> i <code>let</code>.
+      </p>
+      <blockquote class="tip">✨ Un bon comentari pot estalviar hores de depuració!</blockquote>
+    </section>
 
     <div class="buttons">
-      <a href="../index.html" class="btn">⬅️ Tornar</a>
-      <a href="examen/index.html" class="btn">🧾 Anar a l’examen</a>
+      <a href="../index.html" class="btn">⬅️ Tornar al mòdul</a>
+      <a href="examen/index.html" class="btn highlight">🧾 Anar a l’examen</a>
     </div>
+  </main>
+
+  <footer>
+    Material didàctic · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
+  </footer>
+</body>
+</html>

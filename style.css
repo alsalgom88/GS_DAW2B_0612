@@ -1,4 +1,100 @@
-/* 🧭 Targetes d'enllaç */
+/* 🎨 Estil general */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background-color: #f5fbfb;
+  color: #013243;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 🧭 Capçalera */
+header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #007b83, #00a8a8);
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem 6rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  animation: fadeInDown 1.2s ease;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23f5fbfb" fill-opacity="0.3" d="M0,160L48,154.7C96,149,192,139,288,138.7C384,139,480,149,576,138.7C672,128,768,96,864,101.3C960,107,1056,149,1152,176C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+header h1, header h2, header p, .logo {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+header p {
+  margin: 0.3rem 0;
+  font-size: 1.15rem;
+}
+header h2 {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #e0ffff;
+}
+
+/* 🔹 Seccions principals */
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1rem 1.5rem 4rem;
+  animation: fadeIn 1.5s ease;
+}
+
+section {
+  background: white;
+  margin: 2rem 0;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  color: #007b83;
+  border-bottom: 2px solid #00a8a8;
+  padding-bottom: 0.5rem;
+}
+
+/* 🧱 Targetes d’enllaç */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -7,16 +103,16 @@
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   border-radius: 15px;
   padding: 1.8rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.3s ease;
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .card h3 {
   color: #007b83;
@@ -41,4 +137,24 @@
 .card button:hover {
   background: #007b83;
   transform: scale(1.05);
+}
+
+/* 🌈 Altres animacions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🦶 Peu de pàgina */
+footer {
+  text-align: center;
+  background: #013243;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }

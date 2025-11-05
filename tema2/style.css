@@ -1,16 +1,44 @@
 @import url('../style.css');
 
-main {
-  text-align: left;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-ul.text-left {
-  list-style: disc;
-  padding-left: 40px;
+h2 {
+  color: #007b83;
+  border-bottom: 2px solid #00a8a8;
+  padding-bottom: 0.3rem;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+ul { list-style: none; padding-left: 1rem; }
+ul li::before {
+  content: "• ";
+  color: #00a8a8;
+  font-weight: bold;
 }
+
+blockquote.nota, blockquote.tip {
+  margin: 1.2rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #00a8a8;
+  background: #e0f7f7;
+  border-radius: 8px;
+  font-style: italic;
+  color: #013243;
+}
+
+.btn {
+  background: #00a8a8;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-right: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.btn:hover { background: #007b83; transform: scale(1.05); }
+.btn.highlight { background: #007b83; }
