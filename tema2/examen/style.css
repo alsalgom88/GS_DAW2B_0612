@@ -96,3 +96,69 @@ td, th {
   border: 1px solid #ccc;
   padding: 8px 12px;
 }
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.download-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.download-card h3 {
+  color: #007b83;
+  margin-bottom: 0.4rem;
+}
+
+.download-card p {
+  color: #013243;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.download-card .btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: #00a8a8;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.download-card .btn:hover {
+  background: #007b83;
+}
+
+ul.explain, ul.files {
+  list-style: none;
+  padding-left: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+ul.explain li, ul.files li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+ul.explain li::before {
+  content: "💠 ";
+}
+
+ul.files li::before {
+  content: "📂 ";
+}
+

@@ -355,62 +355,97 @@
 
     <!-- 5️⃣ Codi base -->
     <section class="card hidden" id="page5">
-      <h2>🧱 Codi base</h2>
-      <h3>HTML</h3>
-      <pre><code>&lt;!doctype html&gt;
-&lt;html lang="ca"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Examen NF2 — 2DAW B&lt;/title&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Gestió de vendes setmanals&lt;/h1&gt;
-  &lt;section&gt;
-    &lt;label&gt;Nom del venedor: &lt;input id="nom"&gt;&lt;/label&gt;
-    &lt;label&gt;Import total de vendes (€): &lt;input id="vendes" type="number" min="0"&gt;&lt;/label&gt;
-    &lt;label&gt;Objectiu setmanal (€): &lt;input id="objectiu" type="number" min="0"&gt;&lt;/label&gt;
-    &lt;button id="btnAfegir"&gt;Afegir venedor&lt;/button&gt;
-    &lt;button id="btnResum"&gt;Mostrar resum&lt;/button&gt;
-    &lt;div id="missatge" class="resultat"&gt;&lt;/div&gt;
-    &lt;div id="sortida" class="resultat"&gt;&lt;/div&gt;
-  &lt;/section&gt;
-  &lt;script src="main.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+      <h2>🧱 Codi base del projecte</h2>
+      <p>
+        Per ajudar-te a començar, tens disponibles tres paquets <strong>ZIP</strong> amb el codi base de cada fase.
+        Cadascun conté la mateixa estructura de fitxers (<code>index.html</code>, <code>style.css</code> i
+        <code>main.js</code>),
+        amb comentaris explicatius i espais <code>// TODO:</code> per completar el teu propi codi.
+      </p>
 
-      <h3>CSS</h3>
-      <pre><code>body { font-family: system-ui, sans-serif; margin: 20px; background: #f9fafb; }
-h1 { color: #0f172a; border-bottom: 3px solid #1e3a8a; padding-bottom: 6px; }
-label { display:block; margin:6px 0; }
-button { margin:8px 6px 0 0; background:#2563eb; color:white; border:none; padding:6px 12px; border-radius:6px; cursor:pointer; }
-button:hover { background:#1e3a8a; }
-.resultat { background:#f3f4f6; padding:10px; border-radius:8px; margin-top:10px; white-space:pre-wrap; }
-.error { color:#b91c1c; font-weight:bold; }
-</code></pre>
+      <div class="download-grid">
+        <!-- FASE 1 -->
+        <div class="download-card">
+          <h3>🚦 Fase 1 — Un sol venedor</h3>
+          <p>
+            En aquesta primera versió treballaràs amb <code>prompt()</code>, <code>alert()</code> i
+            <code>console.log()</code> per practicar:
+          </p>
+          <ul class="explain">
+            <li>🔹 Com declarar constants i variables (<code>const</code>, <code>let</code>).</li>
+            <li>🔹 Com llegir dades amb <code>prompt()</code>.</li>
+            <li>🔹 Com validar dades i mostrar missatges d’error.</li>
+            <li>🔹 Com calcular una comissió simple amb operadors bàsics.</li>
+          </ul>
+          <p><strong>Fitxers inclosos:</strong></p>
+          <ul class="files">
+            <li>📄 <code>index.html</code> — estructura mínima amb el <code>&lt;script&gt;</code> enllaçat.</li>
+            <li>🎨 <code>style.css</code> — estil senzill per a llegibilitat.</li>
+            <li>🧠 <code>main.js</code> — base amb comentaris i <code>// TODO</code> per completar.</li>
+          </ul>
+          <a class="btn" href="./assets/codiBase/fase1.zip" download>⬇️ Descarregar Fase 1</a>
+        </div>
 
-      <h3>JavaScript (esquelet)</h3>
-      <pre><code>'use strict';
+        <!-- FASE 1.5 -->
+        <div class="download-card">
+          <h3>👥 Fase 1.5 — Diversos venedors</h3>
+          <p>
+            Ara afegiràs complexitat: el programa gestionarà <strong>diversos venedors</strong> utilitzant arrays i
+            bucles.
+            Practicaràs com crear objectes, recorrer-los i calcular mitjanes.
+          </p>
+          <ul class="explain">
+            <li>🔹 Com utilitzar <code>for</code> i <code>for...of</code> per iterar sobre dades.</li>
+            <li>🔹 Com guardar venedors en un array (<code>venedors.push()</code>).</li>
+            <li>🔹 Com fer càlculs agregats (mitjanes i totals).</li>
+            <li>🔹 Com validar múltiples registres.</li>
+          </ul>
+          <p><strong>Fitxers inclosos:</strong></p>
+          <ul class="files">
+            <li>📄 <code>index.html</code> — indica que aquesta versió s’executa només amb <code>prompt()</code>.</li>
+            <li>🎨 <code>style.css</code> — estil base reutilitzat de la fase anterior.</li>
+            <li>🧠 <code>main.js</code> — codi base amb bucle <code>for</code> i comentaris detallats.</li>
+          </ul>
+          <a class="btn" href="./assets/codiBase/fase1_5.zip" download>⬇️ Descarregar Fase 1.5</a>
+        </div>
 
-const $ = (sel) =&gt; document.querySelector(sel);
+        <!-- FASE 2 -->
+        <div class="download-card">
+          <h3>💻 Fase 2 — Aplicació web (DOM)</h3>
+          <p>
+            Aquesta és la versió visual del projecte.
+            Aprendràs a utilitzar el <strong>DOM</strong> per llegir inputs, mostrar missatges i calcular resultats a la
+            pàgina.
+          </p>
+          <ul class="explain">
+            <li>🔹 Ús de <code>document.querySelector()</code> per accedir a inputs i elements.</li>
+            <li>🔹 Ús d’esdeveniments amb <code>addEventListener()</code>.</li>
+            <li>🔹 Validació i feedback visual d’errors.</li>
+            <li>🔹 Inserció de resultats dins el DOM amb <code>textContent</code>.</li>
+          </ul>
+          <p><strong>Fitxers inclosos:</strong></p>
+          <ul class="files">
+            <li>📄 <code>index.html</code> — estructura amb inputs i botons (<code>#nom</code>, <code>#vendes</code>,
+              <code>#objectiu</code>).</li>
+            <li>🎨 <code>style.css</code> — disseny modern i coherent amb l’estil del mòdul.</li>
+            <li>🧠 <code>main.js</code> — funcions buides amb <code>// TODO</code> per afegir la lògica.</li>
+          </ul>
+          <a class="btn" href="./assets/codiBase/fase2.zip" download>⬇️ Descarregar Fase 2</a>
+        </div>
+      </div>
 
-// TODO: declara COMISSIO i array venedors
-// TODO: llegeix i valida dades
-// TODO: calcula totalComissio i supera
-// TODO: mostra resum al DOM
-function mostrarMissatge(text, esError = false) {
-  const box = $('#missatge');
-  box.textContent = text;
-  if (esError) box.classList.add('error');
-  else box.classList.remove('error');
-}
-</code></pre>
+      <div class="tip-box">
+        💡 <strong>Com treballar:</strong> descarrega una fase, descomprimeix-la, obre el fitxer <code>index.html</code>
+        al navegador i edita el <code>main.js</code> al teu editor (VS Code).
+        Pots avançar d’una fase a l’altra mantenint la mateixa estructura i afegint funcionalitats progressivament.
+      </div>
+
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <button onclick="nextPage()">➡️ Següent</button>
       </div>
     </section>
+
 
     <!-- 6️⃣ Rúbrica d’avaluació -->
     <section class="card hidden" id="page6">
@@ -534,12 +569,14 @@ function mostrarMissatge(text, esError = false) {
         <li><strong>Cap <code>var</code> ni <code>==</code></strong>
           ➤ Fes servir només <code>let</code> i <code>const</code> per a variables, i <code>===</code> /
           <code>!==</code> per comparacions estrictes.
-          Això garanteix un codi modern, segur i predictible.</li>
+          Això garanteix un codi modern, segur i predictible.
+        </li>
 
         <li><strong>Validacions mostrades al DOM</strong>
           ➤ Els errors s’han de mostrar a la pàgina (amb <code>innerText</code> o <code>textContent</code>), no amb
           <code>alert()</code>.
-          Els missatges han de ser clars i ajudar a l’usuari a corregir les dades d’entrada.</li>
+          Els missatges han de ser clars i ajudar a l’usuari a corregir les dades d’entrada.
+        </li>
 
         <li><strong>Prova almenys tres casos:</strong>
           <ul>
