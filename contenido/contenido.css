@@ -110,4 +110,22 @@ summary {
   font-size: 1.1rem;
   font-weight: 600;
 }
-details[open] summary { background: rgba(0,25
+details[open] summary { background: rgba(0,255,128,0.2); }
+
+ul { list-style: none; padding-left: 20px; }
+li { margin: 8px 0; }
+li a { font-weight: 600; color: var(--accent2); text-decoration: none; }
+li a:hover { text-decoration: underline; }
+p { margin: 4px 0 12px; }
+em { color: var(--accent); font-style: normal; font-weight: 500; }
+
+footer {
+  text-align: center;
+  font-size: .9rem;
+  padding: 30px 10px;
+  background: var(--menu-bg);
+  color: white;
+  border-top: 2px solid var(--accent);
+}
+
+section { scroll-margin-top: 150px; }
