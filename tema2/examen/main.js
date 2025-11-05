@@ -1,31 +1,31 @@
 'use strict';
 
-/* ============================================================
-   Navegació entre seccions (pantalles)
-   ============================================================ */
-
+// --- Navegació entre pàgines ---
 let current = 1;
+const totalPages = 7;
 
-// Mostra només la secció actual
+const pages = document.querySelectorAll('section.card');
 function showPage(num) {
-  document.querySelectorAll('section.card').forEach((sec, i) => {
-    sec.classList.toggle('hidden', i + 1 !== num);
+  pages.forEach((page, index) => {
+    if (index + 1 === num) {
+      page.style.display = 'block';
+      setTimeout(() => page.classList.add('visible'), 50);
+    } else {
+      page.classList.remove('visible');
+      setTimeout(() => (page.style.display = 'none'), 400);
+    }
   });
 }
-
-// Botons següent / anterior
 function nextPage() {
-  const total = document.querySelectorAll('section.card').length;
-  if (current < total) current++;
+  if (current < totalPages) current++;
   showPage(current);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function prevPage() {
   if (current > 1) current--;
   showPage(current);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Inicialitza la primera pàgina
-document.addEventListener('DOMContentLoaded', () => {
-  showPage(current);
-});
+// Inici
+document.addEventListener('DOMContentLoaded', () => showPage(current));

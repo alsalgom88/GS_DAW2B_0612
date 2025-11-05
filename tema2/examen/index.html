@@ -18,50 +18,141 @@
   </header>
 
   <main class="container">
-<a href="../index.html" class="btn">⬅️ Tornar al Tema 2</a>
+    <a href="../index.html" class="btn">⬅️ Tornar al Tema 2</a>
     <!-- 1️⃣ Objectius generals -->
     <section class="card" id="page1">
       <h2>🎯 Objectiu general</h2>
       <p>
-        Desenvolupar una miniaplicació web que permeti <strong>gestionar les vendes setmanals</strong> d’un equip
-        comercial,
-        aplicant la sintaxi bàsica de JavaScript: declaració de variables i constants, operadors, condicions, bucles,
-        tractament d’errors i bones pràctiques de codi.
+        Desenvolupar una <strong>miniaplicació web interactiva</strong> que permeti
+        <strong>gestionar les vendes setmanals d’un equip comercial</strong>, aplicant de manera pràctica
+        tots els conceptes fonamentals de la <em>sintaxi bàsica de JavaScript</em> treballats durant el tema.
       </p>
+
       <p>
-        El projecte es realitza amb <strong>HTML, CSS i JavaScript pur</strong> (sense frameworks).
-        Tot el codi ha de ser <em>propi, clar i comentat</em>.
+        L’activitat té com a finalitat consolidar les competències bàsiques del llenguatge mitjançant
+        la creació d’un projecte senzill però complet, capaç d’integrar:
       </p>
+
+      <ul>
+        <li>✅ <strong>Declaració i ús correcte</strong> de variables i constants, diferenciant l’abast i el tipus de
+          dada.</li>
+        <li>🔢 Aplicació d’<strong>operadors aritmètics, lògics i de comparació</strong> per realitzar càlculs i
+          decisions.</li>
+        <li>🔀 Implementació d’<strong>estructures de control</strong> (<code>if</code>, <code>else if</code>,
+          <code>switch</code>) per dirigir el flux del programa.
+        </li>
+        <li>🔁 Ús de <strong>bucles iteratius</strong> (<code>for</code>, <code>while</code>, <code>do...while</code>)
+          per recórrer i processar dades.</li>
+        <li>⚠️ Aplicació de <strong>validacions i tractament d’errors</strong> per evitar entrades incorrectes i
+          millorar la robustesa del codi.</li>
+        <li>🧩 Respecte a les <strong>bones pràctiques de codi</strong>: ús de <code>'use strict'</code>, estil
+          <code>camelCase</code>, comentaris útils i claredat estructural.
+        </li>
+      </ul>
+
+      <p>
+        El resultat final serà una aplicació capaç de registrar informació de diversos venedors
+        (nom, import de vendes i objectiu setmanal), calcular-ne automàticament la
+        <strong>comissió corresponent</strong> i indicar si s’ha assolit l’objectiu fixat.
+      </p>
+
+      <p>
+        A més, el programa generarà un <strong>resum global</strong> amb:
+      </p>
+      <ul>
+        <li>📊 La <em>mitjana de vendes</em> de tot l’equip.</li>
+        <li>💰 La <em>mitjana de comissions</em> obtingudes.</li>
+        <li>🏆 El <em>nombre de venedors</em> que han superat l’objectiu setmanal.</li>
+      </ul>
+
+      <p>
+        Tot el projecte es desenvoluparà amb <strong>HTML, CSS i JavaScript pur</strong> (sense frameworks ni llibreries
+        externes),
+        fomentant l’autonomia, la comprensió profunda del llenguatge i la cura pel detall.
+        El codi haurà de ser <strong>propi, clar, documentat i validat</strong>, reflectint un enfocament professional
+        en el desenvolupament web.
+      </p>
+
       <div class="buttons">
         <span></span>
         <button onclick="nextPage()">➡️ Següent</button>
       </div>
     </section>
 
+
     <!-- 2️⃣ Normes i recursos -->
     <section class="card hidden" id="page2">
       <h2>🛡️ Normes d’integritat i recursos</h2>
+
+      <p>
+        Aquest examen és <strong>individual i d’autoria pròpia</strong>.
+        L’objectiu és demostrar que domines la sintaxi bàsica de JavaScript i saps aplicar-la de manera correcta,
+        comprensible i coherent amb el que hem treballat a classe.
+      </p>
+
+      <h3>🚫 No està permès:</h3>
       <ul>
-        <li>❌ No es permet l’ús d’intel·ligències artificials, fòrums o codi copiat.</li>
-        <li>✅ Pots consultar documentació de referència:
-          <ul>
-            <li><a href="https://developer.mozilla.org/ca/docs/Web/JavaScript" target="_blank">MDN Web Docs —
-                JavaScript</a></li>
-            <li><a href="https://validator.w3.org/" target="_blank">W3C Validator (HTML)</a></li>
-            <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a></li>
-            <li><a href="https://eslint.org/play/" target="_blank">ESLint Play (bones pràctiques)</a></li>
-          </ul>
+        <li>❌ L’ús de cap tipus d’<strong>intel·ligència artificial</strong> (com ChatGPT, Copilot, DeepSeek, Gemini,
+          etc.).</li>
+        <li>❌ Copiar codi o solucions de <strong>fòrums o webs de tercers</strong> (Stack Overflow, Reddit, GitHub,
+          GeeksForGeeks, etc.).</li>
+        <li>❌ Compartir o intercanviar fragments de codi amb altres companys durant l’examen.</li>
+        <li>❌ Fer servir extensions o complements que <em>generin o completin codi automàticament</em>.</li>
+      </ul>
+
+      <h3>✅ Recursos autoritzats:</h3>
+      <p>
+        Pots consultar únicament <strong>documentació tècnica oficial</strong> i els materials docents que ja hem
+        utilitzat al curs.
+        Aquests recursos serveixen per verificar sintaxi, definicions o comportaments del llenguatge, no per obtenir
+        solucions completes.
+      </p>
+
+      <ul>
+        <li>📘 <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript" target="_blank">MDN Web Docs —
+            JavaScript</a>
+          <br><em>(Referència oficial del llenguatge: sintaxi, mètodes, exemples i bones pràctiques.)</em>
         </li>
-        <li>Preferències de codi:
-          <ul>
-            <li>‘use strict’;</li>
-            <li>camelCase</li>
-            <li><code>const</code> / <code>let</code> (no <code>var</code>)</li>
-            <li><code>===</code> / <code>!==</code></li>
-            <li>Comentaris curts i útils</li>
-          </ul>
+        <li>🧩 <a href="https://validator.w3.org/" target="_blank">W3C Validator (HTML)</a>
+          <br><em>Per comprovar que el teu HTML sigui correcte i estigui ben estructurat.</em>
+        </li>
+        <li>🎨 <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a>
+          <br><em>Per validar l’estil del teu CSS i corregir possibles errors de sintaxi.</em>
+        </li>
+        <li>🧹 <a href="https://eslint.org/play/" target="_blank">ESLint Play — JavaScript Linter</a>
+          <br><em>Per revisar bones pràctiques i possibles advertències del teu codi JS.</em>
+        </li>
+        <li>💻 <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a> o <a href="https://codepen.io/"
+            target="_blank">CodePen</a>
+          <br><em>Només per fer proves breus de sintaxi i comprovacions bàsiques de comportament (no per desenvolupar
+            tot l’examen).</em>
+        </li>
+        <li>📚 Moodle del centre i activitats del mòdul DWC
+          <br><em>Només pots accedir al Moodle per consultar apunts, esquemes o exercicis ja treballats.</em>
         </li>
       </ul>
+
+      <h3>🧠 Recomanacions i bones pràctiques de codi:</h3>
+      <ul>
+        <li>Usa sempre <code>'use strict';</code> al començament del teu fitxer JavaScript.</li>
+        <li>Fes servir noms de variables en <strong>camelCase</strong> i clars (ex: <code>totalVendes</code>,
+          <code>objectiuSetmanal</code>).
+        </li>
+        <li>Utilitza <code>const</code> i <code>let</code> segons convingui — <strong>no s’accepta</strong> l’ús de
+          <code>var</code>.
+        </li>
+        <li>Fes comparacions estrictes amb <code>===</code> i <code>!==</code> (no usis <code>==</code> o
+          <code>!=</code>).
+        </li>
+        <li>Inclou <strong>comentaris curts, útils i descriptius</strong> que ajudin a entendre el teu raonament.</li>
+        <li>Mantén una <strong>indentació constant</strong> i un codi llegible.</li>
+      </ul>
+
+      <p class="nota">
+        ⚠️ Recorda: l’examen no valora només que funcioni, sinó <strong>com està escrit i estructurat</strong>.
+        Un codi clar, validat i ben comentat pot obtenir millor nota encara que tingui petits errors funcionals.
+      </p>
+
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <button onclick="nextPage()">➡️ Següent</button>
@@ -92,22 +183,79 @@
     <!-- 4️⃣ Estructura d'entrega -->
     <section class="card hidden" id="page4">
       <h2>📦 Estructura i entrega</h2>
-      <pre><code>ExamenNF2_2DAWB_CognomNom/
-├─ index.html
-├─ style.css
-├─ main.js
-└─ notes.txt   (6–10 línies amb reflexió tècnica)
-</code></pre>
-      <p class="nota">
-        💡 Entrega un únic fitxer ZIP amb aquesta estructura. <br>
-        El fitxer <code>notes.txt</code> ha d’explicar un error trobat, per què cal validar, i un exemple de coerció de
-        tipus.
+
+      <p>
+        L’examen pràctic s’ha d’entregar com un <strong>projecte complet i organitzat</strong>, amb tots els fitxers
+        necessaris per a la seva execució.
+        La carpeta ha de seguir <strong>exactament</strong> aquesta estructura:
       </p>
+
+      <pre><code>ExamenNF2_2DAWB_CognomNom/
+├─ index.html        → Fitxer principal amb l’estructura HTML de l’aplicació
+├─ style.css         → Full d’estil amb el disseny i colors utilitzats
+├─ main.js           → Codi JavaScript amb tota la lògica del programa
+└─ notes.txt         → Fitxer de text amb reflexió tècnica (6–10 línies)
+</code></pre>
+
+      <p class="nota">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00a8a8" width="28" height="28"
+          style="vertical-align: middle; margin-right: 8px;">
+          <path d="M10 4H4c-1.1 0-2 .9-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8c0-1.1-.9-2-2-2h-8l-2-2zM4 8h16v10H4V8z" />
+        </svg><strong>Entrega:</strong>
+        Cal comprimir tota la carpeta dins d’un sol fitxer ZIP i enviar-lo amb el nom:
+        <br><code>ExamenNF2_2DAWB_CognomNom.zip</code>
+        (Exemple: <code>ExamenNF2_2DAWB_PerezLaura.zip</code>)
+      </p>
+
+      <h3>📂 Descripció de cada fitxer:</h3>
+      <ul>
+        <li><strong>index.html</strong>
+          Conté l’estructura base del projecte: capçalera, formulari, botons i zones de sortida de resultats.
+          Ha d’incloure els enllaços correctes a <code>style.css</code> i <code>main.js</code>.</li>
+
+        <li><strong>style.css</strong>
+          Defineix els estils visuals de l’aplicació: colors, mides, marges, tipografia i disseny general.
+          Es valorarà la <em>coherència visual</em> i la <em>legibilitat</em> del resultat.</li>
+
+        <li><strong>main.js</strong>
+          És el fitxer més important. Aquí hi ha d’haver la lògica del programa:
+          lectura de dades, càlculs, validacions, bucles, i la generació del resum.
+          Inclou comentaris útils i clars per cada secció del codi.</li>
+
+        <li><strong>notes.txt</strong>
+          Fitxer de text breu (màxim 10 línies) on reflexiones sobre el teu propi treball.
+          Ha d’incloure obligatòriament:
+          <ul>
+            <li>🧩 <strong>Un error o dificultat</strong> que hagis trobat durant l’examen i com l’has solucionat.</li>
+            <li>🔍 <strong>Una explicació</strong> de per què és important validar les dades d’entrada.</li>
+            <li>⚙️ <strong>Un exemple concret</strong> de coerció de tipus (p. ex. número ↔️ string) dins el teu codi.
+            </li>
+          </ul>
+          Es valorarà la claredat de l’explicació i la reflexió tècnica, no la longitud del text.
+        </li>
+      </ul>
+
+      <h3>🧾 Recomanacions finals:</h3>
+      <ul>
+        <li>Comprova que el teu projecte <strong>funciona completament offline</strong> (obrint l’HTML localment al
+          navegador).</li>
+        <li>Verifica que <strong>tots els fitxers estan dins la carpeta principal</strong> abans de comprimir.</li>
+        <li>Assegura’t que el codi no conté <strong>errors de sintaxi ni missatges de consola</strong>.</li>
+        <li>Valida l’HTML i el CSS amb els enllaços oficials (W3C i Jigsaw Validator).</li>
+        <li>Guarda una còpia de seguretat del teu treball abans d’enviar-lo.</li>
+      </ul>
+
+      <p class="nota">
+        📤 Un cop entregat, no es permeten reenvios.
+        Revisa tot dues vegades abans de comprimir i pujar el fitxer ZIP.
+      </p>
+
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <button onclick="nextPage()">➡️ Següent</button>
       </div>
     </section>
+
 
     <!-- 5️⃣ Codi base -->
     <section class="card hidden" id="page5">
@@ -168,66 +316,176 @@ function mostrarMissatge(text, esError = false) {
       </div>
     </section>
 
-    <!-- 6️⃣ Rúbrica -->
+    <!-- 6️⃣ Rúbrica d’avaluació -->
     <section class="card hidden" id="page6">
-      <h2>📊 Rúbrica d’avaluació (10 punts)</h2>
-      <table border="1" cellpadding="6" cellspacing="0">
-        <tr>
-          <th>Codi</th>
-          <th>Criteri</th>
-          <th>Punts</th>
-        </tr>
-        <tr>
-          <td>C1</td>
-          <td>Variables i càlculs correctes; conversions de tipus adequades</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>C2</td>
-          <td>Validació robusta i missatges d’error clars al DOM</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>C3</td>
-          <td>Array d’objectes, recorregut i resum</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>C4</td>
-          <td>Bones pràctiques (‘use strict’, camelCase, comentaris)</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>C5</td>
-          <td>notes.txt amb reflexió personal tècnica</td>
-          <td>1</td>
-        </tr>
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00a8a8" width="28" height="28"
+          style="vertical-align: middle; margin-right: 8px;">
+          <path d="M3 3h2v18H3V3zm4 10h2v8H7v-8zm4-6h2v14h-2V7zm4 3h2v11h-2V10zm4-5h2v16h-2V5z" />
+        </svg>
+        Rúbrica d’avaluació (10 punts)
+      </h2>
+
+      <p>
+        Aquesta rúbrica t’ajudarà a entendre <strong>com es valorarà el teu examen</strong>.
+        Cada apartat correspon a una competència clau del Tema 2 — <em>Sintaxi bàsica de JavaScript</em>.
+        El total màxim és de <strong>10 punts</strong>.
+      </p>
+
+      <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse: collapse; text-align:left;">
+        <thead style="background:#00a8a8; color:white;">
+          <tr>
+            <th style="width:10%;">Codi</th>
+            <th style="width:70%;">Criteri d’avaluació</th>
+            <th style="width:20%;">Punts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>C1</strong></td>
+            <td>
+              <strong>Variables i càlculs correctes; conversions de tipus adequades</strong><br>
+              El programa fa servir correctament variables i constants, amb noms clars i consistents.
+              Els càlculs són coherents i es controlen els tipus (nombres, cadenes).
+              Es valorarà la comprensió del funcionament de la coerció de tipus i el bon ús d’operadors.
+            </td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td><strong>C2</strong></td>
+            <td>
+              <strong>Validació robusta i missatges d’error clars al DOM</strong><br>
+              Les dades d’entrada es comproven correctament: no es permeten camps buits o valors no numèrics.
+              Els missatges d’error es mostren de manera clara, dins del DOM (no només per <code>alert()</code>),
+              i ajuden a l’usuari a entendre què cal corregir.
+            </td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td><strong>C3</strong></td>
+            <td>
+              <strong>Array d’objectes, recorregut i resum</strong><br>
+              Es crea un array amb objectes per a cada venedor amb propietats clares: nom, vendes, objectiu, etc.
+              Es recorre correctament amb <code>for...of</code> o mètodes similars per generar un resum amb mitjanes i
+              resultats finals.
+              Es valora la claredat i estructura de la sortida de dades.
+            </td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <td><strong>C4</strong></td>
+            <td>
+              <strong>Bones pràctiques (‘use strict’, camelCase, comentaris)</strong><br>
+              Es fa ús de <code>'use strict';</code> al començament del codi, variables en camelCase,
+              comparacions estrictes (<code>===</code> / <code>!==</code>), i comentaris útils.
+              Es valora la claredat, la coherència i la netedat del codi.
+            </td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td><strong>C5</strong></td>
+            <td>
+              <strong><code>notes.txt</code> amb reflexió tècnica personal</strong><br>
+              Es presenta el fitxer <code>notes.txt</code> amb una reflexió breu però significativa:
+              descripció d’un error real, importància de la validació i un exemple de coerció de tipus.
+              Es valora la capacitat d’autoavaluació i comprensió tècnica.
+            </td>
+            <td>1</td>
+          </tr>
+        </tbody>
       </table>
+
+      <p class="nota">
+        💡 <strong>Consell:</strong> Un codi que funcioni no és suficient — es premia la claredat, la coherència i la
+        comprensió.
+        Si el teu projecte mostra un <em>procés de raonament correcte</em> encara que hi hagi petits errors, pot obtenir
+        una bona puntuació.
+      </p>
+
       <div class="buttons">
         <button onclick="prevPage()">⬅️ Enrere</button>
         <button onclick="nextPage()">➡️ Següent</button>
       </div>
     </section>
 
-    <!-- 7️⃣ Checklist -->
-    <section class="card hidden" id="page7">
-      <h2>✅ Checklist abans d’enviar</h2>
+
+    <!-- 7️⃣ Checklist final abans d’enviar -->
+<section class="card hidden" id="page7">
+  <h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         fill="#00a8a8" width="30" height="30"
+         style="vertical-align: middle; margin-right: 8px;">
+      <path d="M6 2v20h2v-6h10l2 2 2-2V2H6zm12 12H8V4h10v10z"/>
+    </svg>
+    ✅ Checklist abans d’enviar
+  </h2>
+
+  <p>
+    Abans de comprimir i entregar el teu projecte, revisa atentament cada punt d’aquesta llista.  
+    <strong>Tots</strong> són obligatoris i formen part de la qualificació final.  
+    Marca’ls mentalment o amb una ✅ quan els tinguis completats.
+  </p>
+
+  <ul class="checklist">
+    <li><strong>‘use strict’;</strong> al principi de <code>main.js</code>  
+      ➤ És obligatori per assegurar bones pràctiques i evitar errors silenciosos.  
+      Activa el mode estricte de JavaScript, que ajuda a detectar variables no declarades i altres problemes comuns.</li>
+
+    <li><strong>Cap <code>var</code> ni <code>==</code></strong>  
+      ➤ Fes servir només <code>let</code> i <code>const</code> per a variables, i <code>===</code> / <code>!==</code> per comparacions estrictes.  
+      Això garanteix un codi modern, segur i predictible.</li>
+
+    <li><strong>Validacions mostrades al DOM</strong>  
+      ➤ Els errors s’han de mostrar a la pàgina (amb <code>innerText</code> o <code>textContent</code>), no amb <code>alert()</code>.  
+      Els missatges han de ser clars i ajudar a l’usuari a corregir les dades d’entrada.</li>
+
+    <li><strong>Prova almenys tres casos:</strong>  
       <ul>
-        <li>‘use strict’; al principi de <code>main.js</code></li>
-        <li>Cap <code>var</code> ni <code>==</code></li>
-        <li>Validacions mostrades al DOM</li>
-        <li>Prova almenys tres casos: correcte, límit i error</li>
-        <li>HTML i CSS validats sense errors</li>
-        <li><code>notes.txt</code> escrit amb reflexió tècnica</li>
+        <li>✔️ <em>Cas correcte</em>: totes les dades vàlides, resultat esperat.</li>
+        <li>⚠️ <em>Cas límit</em>: valors mínims (0, buits, iguals a l’objectiu).</li>
+        <li>❌ <em>Cas d’error</em>: dades negatives o camp buit, s’ha de mostrar missatge d’error.</li>
       </ul>
-      <p class="nota">Quan tot estigui llest, comprimeix la carpeta i entrega
-        <strong>ExamenNF2_2DAWB_CognomNom.zip</strong>.
-      </p>
-      <div class="buttons">
-        <button onclick="prevPage()">⬅️ Enrere</button>
-        <span></span>
-      </div>
-    </section>
+      ➤ D’aquesta manera comproves que el teu codi és robust i cobreix totes les situacions possibles.
+    </li>
+
+    <li><strong>HTML i CSS validats sense errors</strong>  
+      ➤ Verifica el teu HTML amb el <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>  
+      i el CSS amb el <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw CSS Validator</a>.  
+      Si hi ha avisos (warnings), revisa’ls i corregeix-los abans d’enviar.</li>
+
+    <li><strong><code>notes.txt</code> escrit amb reflexió tècnica</strong>  
+      ➤ Ha de contenir almenys 6 línies amb:
+      <ul>
+        <li>Un error o dificultat trobada i com l’has resolt.</li>
+        <li>Una explicació breu de la importància de validar.</li>
+        <li>Un exemple concret de coerció de tipus del teu codi.</li>
+      </ul>
+      Escriu-ho amb paraules teves: no cal perfecció, sinó comprensió.
+    </li>
+  </ul>
+
+  <p class="nota">
+    🧩 <strong>Verifica:</strong> comprova que tots els fitxers (HTML, CSS, JS, notes.txt) estan dins de la mateixa carpeta abans de comprimir.
+  </p>
+
+  <p class="nota" style="border-top: 2px solid #00a8a8; padding-top: 10px;">
+    🏁 <strong>Final del projecte!</strong><br>
+    Quan tot estigui llest, crea un arxiu ZIP amb el nom:<br>
+    <code>ExamenNF2_2DAWB_CognomNom.zip</code><br>
+    (Exemple: <code>ExamenNF2_2DAWB_FerrerClara.zip</code>)<br><br>
+    ✅ Revisa dues vegades abans d’enviar — un bon programador sempre comprova fins a l’últim detall!
+  </p>
+
+  <div class="buttons">
+    <button onclick="prevPage()">⬅️ Enrere</button>
+    <span></span>
+  </div>
+</section>
+
   </main>
 
   <script src="main.js"></script>
