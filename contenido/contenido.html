@@ -4,400 +4,371 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAM0489 – Programació multimèdia i dispositius mòbils</title>
+  <title>MP0612 · Desenvolupament web en entorn client</title>
   <link rel="stylesheet" href="contenido.css">
 
 </head>
 
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo del mòdul" class="logo">
-    <h1>📘 DAM0489 – Programació multimèdia i dispositius mòbils</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"
-      class="logo-icon">
-      <path fill="currentColor"
-        d="M12 2c-1.1 0-2 .9-2 2v1H8v2h8V5h-2V4c0-1.1-.9-2-2-2zM5 9v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V9H5zm3 3h2v5H8v-5zm6 0h2v5h-2v-5z" />
-    </svg>
-
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <h1>Institut Puig Castellar</h1>
+    <p>Cicle Formatiu de Grau Superior · Desenvolupament d'Aplicacions Web</p>
+    <h2>Mòdul professional 0612 · Desenvolupament web en entorn client</h2>
   </header>
 
   <nav>
-    <a href="#inici">🏠 Inici</a>
     <a href="#tema1">Tema 1</a>
     <a href="#tema2">Tema 2</a>
     <a href="#tema3">Tema 3</a>
     <a href="#tema4">Tema 4</a>
     <a href="#tema5">Tema 5</a>
+    <a href="#tema6">Tema 6</a>
+    <a href="#tema7">Tema 7</a>
   </nav>
 
-  <main>
-    <section id="inici">
-      <h2>📘 DAM0489 – Programació multimèdia i dispositius mòbils</h2>
-      <p><strong>Descripció del mòdul:</strong> Aquest mòdul introdueix l’alumnat al desenvolupament d’aplicacions
-        multimèdia i mòbils per a Android, combinant coneixements de programació, interfícies d’usuari, persistència de
-        dades, connectivitat i jocs. Es treballa tant el disseny visual com la lògica funcional i la integració amb
-        l’ecosistema Android Studio.</p>
-      <p><strong>Objectius generals:</strong></p>
-      <ul>
-        <li>Instal·lar i configurar entorns de desenvolupament Android.</li>
-        <li>Dissenyar interfícies gràfiques modernes i accessibles.</li>
-        <li>Gestionar dades locals i remotes amb persistència segura.</li>
-        <li>Integrar elements multimèdia: àudio, vídeo i animacions.</li>
-        <li>Desenvolupar jocs senzills en 2D i 3D per a dispositius mòbils.</li>
-      </ul>
-      <p><em>Durada:</em> 99 hores · <em>Modalitat:</em> presencial · <em>Curs:</em> 2025-2026</p>
-    </section>
+  <section id="intro">
+    <h2>Benvinguts al mòdul!</h2>
+    <p><strong>Com funciona aquest índex interactiu:</strong>
+      A continuació trobaràs tots els temes del mòdul amb els seus objectius i subtemes.
+      <u>Cada enllaç del tema</u> (tant els principals com els subtemes) està preparat per obrir directament la seva
+      secció corresponent al Moodle en una pestanya nova.
+      Només has de fer clic i… *warp!* 🚀 et transportarà al contingut complet del tema, amb activitats, materials i
+      pràctiques.
+    </p>
 
-    <!-- ===== TEMA 1 ===== -->
-    <details id="tema1" open>
-      <summary>📂 Tema 1 – Entorns de desenvolupament</summary>
-      <p><strong>Objectiu:</strong> Aprendre com instal·lar, configurar i utilitzar entorns per desenvolupar aplicacions
-        mòbils Android. L’alumnat coneixerà les eines bàsiques del desenvolupament mòbil i comprendrà la seva integració
-        amb l’ecosistema Android Studio i AVD.</p>
-      <ul>
-        <li><a href="#t1_1">1.1 Dispositius mòbils. Evolució. Tipus. Característiques.</a>
-          <p><em>Objectiu:</em> Conèixer l’evolució històrica dels dispositius mòbils i les seves categories. Es veurà
-            com les limitacions de maquinari condicionen el disseny d’aplicacions.<br><strong>Activitat:</strong> línia
-            del temps interactiva d’Android i iOS. (📱 El futur cap a la butxaca!)</p>
-        </li>
+    <p><em>Consell Jedi:</em> guarda aquest índex com a punt de partida del teu viatge — és la teva holocròn del codi. ✨
+    </p>
 
-        <li><a href="#t1_2">1.2 Maquinari per a dispositius mòbils</a>
-          <p><em>Objectiu:</em> Estudiar components com pantalla, CPU, GPU, memòria, sensors i bateria. S’analitzarà com
-            aquests influeixen en el rendiment i l’eficiència d’una app.<br><strong>Pràctica:</strong> comparació de
-            dispositius amb CPU-Z. (🔧 Coneix el teu aliat invisible!)</p>
-        </li>
+    <p><strong>Descripció general:</strong> Aquest mòdul introdueix els fonaments del desenvolupament web en entorn
+      client. Treballarem amb JavaScript i TypeScript, aprendrem a manipular el DOM, gestionar esdeveniments, validar
+      formularis, crear aplicacions dinàmiques i connectar-nos a APIs. En definitiva, ens formarem per construir
+      interfícies web modernes, accessibles i reactives. 🌐</p>
+    <p><strong>Objectius del mòdul:</strong> Entendre la diferència entre client i servidor, escriure codi eficient i
+      net, manipular contingut web dinàmicament, i implementar aplicacions interactives amb asincronia i bones
+      pràctiques professionals. 🚀</p>
+  </section>
 
-        <li><a href="#t1_3">1.3 Tecnologies de desenvolupament</a>
-          <p><em>Objectiu:</em> Distingir entre desenvolupament natiu i multiplataforma (Kotlin, Flutter, React Native).
-            L’alumnat decidirà quina tecnologia s’adapta millor a cada projecte.<br><strong>Debat:</strong> “Natiu o
-            híbrids?”. (🛠️ Tria la teva arma de programació!)</p>
-        </li>
+  <section id="tema1">
+    <h2>Tema 1 – RA1: Selecció d’arquitectures i tecnologies de programació sobre clients web</h2>
+    <p><strong>Durada:</strong> 6 h</p>
+    <p><strong>Objectiu general:</strong> Comprendre les diferències entre l’execució client i servidor, i conèixer les
+      principals tecnologies del desenvolupament web client.</p>
+    <p>En aquest primer tema introduirem les bases de com funciona una aplicació web: què passa al client i què al
+      servidor. Ens familiaritzarem amb les eines i tecnologies essencials, començant a configurar el nostre entorn de
+      desenvolupament com tot bon Jedi del codi. ⚔️</p>
+    <ul>
+      <li><a href="#" class="subtema" target="_blank">1.1. Model d’execució client vs servidor</a><br>Analitzarem el
+        funcionament del model client-servidor i les seves interaccions, identificant quin paper juga cada component.
+      </li>
+      <li><a href="#" class="subtema" target="_blank">1.2. Capacitats i limitacions dels navegadors</a><br>Explorarem el
+        poder (i els límits) dels navegadors moderns, i com gestionar compatibilitats i rendiment.</li>
+      <li><a href="#" class="subtema" target="_blank">1.3. Llenguatges d’etiquetes i programació web: HTML, CSS i
+          JavaScript</a><br>Farem un recorregut per la Santíssima Trinitat del web: estructura, estil i lògica. 🧙‍♂️
+      </li>
+      <li><a href="#" class="subtema" target="_blank">1.4. Eines i entorns de desenvolupament (VS Code, Chrome
+          DevTools)</a><br>Configurarem entorns de treball i aprendrem a depurar amb eines professionals.</li>
+      <li><a href="#" class="subtema" target="_blank">1.5. Integració HTML + JavaScript</a><br>Entendrem com interactuen
+        els fitxers HTML i JS per crear comportament dinàmic.</li>
+      <li><a href="#" class="subtema" target="_blank">1.6. Frameworks i llibreries actuals (React, Vue,
+          Svelte...)</a><br>Una mirada cap al futur del desenvolupament client amb frameworks populars.</li>
+      <li><a href="#" class="subtema" target="_blank">1.7. Depuració i proves en entorns client</a><br>Aprendrem a
+        detectar i resoldre errors com veritables detectius del codi. 🕵️‍♀️</li>
+    </ul>
+  </section>
+  <!-- ============================= -->
+  <!-- TEMES 2 A 7 -->
+  <!-- ============================= -->
 
-        <li><a href="#t1_4">1.4 Emuladors</a>
-          <p><em>Objectiu:</em> Configurar i utilitzar emuladors d’Android Studio per provar aplicacions en dispositius
-            virtuals. Es practicarà amb diferents resolucions i versions d’API.<br><strong>Pràctica:</strong> crear i
-            personalitzar un AVD. (🎮 Els teus laboratoris digitals!)</p>
-        </li>
+  <section id="tema2">
+    <h2>Tema 2 – RA2: Escriptura de sentències simples i sintaxi del llenguatge</h2>
+    <p><strong>Durada:</strong> 10 h</p>
+    <p><strong>Objectiu general:</strong> Dominar la sintaxi bàsica de JavaScript i crear scripts senzills que
+      s’executin correctament al navegador.</p>
 
-        <li><a href="#t1_5">1.5 Aplicacions mòbils. Estructura.</a>
-          <p><em>Objectiu:</em> Analitzar l’estructura d’un projecte Android (manifests, recursos, classes, layouts).
-            S’aprendrà com Android Studio organitza fitxers i carpetes.<br><strong>Activitat:</strong> esquema visual de
-            carpetes. (🧩 Tot encaixa com un puzzle!)</p>
-        </li>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">2.1. Variables, constants i tipus de dades</a><br>
+        Aprendrem a declarar variables, constants i identificar els principals tipus de dades en JavaScript (string,
+        number, boolean, object, null i undefined).
+        Es realitzaran exemples pràctics de declaració i conversió de tipus.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">2.2. Operadors (aritmètics, lògics, de comparació i
+          assignació)</a><br>
+        Es treballaran els operadors fonamentals del llenguatge: aritmètics (+, -, *, /), de comparació (==, ===, !=,
+        <,>) i lògics (&&, ||, !),
+          així com els d’assignació. Es faran exercicis per comprendre el flux de valors i resultats.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">2.3. Estructures de decisió (if, else, switch)</a><br>
+        Analitzarem com prendre decisions en un programa mitjançant condicions, utilitzant if, else i switch.
+        Crearem mini-programes amb resultats diferents segons les dades d’entrada de l’usuari.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">2.4. Estructures iteratives (for, while, do while)</a><br>
+        Aprendrem a repetir instruccions amb bucles controlats i condicionats, aplicant-los a exercicis de càlcul,
+        recorregut de dades i validació de valors.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">2.5. Comentaris, bones pràctiques i estil de codi (JSDoc)</a><br>
+        Introduirem la importància dels comentaris i l’escriptura clara de codi.
+        Es treballarà amb l’estil recomanat d’indentació, noms de variables i documentació amb JSDoc per facilitar la
+        lectura i manteniment del projecte.
+      </li>
+    </ul>
+  </section>
 
-        <li><a href="#t1_5_1">1.5.1 Layouts i activitats (XML + Kotlin)</a>
-          <p><em>Objectiu:</em> Crear interfícies XML vinculades a la lògica en Kotlin i provar-les en
-            emulador.<br><strong>Pràctica:</strong> dissenyar una pantalla base buida amb interacció bàsica.</p>
-        </li>
 
-        <li><a href="#t1_6">1.6 Model d’estats d’una aplicació</a>
-          <p><em>Objectiu:</em> Comprendre els estats d’execució d’una app (activa, pausa, aturada) i la seva gestió
-            mitjançant mètodes del cicle de vida.<br><strong>Activitat:</strong> registre a Logcat dels callbacks. (🔄
-            Tot canvia, però res desapareix!)</p>
-        </li>
+  <!-- ============================= -->
+  <!-- TEMA 3 -->
+  <!-- ============================= -->
+  <section id="tema3">
+    <h2>Tema 3 – RA3: Ús dels objectes predefinits del llenguatge</h2>
+    <p><strong>Durada:</strong> 12 h</p>
+    <p><strong>Objectiu general:</strong> Utilitzar objectes natius i globals del navegador per interactuar amb l’usuari
+      i manipular contingut.</p>
 
-        <li><a href="#t1_7">1.7 Cicle de vida</a>
-          <p><em>Objectiu:</em> Identificar les fases d’una app des de la instal·lació fins a la desinstal·lació.
-            Aplicar els mètodes onCreate(), onResume(), onPause() i onDestroy().<br><strong>Pràctica:</strong>
-            monitorització en temps real. (🌱 Creix, viu i… evoluciona!)</p>
-        </li>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">3.1. Objectes natius: String, Number, Math, Date</a><br>
+        Propietats i mètodes bàsics dels objectes natius. Exercicis amb concatenació, càlculs i formats de data. Mini
+        projecte: “Calculadora d’edat”.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">3.2. Objectes globals: window, console, alert, prompt,
+          confirm</a><br>
+        Ús de window, console, alert, prompt i confirm. Pràctiques d’entrada/sortida de dades i depuració. Exercici:
+        “Test interactiu amb prompt()”.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">3.3. Interacció amb l’usuari i finestres emergents</a><br>
+        Creació de finestres emergents amb window.open(). Comunicació entre finestres (parent/child). Exercici:
+        “Missatge entre finestres”.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">3.4. Emmagatzematge local (localStorage, sessionStorage)</a><br>
+        Ús de localStorage i sessionStorage. Guardar i recuperar preferències d’usuari. Exercici: “Selector de tema
+        fosc/clar”.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">3.5. Aprofundiment en mètodes avançats, depuració professional
+          (try...catch) i documentació del codi</a><br>
+        Ús avançat d’objectes natius combinats (per exemple, Date + String). Gestió d’errors amb try...catch i throw.
+        Creació de funcions amb objectes dins d’altres objectes. Introducció a mètodes interns (toString, valueOf,
+        hasOwnProperty, etc.). Documentació amb JSDoc i bones pràctiques d’escriptura.
+      </li>
+    </ul>
+  </section>
 
-        <li><a href="#t1_8">1.8 Modificació d’aplicacions</a>
-          <p><em>Objectiu:</em> Reutilitzar i adaptar aplicacions existents per aprendre bones pràctiques de
-            refactorització i compatibilitat amb noves API.<br><strong>Activitat:</strong> millorar una app antiga. (🔁
-            Reinventa allò que ja existeix!)</p>
-        </li>
+  <!-- ============================= -->
+  <!-- TEMA 4 -->
+  <!-- ============================= -->
+  <section id="tema4">
+    <h2>Tema 4 – RA4: Programació amb estructures definides per l’usuari</h2>
+    <p><strong>Durada:</strong> 12 h</p>
+    <p><strong>Objectiu general:</strong> Crear funcions, col·leccions i objectes personalitzats aplicant conceptes
+      bàsics d’orientació a objectes.</p>
 
-        <li><a href="#t1_8_1">1.8.1 Navegació i intents</a>
-          <p><em>Objectiu:</em> Implementar navegació entre pantalles, intents explícits i implícits, i el pas de dades
-            entre activitats.<br><strong>Pràctica:</strong> app amb dues pantalles connectades per intents.</p>
-        </li>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.1. Funcions predefinides i definides per l’usuari</a><br>
+        Tipus de funcions: declarades, expressades i fletxa (arrow). Creació i ús de funcions pròpies per modularitzar
+        el codi.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.2. Paràmetres, valors de retorn i arrow functions</a><br>
+        Paràmetres, valors per defecte, retorns i scope. Funcions com a objectes i ús de callbacks.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.3. Arrays i mètodes (map, filter, reduce)</a><br>
+        Creació, recorregut i manipulació d’arrays. Ús dels mètodes push, pop, splice, map, filter i reduce. Arrays
+        multidimensionals i ordenació.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.4. Objectes literals, constructors i mètodes</a><br>
+        Creació d’objectes literals i constructors. Propietats, mètodes i accés dinàmic. Ús de this, prototips i
+        encapsulació.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.5. Objectes definits per l’usuari</a><br>
+        Creació d’objectes personalitzats amb propietats i comportament propi per a cada projecte.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.6. Classes i instàncies (POO bàsica)</a><br>
+        Conceptes d’objecte, classe i instància. Constructor(), super i herència simple. Definició de mètodes i
+        propietats d’instància.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.7. Patrons de disseny senzills (Factory, Module)</a><br>
+        Aplicació de patrons bàsics per estructurar el codi i millorar la reutilització (Factory, Module).
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.8. Tipus avançats en JavaScript (spread, destructuring,
+          Object.keys, entries)</a><br>
+        Ús d’operadors spread, rest i destructuring. Manipulació d’objectes amb Object.keys, Object.entries i
+        Object.assign.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.9. Depuració i bones pràctiques de codi</a><br>
+        Aplicació de tècniques de depuració i bones pràctiques per assegurar un codi net, tipatge estàtic i mantenible.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">4.10. Extensió TypeScript: tipatge, interfícies i compilació</a><br>
+        Introducció a TypeScript, creació de classes i interfícies, compilació i avantatges en mantenibilitat i
+        depuració.
+      </li>
+    </ul>
+  </section>
 
-        <li><a href="#t1_8_2">1.8.2 Anàlisi i modificació d’apps</a>
-          <p><em>Objectiu:</em> Revisar i millorar aplicacions existents aplicant bones pràctiques de manteniment i
-            actualització a noves API.<br><strong>Activitat:</strong> refactorització guiada d’una app exemple.</p>
-        </li>
+  <!-- ============================= -->
+  <!-- TEMA 5 -->
+  <!-- ============================= -->
+  <section id="tema5">
+    <h2>Tema 5 – RA5: Desenvolupament d’aplicacions web interactives amb esdeveniments</h2>
+    <p><strong>Durada:</strong> 11 h</p>
+    <p><strong>Objectiu general:</strong> Implementar aplicacions web que reaccionin a les accions de l’usuari a través
+      d’esdeveniments.</p>
 
-        <li><a href="#t1_9">1.9 Administrador d’aplicacions</a>
-          <p><em>Objectiu:</em> Entendre el paper del gestor d’aplicacions d’Android: permisos, processos i
-            optimització.<br><strong>Pràctica:</strong> anàlisi de consum i permisos. (🛡️ L’ordre dins del caos!)</p>
-        </li>
-      </ul>
-      <p><strong>Activitats finals:</strong> Recull de pràctiques: instal·lació d’Android Studio, configuració d’un AVD,
-        creació d’una app bàsica i prova de navegació entre pantalles.</p>
-    </details>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">5.1. Introducció a addEventListener</a><br>
+        Tipus d’esdeveniments en JS (ratolí, teclat, formularis). Objecte event i propagació (bubbling i capturing).
+        Assignació i eliminació de gestors d’esdeveniments.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">5.2. Esdeveniments de ratolí i teclat (click, keydown,
+          mousemove)</a><br>
+        Captura i resposta a esdeveniments de ratolí i teclat per crear interaccions dinàmiques com animacions o
+        moviments.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">5.3. Gestió de formularis i validació</a><br>
+        Captura d’esdeveniments submit, change, input. Validació de camps amb atributs HTML i patrons. Generació de
+        missatges d’error i feedback visual.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">5.4. Expressions regulars per validar dades</a><br>
+        Sintaxi bàsica d’expressions regulars (regex). Validació de correus, telèfons i contrasenyes amb expressions
+        personalitzades.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">5.5. Disseny d’interfícies accessibles i amb feedback visual</a><br>
+        Creació d’interfícies accessibles i usables amb retroalimentació visual i millora de l’experiència d’usuari.
+      </li>
+    </ul>
+  </section>
 
-    <!-- ===== TEMA 2 ===== -->
-    <details id="tema2">
-      <summary>📗 Tema 2 – Interfícies gràfiques i interacció</summary>
-      <p><strong>Objectiu:</strong> Dissenyar i programar interfícies gràfiques modernes i funcionals amb XML i Jetpack
-        Compose, entenent la importància de la usabilitat, el disseny responsive i l’accessibilitat. Es treballaran
-        conceptes d’UI/UX, arquitectura visual i gestió d’esdeveniments.</p>
-      <ul>
-        <li><a href="#t2_1">2.1 Eines i flux de treball</a>
-          <p><em>Objectiu:</em> Entendre el procés complet de creació d’una interfície: del prototip al codi
-            final.<br><strong>Pràctica:</strong> crear un wireframe a Figma i implementar-lo a Android Studio. (🔄 Un
-            bon flux = productivitat màxima!)</p>
-        </li>
+  <!-- ============================= -->
+  <!-- TEMA 6 -->
+  <!-- ============================= -->
+  <section id="tema6">
+    <h2>Tema 6 – RA6: Utilització del Model d’Objectes del Document (DOM)</h2>
+    <p><strong>Durada:</strong> 18 h</p>
+    <p><strong>Objectiu general:</strong> Manipular dinàmicament el contingut i l’estil d’una pàgina web amb el DOM.</p>
 
-        <li><a href="#t2_2">2.2 Components i recursos</a>
-          <p><em>Objectiu:</em> Gestionar fitxers, textos, icones, colors i estils
-            visuals.<br><strong>Pràctica:</strong> crear un tema personalitzat amb colors dinàmics i mode fosc. (🎨 Tot
-            té el seu lloc!)</p>
-        </li>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.1. Estructura del DOM i mètodes de selecció (getElementById,
+          querySelector)</a><br>
+        Estructura jeràrquica del DOM (nodes, elements, atributs). Mètodes de selecció i recorregut de nodes. Propietats
+        comunes.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.2. Modificació d’atributs, continguts i estils (innerHTML,
+          classList, style)</a><br>
+        Modificació d’atributs amb setAttribute, gestió d’estils i classes amb classList i style, actualització de
+        contingut textual i HTML.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.3. Creació i eliminació de nodes (createElement, appendChild,
+          removeChild)</a><br>
+        Generació, inserció i eliminació d’elements. Construcció dinàmica de contingut. Aplicació pràctica: CRUD sobre
+        DOM.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.4. Compatibilitat multi-navegador</a><br>
+        Diferències entre navegadors en la implementació del DOM i bones pràctiques per assegurar compatibilitat.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.5. Separació de capes (HTML/CSS/JS)</a><br>
+        Estructura organitzada del projecte amb separació d’estructura, estil i comportament.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">6.6. Pràctica final: CRUD sobre DOM</a><br>
+        Aplicació completa amb creació, lectura, actualització i eliminació d’elements. Documentació i depuració final
+        del projecte.
+      </li>
+    </ul>
+  </section>
 
-        <li><a href="#t2_3">2.3 UI i classes associades</a>
-          <p><em>Objectiu:</em> Relacionar disseny XML/Compose amb la lògica en Kotlin.<br><strong>Activitat:</strong>
-            dissenyar un formulari i vincular-lo a la classe MainActivity. (🧠 El cervell darrere del botó!)</p>
-        </li>
+  <!-- ============================= -->
+  <!-- TEMA 7 -->
+  <!-- ============================= -->
+  <section id="tema7">
+    <h2>Tema 7 – RA7: Desenvolupament d’aplicacions web dinàmiques amb comunicació asíncrona</h2>
+    <p><strong>Durada:</strong> 18 h</p>
+    <p><strong>Objectiu general:</strong> Implementar aplicacions web que intercanviïn dades amb el servidor mitjançant
+      mecanismes asíncrons.</p>
 
-        <li><a href="#t2_4">2.4 Context gràfic</a>
-          <p><em>Objectiu:</em> Utilitzar imatges, fons i estils visuals per millorar la
-            interfície.<br><strong>Pràctica:</strong> crear una splash screen amb un gradient animat. (🖼️ Estètica que
-            comunica!)</p>
-        </li>
+    <ul>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.1. Comunicació asíncrona: concepte i avantatges</a><br>
+        Concepte d’asincronia i diferències amb execució síncrona. Peticions HTTP GET i POST per comunicar client i
+        servidor.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.2. Fetch API i XMLHttpRequest</a><br>
+        Comparació entre Fetch API i XMLHttpRequest. Creació de peticions, tractament de respostes i gestió d’errors.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.3. Format JSON: parse i stringify</a><br>
+        Estructura i ús del format JSON. Conversió entre objectes JS i JSON. Lectura i visualització de dades remotes.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.4. Actualització dinàmica del DOM amb dades remotes</a><br>
+        Inserció i actualització de contingut al DOM amb dades obtingudes del servidor. Processament amb map, filter,
+        forEach.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.5. Llibreries de suport (Axios, jQuery AJAX)</a><br>
+        Ús de llibreries per simplificar les crides HTTP (Axios, jQuery AJAX). Gestió d’errors amb try/catch.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.6. Asincronia amb TypeScript</a><br>
+        Integració de funcions asíncrones amb tipatge en TypeScript. Declaració de Promeses tipades i respostes segures.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.7. Connexió a MySQL via API</a><br>
+        Creació de rutes GET i POST, connexió amb bases de dades mitjançant API REST i middleware.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.8. Promeses i async/await</a><br>
+        Gestió avançada d’operacions asíncrones amb Promises i async/await. Ús de try/catch/finally per controlar
+        errors.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.9. JSON Server i simulació d’APIs REST</a><br>
+        Creació d’un servidor local amb JSON Server. Peticions CRUD (GET, POST, PUT, DELETE) i proves d’API.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.10. Introducció a Node.js i Express</a><br>
+        Conceptes bàsics de Node.js i Express per crear un backend senzill i connectar-lo amb el front-end.
+      </li>
+      <li>
+        <a href="#" class="subtema" target="_blank">7.11. Projecte final integrador CRUD + API REST</a><br>
+        Desenvolupament d’una aplicació completa amb Fetch/Axios i API REST (Node + Express). Gestió d’estat,
+        validacions i documentació final.
+      </li>
+    </ul>
+  </section>
 
-        <li><a href="#t2_5">2.5 Entrades i esdeveniments</a>
-          <p><em>Objectiu:</em> Gestionar tocs, gestos i entrades de l’usuari.<br><strong>Pràctica:</strong> implementar
-            un botó interactiu amb efectes d’animació. (🖱️ Toca, gestiona, reacciona!)</p>
-        </li>
 
-        <li><a href="#t2_6">2.6 Preferències</a>
-          <p><em>Objectiu:</em> Desa configuracions personals de l’usuari amb SharedPreferences o
-            DataStore.<br><strong>Pràctica:</strong> crear un panell de configuració amb preferències persistents. (⚙️
-            Que l’app recordi per tu!)</p>
-        </li>
-
-        <li><a href="#t2_6_1">2.6.1 Persistència local</a>
-          <p><em>Objectiu:</em> Utilitzar SharedPreferences, DataStore i Room per desar dades localment i garantir la
-            persistència d’informació.<br><strong>Pràctica:</strong> Desenvolupament d’una app de notes amb
-            funcionalitats CRUD. (🗃️ Recordar és poder!)</p>
-        </li>
-
-        <li><a href="#t2_7">2.7 Bases de dades</a>
-          <p><em>Objectiu:</em> Implementar sistemes de persistència local amb SQLite i
-            Room.<br><strong>Pràctica:</strong> CRUD complet d’una app de notes. (🗃️ La memòria de l’app!)</p>
-        </li>
-
-        <li><a href="#t2_8">2.8 Tasques en segon pla</a>
-          <p><em>Objectiu:</em> Configurar serveis i processos que s’executen sense interferir amb
-            l’usuari.<br><strong>Pràctica:</strong> crear un servei que actualitzi dades automàticament. (🛠️ Treballa
-            sense fer soroll!)</p>
-        </li>
-
-        <li><a href="#t2_9">2.9 Seguretat i permisos</a>
-          <p><em>Objectiu:</em> Comprendre i aplicar els permisos de sistema.<br><strong>Pràctica:</strong> demanar
-            permís d’accés a la càmera i al micròfon. (🔐 El cadenat digital!)</p>
-        </li>
-
-        <li><a href="#t2_10">2.10 Connectivitat</a>
-          <p><em>Objectiu:</em> Gestionar connexions de xarxa (Wi-Fi, Bluetooth, API
-            REST).<br><strong>Pràctica:</strong> consumir una API REST amb Retrofit. (🌐 Connecta’t al món!)</p>
-        </li>
-
-        <li><a href="#t2_10_1">2.10.1 Connectivitat i serveis REST</a>
-          <p><em>Objectiu:</em> Integrar connexions amb APIs externes i serveis web mitjançant Retrofit.
-            <br><strong>Pràctica:</strong> Consultar dades JSON d’un servidor remot i mostrar-les a l’app.
-          </p>
-        </li>
-
-        <li><a href="#t2_10_2">2.10.2 Sensors i geolocalització</a>
-          <p><em>Objectiu:</em> Aplicar l’ús de sensors del dispositiu (GPS, acceleròmetre,
-            orientació).<br><strong>Pràctica:</strong> Crear una app amb seguiment de posició i moviment. (📍 Mou-te i
-            explora!)</p>
-        </li>
-
-        <li><a href="#t2_10_3">2.10.3 Comparació XML i Compose</a>
-          <p><em>Objectiu:</em> Comparar els enfocaments de disseny XML clàssic i Jetpack Compose per crear interfícies
-            modernes.<br><strong>Activitat:</strong> Reproduir una mateixa UI ambdós sistemes i analitzar diferències.
-            (⚖️ Tradició vs innovació!)</p>
-        </li>
-      </ul>
-    </details>
-
-    <!-- ===== TEMA 3 ===== -->
-    <details id="tema3">
-      <summary>📙 Tema 3 – Multimèdia</summary>
-      <p><strong>Objectiu:</strong> Integrar imatges, àudio, vídeo i animacions dins d’una aplicació Android per
-        enriquir la interacció amb l’usuari i millorar la seva experiència sensorial i visual.</p>
-      <ul>
-        <li><a href="#t3_1">3.1 Què és una app multimèdia?</a>
-          <p><em>Objectiu:</em> Comprendre què diferencia una app multimèdia d’una estàndard i com millorar-ne la
-            interacció.<br><strong>Activitat:</strong> Analitzar apps com Spotify o TikTok. (📺 Tot és més viu amb
-            multimèdia!)</p>
-        </li>
-
-        <li><a href="#t3_2">3.2 Arquitectura API multimèdia</a>
-          <p><em>Objectiu:</em> Entendre les APIs per gestionar àudio i vídeo.<br><strong>Pràctica:</strong> Ús de
-            MediaPlayer i AudioManager. (📐 L’esquelet de l’experiència!)</p>
-        </li>
-
-        <li><a href="#t3_3">3.3 Fonts de dades multimèdia</a>
-          <p><em>Objectiu:</em> Conèixer l’origen dels recursos multimèdia: locals, remots o
-            mixtes.<br><strong>Pràctica:</strong> Reproduir un vídeo allotjat en servidor. (🧭 Tota app té una font!)
-          </p>
-        </li>
-
-        <li><a href="#t3_3_1">3.3.1 Autenticació i núvol</a>
-          <p><em>Objectiu:</em> Connectar aplicacions amb serveis d’autenticació com Firebase o Google Sign-In i
-            gestionar dades al núvol.<br><strong>Pràctica:</strong> Crear login amb Firebase Authentication i
-            sincronització de dades. (☁️ Tot al núvol!)</p>
-        </li>
-
-        <li><a href="#t3_4">3.4 Processament multimèdia</a>
-          <p><em>Objectiu:</em> Aplicar tècniques bàsiques de processament d’imatges i
-            àudio.<br><strong>Pràctica:</strong> Convertir formats d’arxiu i filtrar àudio. (🎛️ Modifica i transforma!)
-          </p>
-        </li>
-
-        <li><a href="#t3_4_1">3.4.1 Fitxers multimèdia</a>
-          <p><em>Objectiu:</em> Gestionar arxius d’àudio, vídeo i imatges locals o remots, amb suport per a formats
-            múltiples.<br><strong>Pràctica:</strong> Crear una galeria multimèdia interactiva. (🖼️ Els teus records en
-            moviment!)</p>
-        </li>
-
-        <li><a href="#t3_5">3.5 Reproducció</a>
-          <p><em>Objectiu:</em> Integrar la reproducció de continguts dins de l’app.<br><strong>Pràctica:</strong>
-            Implementar un reproductor d’àudio amb controls. (▶️ Prepara les orelles!)</p>
-        </li>
-
-        <li><a href="#t3_6">3.6 Animacions</a>
-          <p><em>Objectiu:</em> Crear animacions per enriquir la interfície.<br><strong>Pràctica:</strong> Animar botons
-            amb Lottie i transicions en Compose. (🎬 Moure és comunicar!)</p>
-        </li>
-
-        <li><a href="#t3_6_1">3.6.1 Animacions en Compose o XML</a>
-          <p><em>Objectiu:</em> Dominar la creació d’animacions tant en XML (MotionLayout) com amb Compose Animation
-            API.<br><strong>Pràctica:</strong> Crear animacions fluides d’entrada i sortida. (✨ Donar vida a la UI!)</p>
-        </li>
-      </ul>
-    </details>
-    <!-- ===== TEMA 4 ===== -->
-    <details id="tema4">
-      <summary>📒 Tema 4 – Motors de jocs</summary>
-      <p><strong>Objectiu:</strong> Conèixer els motors de jocs i les seves eines per crear entorns interactius en 2D i
-        3D. Es treballarà amb engines com Unity, Godot o frameworks com LibGDX.</p>
-      <ul>
-        <li><a href="#t4_1">4.1 Animació 2D/3D</a>
-          <p><em>Objectiu:</em> Diferenciar entre animació 2D i 3D i les seves tècniques.<br><strong>Pràctica:</strong>
-            Animar un personatge simple. (🌀 Tot comença amb moviment!)</p>
-        </li>
-
-        <li><a href="#t4_2">4.2 Arquitectura del joc</a>
-          <p><em>Objectiu:</em> Comprendre com es compon un joc: motor gràfic, física, àudio,
-            IA.<br><strong>Activitat:</strong> Esquematitzar el funcionament intern d’un joc. (🏗️ Tot joc és una
-            construcció!)</p>
-        </li>
-
-        <li><a href="#t4_2_1">4.2.1 Arquitectura de jocs</a>
-          <p><em>Objectiu:</em> Analitzar els components interns d’un motor de joc: renderitzat, física, IA i flux
-            d’execució.<br><strong>Pràctica:</strong> Crear un diagrama funcional d’un motor senzill. (⚙️ La màgia
-            darrere del joc!)</p>
-        </li>
-
-        <li><a href="#t4_3">4.3 Motors de jocs</a>
-          <p><em>Objectiu:</em> Analitzar motors populars com Unity i Godot.<br><strong>Pràctica:</strong> Crear una
-            escena bàsica amb moviment. (⚙️ La màquina que mou la màgia!)</p>
-        </li>
-
-        <li><a href="#t4_3_1">4.3.1 Motors de desenvolupament</a>
-          <p><em>Objectiu:</em> Explorar motors de desenvolupament com Unity, Godot o LibGDX, comparant funcionalitats i
-            llenguatges.<br><strong>Pràctica:</strong> Crear un mini joc 2D en cadascun per comparar resultats. (🎮
-            Diversió multiplataforma!)</p>
-        </li>
-
-        <li><a href="#t4_4">4.4 Llibreries i llenguatges</a>
-          <p><em>Objectiu:</em> Explorar llenguatges i frameworks per a jocs.<br><strong>Pràctica:</strong> Ús de LibGDX
-            o Kotlin Game Engine. (📚 La caixa d’eines del gamer dev!)</p>
-        </li>
-
-        <li><a href="#t4_5">4.5 Components d’un motor</a>
-          <p><em>Objectiu:</em> Identificar les parts d’un motor de joc i la seva
-            interacció.<br><strong>Activitat:</strong> Crear un mapa conceptual del motor. (🧩 Tots els engranatges!)
-          </p>
-        </li>
-
-        <li><a href="#t4_6">4.6 Llibreries per jocs 2D/3D</a>
-          <p><em>Objectiu:</em> Conèixer les llibreries de suport per accelerar el
-            desenvolupament.<br><strong>Pràctica:</strong> Crear un mini entorn 2D amb sprites. (💾 Codis màgics!)</p>
-        </li>
-
-        <li><a href="#t4_7">4.7 Estudi de jocs</a>
-          <p><em>Objectiu:</em> Analitzar jocs existents per comprendre bones pràctiques de disseny i
-            mecàniques.<br><strong>Activitat:</strong> Anàlisi d’un joc conegut. (🔍 Aprèn dels mestres!)</p>
-        </li>
-      </ul>
-    </details>
-
-    <!-- ===== TEMA 5 ===== -->
-    <details id="tema5">
-      <summary>📕 Tema 5 – Desenvolupament de jocs mòbils</summary>
-      <p><strong>Objectiu:</strong> Crear jocs senzills per Android aplicant conceptes de programació, àudio, càmeres,
-        escenes i optimització. Es farà èmfasi en el flux complet de desenvolupament: del concepte al prototip final.
-      </p>
-      <ul>
-        <li><a href="#t5_1">5.1 Programació 2D/3D</a>
-          <p><em>Objectiu:</em> Codificar les bases d’un joc en 2D o 3D.<br><strong>Pràctica:</strong> Moviment de
-            personatge i col·lisions bàsiques. (🎮 El teu primer joc t’espera!)</p>
-        </li>
-
-        <li><a href="#t5_1_1">5.1.1 Joc arcade 2D</a>
-          <p><em>Objectiu:</em> Desenvolupar un joc senzill tipus arcade utilitzant Canvas o un motor
-            lleuger.<br><strong>Pràctica:</strong> Implementar moviment, puntuació i final de partida. (🕹️ Arcade
-            revival!)</p>
-        </li>
-
-        <li><a href="#t5_2">5.2 Fases de desenvolupament</a>
-          <p><em>Objectiu:</em> Entendre les etapes: idea, prototip, producció, test i
-            publicació.<br><strong>Activitat:</strong> Planificar un petit projecte de joc. (🗺️ Un viatge de zero a
-            joc!)</p>
-        </li>
-
-        <li><a href="#t5_3">5.3 Materials i textures</a>
-          <p><em>Objectiu:</em> Gestionar elements visuals i materials dins del motor.<br><strong>Pràctica:</strong>
-            Aplicar textures i reflexos. (🎨 Pinta el teu món!)</p>
-        </li>
-
-        <li><a href="#t5_4">5.4 Fonts d’àudio</a>
-          <p><em>Objectiu:</em> Afegir efectes i música d’ambient.<br><strong>Pràctica:</strong> Implementar efectes de
-            so al joc. (🎧 Que soni l’acció!)</p>
-        </li>
-
-        <li><a href="#t5_5">5.5 Càmeres i llum</a>
-          <p><em>Objectiu:</em> Configurar càmeres i fonts de llum dins de l’escena.<br><strong>Pràctica:</strong>
-            Controlar la visió del jugador. (📷 Veuràs el teu univers!)</p>
-        </li>
-
-        <li><a href="#t5_6">5.6 Escenes i jerarquia</a>
-          <p><em>Objectiu:</em> Organitzar elements visuals i jerarquies de joc.<br><strong>Pràctica:</strong> Definir
-            nodes i subnodes d’escena. (🗂️ Tot al seu lloc!)</p>
-        </li>
-
-        <li><a href="#t5_6_1">5.6.1 Joc de plataformes</a>
-          <p><em>Objectiu:</em> Desenvolupar un joc de plataformes amb salts, obstacles i punts de
-            control.<br><strong>Pràctica:</strong> Crear un nivell complet amb física bàsica. (🏃‍♂️ Corre i salta!)</p>
-        </li>
-
-        <li><a href="#t5_7">5.7 Optimització</a>
-          <p><em>Objectiu:</em> Millorar el rendiment i la fluïdesa de les aplicacions.<br><strong>Pràctica:</strong> Ús
-            de GPU profiler i reducció de càrregues. (🚀 Que vagi com un coet!)</p>
-        </li>
-
-        <li><a href="#t5_7_1">5.7.1 Joc multiplataforma</a>
-          <p><em>Objectiu:</em> Publicar i optimitzar el joc per a diverses plataformes mòbils i
-            desktop.<br><strong>Pràctica:</strong> Exportació d’un projecte Unity o Godot a Android i WebGL. (🌍 Un sol
-            joc, molts mons!)</p>
-        </li>
-      </ul>
-    </details>
-
-  </main>
+  <button class="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
   <footer>
-    © 2025-2026 Institut Puig Castellar – Material Didàctic.<br>
-    💚 May the Code Be With You · Wubba Lubba Dub Code · Bazinga!
+    Material didàctic d’ús docent · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
   </footer>
-
   <script defer src="contenido.js"></script>
 </body>
 
