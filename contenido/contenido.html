@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAM0489 – Programació multimèdia i dispositius mòbils</title>
+  <link rel="stylesheet" href="contenido.css">
+
+</head>
+
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo del mòdul" class="logo">
+    <h1>📘 DAM0489 – Programació multimèdia i dispositius mòbils</h1>
+
+    <svg viewBox="0 0 24 24" fill="none">
+      <path fill="white"
+        d="M12 2c-1.1 0-2 .9-2 2v1H8v2h8V5h-2V4c0-1.1-.9-2-2-2zM5 9v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V9H5zm3 3h2v5H8v-5zm6 0h2v5h-2v-5z" />
+    </svg>
+  </header>
+
+  <nav>
+    <a href="#inici">🏠 Inici</a>
+    <a href="#tema1">Tema 1</a>
+    <a href="#tema2">Tema 2</a>
+    <a href="#tema3">Tema 3</a>
+    <a href="#tema4">Tema 4</a>
+    <a href="#tema5">Tema 5</a>
+  </nav>
+
+  <main>
+    <section id="inici">
+      <h2>📘 DAM0489 – Programació multimèdia i dispositius mòbils</h2>
+      <p><strong>Descripció del mòdul:</strong> Aquest mòdul introdueix l’alumnat al desenvolupament d’aplicacions
+        multimèdia i mòbils per a Android, combinant coneixements de programació, interfícies d’usuari, persistència de
+        dades, connectivitat i jocs. Es treballa tant el disseny visual com la lògica funcional i la integració amb
+        l’ecosistema Android Studio.</p>
+      <p><strong>Objectius generals:</strong></p>
+      <ul>
+        <li>Instal·lar i configurar entorns de desenvolupament Android.</li>
+        <li>Dissenyar interfícies gràfiques modernes i accessibles.</li>
+        <li>Gestionar dades locals i remotes amb persistència segura.</li>
+        <li>Integrar elements multimèdia: àudio, vídeo i animacions.</li>
+        <li>Desenvolupar jocs senzills en 2D i 3D per a dispositius mòbils.</li>
+      </ul>
+      <p><em>Durada:</em> 99 hores · <em>Modalitat:</em> presencial · <em>Curs:</em> 2025-2026</p>
+    </section>
+
+    <!-- ===== TEMA 1 ===== -->
+    <details id="tema1" open>
+      <summary>📂 Tema 1 – Entorns de desenvolupament</summary>
+      <p><strong>Objectiu:</strong> Aprendre com instal·lar, configurar i utilitzar entorns per desenvolupar aplicacions
+        mòbils Android. L’alumnat coneixerà les eines bàsiques del desenvolupament mòbil i comprendrà la seva integració
+        amb l’ecosistema Android Studio i AVD.</p>
+      <ul>
+        <li><a href="#t1_1">1.1 Dispositius mòbils. Evolució. Tipus. Característiques.</a>
+          <p><em>Objectiu:</em> Conèixer l’evolució històrica dels dispositius mòbils i les seves categories. Es veurà
+            com les limitacions de maquinari condicionen el disseny d’aplicacions.<br><strong>Activitat:</strong> línia
+            del temps interactiva d’Android i iOS. (📱 El futur cap a la butxaca!)</p>
+        </li>
+
+        <li><a href="#t1_2">1.2 Maquinari per a dispositius mòbils</a>
+          <p><em>Objectiu:</em> Estudiar components com pantalla, CPU, GPU, memòria, sensors i bateria. S’analitzarà com
+            aquests influeixen en el rendiment i l’eficiència d’una app.<br><strong>Pràctica:</strong> comparació de
+            dispositius amb CPU-Z. (🔧 Coneix el teu aliat invisible!)</p>
+        </li>
+
+        <li><a href="#t1_3">1.3 Tecnologies de desenvolupament</a>
+          <p><em>Objectiu:</em> Distingir entre desenvolupament natiu i multiplataforma (Kotlin, Flutter, React Native).
+            L’alumnat decidirà quina tecnologia s’adapta millor a cada projecte.<br><strong>Debat:</strong> “Natiu o
+            híbrids?”. (🛠️ Tria la teva arma de programació!)</p>
+        </li>
+
+        <li><a href="#t1_4">1.4 Emuladors</a>
+          <p><em>Objectiu:</em> Configurar i utilitzar emuladors d’Android Studio per provar aplicacions en dispositius
+            virtuals. Es practicarà amb diferents resolucions i versions d’API.<br><strong>Pràctica:</strong> crear i
+            personalitzar un AVD. (🎮 Els teus laboratoris digitals!)</p>
+        </li>
+
+        <li><a href="#t1_5">1.5 Aplicacions mòbils. Estructura.</a>
+          <p><em>Objectiu:</em> Analitzar l’estructura d’un projecte Android (manifests, recursos, classes, layouts).
+            S’aprendrà com Android Studio organitza fitxers i carpetes.<br><strong>Activitat:</strong> esquema visual de
+            carpetes. (🧩 Tot encaixa com un puzzle!)</p>
+        </li>
+
+        <li><a href="#t1_5_1">1.5.1 Layouts i activitats (XML + Kotlin)</a>
+          <p><em>Objectiu:</em> Crear interfícies XML vinculades a la lògica en Kotlin i provar-les en
+            emulador.<br><strong>Pràctica:</strong> dissenyar una pantalla base buida amb interacció bàsica.</p>
+        </li>
+
+        <li><a href="#t1_6">1.6 Model d’estats d’una aplicació</a>
+          <p><em>Objectiu:</em> Comprendre els estats d’execució d’una app (activa, pausa, aturada) i la seva gestió
+            mitjançant mètodes del cicle de vida.<br><strong>Activitat:</strong> registre a Logcat dels callbacks. (🔄
+            Tot canvia, però res desapareix!)</p>
+        </li>
+
+        <li><a href="#t1_7">1.7 Cicle de vida</a>
+          <p><em>Objectiu:</em> Identificar les fases d’una app des de la instal·lació fins a la desinstal·lació.
+            Aplicar els mètodes onCreate(), onResume(), onPause() i onDestroy().<br><strong>Pràctica:</strong>
+            monitorització en temps real. (🌱 Creix, viu i… evoluciona!)</p>
+        </li>
+
+        <li><a href="#t1_8">1.8 Modificació d’aplicacions</a>
+          <p><em>Objectiu:</em> Reutilitzar i adaptar aplicacions existents per aprendre bones pràctiques de
+            refactorització i compatibilitat amb noves API.<br><strong>Activitat:</strong> millorar una app antiga. (🔁
+            Reinventa allò que ja existeix!)</p>
+        </li>
+
+        <li><a href="#t1_8_1">1.8.1 Navegació i intents</a>
+          <p><em>Objectiu:</em> Implementar navegació entre pantalles, intents explícits i implícits, i el pas de dades
+            entre activitats.<br><strong>Pràctica:</strong> app amb dues pantalles connectades per intents.</p>
+        </li>
+
+        <li><a href="#t1_8_2">1.8.2 Anàlisi i modificació d’apps</a>
+          <p><em>Objectiu:</em> Revisar i millorar aplicacions existents aplicant bones pràctiques de manteniment i
+            actualització a noves API.<br><strong>Activitat:</strong> refactorització guiada d’una app exemple.</p>
+        </li>
+
+        <li><a href="#t1_9">1.9 Administrador d’aplicacions</a>
+          <p><em>Objectiu:</em> Entendre el paper del gestor d’aplicacions d’Android: permisos, processos i
+            optimització.<br><strong>Pràctica:</strong> anàlisi de consum i permisos. (🛡️ L’ordre dins del caos!)</p>
+        </li>
+      </ul>
+      <p><strong>Activitats finals:</strong> Recull de pràctiques: instal·lació d’Android Studio, configuració d’un AVD,
+        creació d’una app bàsica i prova de navegació entre pantalles.</p>
+    </details>
+
+    <!-- ===== TEMA 2 ===== -->
+    <details id="tema2">
+      <summary>📗 Tema 2 – Interfícies gràfiques i interacció</summary>
+      <p><strong>Objectiu:</strong> Dissenyar i programar interfícies gràfiques modernes i funcionals amb XML i Jetpack
+        Compose, entenent la importància de la usabilitat, el disseny responsive i l’accessibilitat. Es treballaran
+        conceptes d’UI/UX, arquitectura visual i gestió d’esdeveniments.</p>
+      <ul>
+        <li><a href="#t2_1">2.1 Eines i flux de treball</a>
+          <p><em>Objectiu:</em> Entendre el procés complet de creació d’una interfície: del prototip al codi
+            final.<br><strong>Pràctica:</strong> crear un wireframe a Figma i implementar-lo a Android Studio. (🔄 Un
+            bon flux = productivitat màxima!)</p>
+        </li>
+
+        <li><a href="#t2_2">2.2 Components i recursos</a>
+          <p><em>Objectiu:</em> Gestionar fitxers, textos, icones, colors i estils
+            visuals.<br><strong>Pràctica:</strong> crear un tema personalitzat amb colors dinàmics i mode fosc. (🎨 Tot
+            té el seu lloc!)</p>
+        </li>
+
+        <li><a href="#t2_3">2.3 UI i classes associades</a>
+          <p><em>Objectiu:</em> Relacionar disseny XML/Compose amb la lògica en Kotlin.<br><strong>Activitat:</strong>
+            dissenyar un formulari i vincular-lo a la classe MainActivity. (🧠 El cervell darrere del botó!)</p>
+        </li>
+
+        <li><a href="#t2_4">2.4 Context gràfic</a>
+          <p><em>Objectiu:</em> Utilitzar imatges, fons i estils visuals per millorar la
+            interfície.<br><strong>Pràctica:</strong> crear una splash screen amb un gradient animat. (🖼️ Estètica que
+            comunica!)</p>
+        </li>
+
+        <li><a href="#t2_5">2.5 Entrades i esdeveniments</a>
+          <p><em>Objectiu:</em> Gestionar tocs, gestos i entrades de l’usuari.<br><strong>Pràctica:</strong> implementar
+            un botó interactiu amb efectes d’animació. (🖱️ Toca, gestiona, reacciona!)</p>
+        </li>
+
+        <li><a href="#t2_6">2.6 Preferències</a>
+          <p><em>Objectiu:</em> Desa configuracions personals de l’usuari amb SharedPreferences o
+            DataStore.<br><strong>Pràctica:</strong> crear un panell de configuració amb preferències persistents. (⚙️
+            Que l’app recordi per tu!)</p>
+        </li>
+
+        <li><a href="#t2_6_1">2.6.1 Persistència local</a>
+          <p><em>Objectiu:</em> Utilitzar SharedPreferences, DataStore i Room per desar dades localment i garantir la
+            persistència d’informació.<br><strong>Pràctica:</strong> Desenvolupament d’una app de notes amb
+            funcionalitats CRUD. (🗃️ Recordar és poder!)</p>
+        </li>
+
+        <li><a href="#t2_7">2.7 Bases de dades</a>
+          <p><em>Objectiu:</em> Implementar sistemes de persistència local amb SQLite i
+            Room.<br><strong>Pràctica:</strong> CRUD complet d’una app de notes. (🗃️ La memòria de l’app!)</p>
+        </li>
+
+        <li><a href="#t2_8">2.8 Tasques en segon pla</a>
+          <p><em>Objectiu:</em> Configurar serveis i processos que s’executen sense interferir amb
+            l’usuari.<br><strong>Pràctica:</strong> crear un servei que actualitzi dades automàticament. (🛠️ Treballa
+            sense fer soroll!)</p>
+        </li>
+
+        <li><a href="#t2_9">2.9 Seguretat i permisos</a>
+          <p><em>Objectiu:</em> Comprendre i aplicar els permisos de sistema.<br><strong>Pràctica:</strong> demanar
+            permís d’accés a la càmera i al micròfon. (🔐 El cadenat digital!)</p>
+        </li>
+
+        <li><a href="#t2_10">2.10 Connectivitat</a>
+          <p><em>Objectiu:</em> Gestionar connexions de xarxa (Wi-Fi, Bluetooth, API
+            REST).<br><strong>Pràctica:</strong> consumir una API REST amb Retrofit. (🌐 Connecta’t al món!)</p>
+        </li>
+
+        <li><a href="#t2_10_1">2.10.1 Connectivitat i serveis REST</a>
+          <p><em>Objectiu:</em> Integrar connexions amb APIs externes i serveis web mitjançant Retrofit.
+            <br><strong>Pràctica:</strong> Consultar dades JSON d’un servidor remot i mostrar-les a l’app.</p>
+        </li>
+
+        <li><a href="#t2_10_2">2.10.2 Sensors i geolocalització</a>
+          <p><em>Objectiu:</em> Aplicar l’ús de sensors del dispositiu (GPS, acceleròmetre,
+            orientació).<br><strong>Pràctica:</strong> Crear una app amb seguiment de posició i moviment. (📍 Mou-te i
+            explora!)</p>
+        </li>
+
+        <li><a href="#t2_10_3">2.10.3 Comparació XML i Compose</a>
+          <p><em>Objectiu:</em> Comparar els enfocaments de disseny XML clàssic i Jetpack Compose per crear interfícies
+            modernes.<br><strong>Activitat:</strong> Reproduir una mateixa UI ambdós sistemes i analitzar diferències.
+            (⚖️ Tradició vs innovació!)</p>
+        </li>
+      </ul>
+    </details>
+
+    <!-- ===== TEMA 3 ===== -->
+    <details id="tema3">
+      <summary>📙 Tema 3 – Multimèdia</summary>
+      <p><strong>Objectiu:</strong> Integrar imatges, àudio, vídeo i animacions dins d’una aplicació Android per
+        enriquir la interacció amb l’usuari i millorar la seva experiència sensorial i visual.</p>
+      <ul>
+        <li><a href="#t3_1">3.1 Què és una app multimèdia?</a>
+          <p><em>Objectiu:</em> Comprendre què diferencia una app multimèdia d’una estàndard i com millorar-ne la
+            interacció.<br><strong>Activitat:</strong> Analitzar apps com Spotify o TikTok. (📺 Tot és més viu amb
+            multimèdia!)</p>
+        </li>
+
+        <li><a href="#t3_2">3.2 Arquitectura API multimèdia</a>
+          <p><em>Objectiu:</em> Entendre les APIs per gestionar àudio i vídeo.<br><strong>Pràctica:</strong> Ús de
+            MediaPlayer i AudioManager. (📐 L’esquelet de l’experiència!)</p>
+        </li>
+
+        <li><a href="#t3_3">3.3 Fonts de dades multimèdia</a>
+          <p><em>Objectiu:</em> Conèixer l’origen dels recursos multimèdia: locals, remots o
+            mixtes.<br><strong>Pràctica:</strong> Reproduir un vídeo allotjat en servidor. (🧭 Tota app té una font!)
+          </p>
+        </li>
+
+        <li><a href="#t3_3_1">3.3.1 Autenticació i núvol</a>
+          <p><em>Objectiu:</em> Connectar aplicacions amb serveis d’autenticació com Firebase o Google Sign-In i
+            gestionar dades al núvol.<br><strong>Pràctica:</strong> Crear login amb Firebase Authentication i
+            sincronització de dades. (☁️ Tot al núvol!)</p>
+        </li>
+
+        <li><a href="#t3_4">3.4 Processament multimèdia</a>
+          <p><em>Objectiu:</em> Aplicar tècniques bàsiques de processament d’imatges i
+            àudio.<br><strong>Pràctica:</strong> Convertir formats d’arxiu i filtrar àudio. (🎛️ Modifica i transforma!)
+          </p>
+        </li>
+
+        <li><a href="#t3_4_1">3.4.1 Fitxers multimèdia</a>
+          <p><em>Objectiu:</em> Gestionar arxius d’àudio, vídeo i imatges locals o remots, amb suport per a formats
+            múltiples.<br><strong>Pràctica:</strong> Crear una galeria multimèdia interactiva. (🖼️ Els teus records en
+            moviment!)</p>
+        </li>
+
+        <li><a href="#t3_5">3.5 Reproducció</a>
+          <p><em>Objectiu:</em> Integrar la reproducció de continguts dins de l’app.<br><strong>Pràctica:</strong>
+            Implementar un reproductor d’àudio amb controls. (▶️ Prepara les orelles!)</p>
+        </li>
+
+        <li><a href="#t3_6">3.6 Animacions</a>
+          <p><em>Objectiu:</em> Crear animacions per enriquir la interfície.<br><strong>Pràctica:</strong> Animar botons
+            amb Lottie i transicions en Compose. (🎬 Moure és comunicar!)</p>
+        </li>
+
+        <li><a href="#t3_6_1">3.6.1 Animacions en Compose o XML</a>
+          <p><em>Objectiu:</em> Dominar la creació d’animacions tant en XML (MotionLayout) com amb Compose Animation
+            API.<br><strong>Pràctica:</strong> Crear animacions fluides d’entrada i sortida. (✨ Donar vida a la UI!)</p>
+        </li>
+      </ul>
+    </details>
+    <!-- ===== TEMA 4 ===== -->
+    <details id="tema4">
+      <summary>📒 Tema 4 – Motors de jocs</summary>
+      <p><strong>Objectiu:</strong> Conèixer els motors de jocs i les seves eines per crear entorns interactius en 2D i
+        3D. Es treballarà amb engines com Unity, Godot o frameworks com LibGDX.</p>
+      <ul>
+        <li><a href="#t4_1">4.1 Animació 2D/3D</a>
+          <p><em>Objectiu:</em> Diferenciar entre animació 2D i 3D i les seves tècniques.<br><strong>Pràctica:</strong>
+            Animar un personatge simple. (🌀 Tot comença amb moviment!)</p>
+        </li>
+
+        <li><a href="#t4_2">4.2 Arquitectura del joc</a>
+          <p><em>Objectiu:</em> Comprendre com es compon un joc: motor gràfic, física, àudio,
+            IA.<br><strong>Activitat:</strong> Esquematitzar el funcionament intern d’un joc. (🏗️ Tot joc és una
+            construcció!)</p>
+        </li>
+
+        <li><a href="#t4_2_1">4.2.1 Arquitectura de jocs</a>
+          <p><em>Objectiu:</em> Analitzar els components interns d’un motor de joc: renderitzat, física, IA i flux
+            d’execució.<br><strong>Pràctica:</strong> Crear un diagrama funcional d’un motor senzill. (⚙️ La màgia
+            darrere del joc!)</p>
+        </li>
+
+        <li><a href="#t4_3">4.3 Motors de jocs</a>
+          <p><em>Objectiu:</em> Analitzar motors populars com Unity i Godot.<br><strong>Pràctica:</strong> Crear una
+            escena bàsica amb moviment. (⚙️ La màquina que mou la màgia!)</p>
+        </li>
+
+        <li><a href="#t4_3_1">4.3.1 Motors de desenvolupament</a>
+          <p><em>Objectiu:</em> Explorar motors de desenvolupament com Unity, Godot o LibGDX, comparant funcionalitats i
+            llenguatges.<br><strong>Pràctica:</strong> Crear un mini joc 2D en cadascun per comparar resultats. (🎮
+            Diversió multiplataforma!)</p>
+        </li>
+
+        <li><a href="#t4_4">4.4 Llibreries i llenguatges</a>
+          <p><em>Objectiu:</em> Explorar llenguatges i frameworks per a jocs.<br><strong>Pràctica:</strong> Ús de LibGDX
+            o Kotlin Game Engine. (📚 La caixa d’eines del gamer dev!)</p>
+        </li>
+
+        <li><a href="#t4_5">4.5 Components d’un motor</a>
+          <p><em>Objectiu:</em> Identificar les parts d’un motor de joc i la seva
+            interacció.<br><strong>Activitat:</strong> Crear un mapa conceptual del motor. (🧩 Tots els engranatges!)
+          </p>
+        </li>
+
+        <li><a href="#t4_6">4.6 Llibreries per jocs 2D/3D</a>
+          <p><em>Objectiu:</em> Conèixer les llibreries de suport per accelerar el
+            desenvolupament.<br><strong>Pràctica:</strong> Crear un mini entorn 2D amb sprites. (💾 Codis màgics!)</p>
+        </li>
+
+        <li><a href="#t4_7">4.7 Estudi de jocs</a>
+          <p><em>Objectiu:</em> Analitzar jocs existents per comprendre bones pràctiques de disseny i
+            mecàniques.<br><strong>Activitat:</strong> Anàlisi d’un joc conegut. (🔍 Aprèn dels mestres!)</p>
+        </li>
+      </ul>
+    </details>
+
+    <!-- ===== TEMA 5 ===== -->
+    <details id="tema5">
+      <summary>📕 Tema 5 – Desenvolupament de jocs mòbils</summary>
+      <p><strong>Objectiu:</strong> Crear jocs senzills per Android aplicant conceptes de programació, àudio, càmeres,
+        escenes i optimització. Es farà èmfasi en el flux complet de desenvolupament: del concepte al prototip final.
+      </p>
+      <ul>
+        <li><a href="#t5_1">5.1 Programació 2D/3D</a>
+          <p><em>Objectiu:</em> Codificar les bases d’un joc en 2D o 3D.<br><strong>Pràctica:</strong> Moviment de
+            personatge i col·lisions bàsiques. (🎮 El teu primer joc t’espera!)</p>
+        </li>
+
+        <li><a href="#t5_1_1">5.1.1 Joc arcade 2D</a>
+          <p><em>Objectiu:</em> Desenvolupar un joc senzill tipus arcade utilitzant Canvas o un motor
+            lleuger.<br><strong>Pràctica:</strong> Implementar moviment, puntuació i final de partida. (🕹️ Arcade
+            revival!)</p>
+        </li>
+
+        <li><a href="#t5_2">5.2 Fases de desenvolupament</a>
+          <p><em>Objectiu:</em> Entendre les etapes: idea, prototip, producció, test i
+            publicació.<br><strong>Activitat:</strong> Planificar un petit projecte de joc. (🗺️ Un viatge de zero a
+            joc!)</p>
+        </li>
+
+        <li><a href="#t5_3">5.3 Materials i textures</a>
+          <p><em>Objectiu:</em> Gestionar elements visuals i materials dins del motor.<br><strong>Pràctica:</strong>
+            Aplicar textures i reflexos. (🎨 Pinta el teu món!)</p>
+        </li>
+
+        <li><a href="#t5_4">5.4 Fonts d’àudio</a>
+          <p><em>Objectiu:</em> Afegir efectes i música d’ambient.<br><strong>Pràctica:</strong> Implementar efectes de
+            so al joc. (🎧 Que soni l’acció!)</p>
+        </li>
+
+        <li><a href="#t5_5">5.5 Càmeres i llum</a>
+          <p><em>Objectiu:</em> Configurar càmeres i fonts de llum dins de l’escena.<br><strong>Pràctica:</strong>
+            Controlar la visió del jugador. (📷 Veuràs el teu univers!)</p>
+        </li>
+
+        <li><a href="#t5_6">5.6 Escenes i jerarquia</a>
+          <p><em>Objectiu:</em> Organitzar elements visuals i jerarquies de joc.<br><strong>Pràctica:</strong> Definir
+            nodes i subnodes d’escena. (🗂️ Tot al seu lloc!)</p>
+        </li>
+
+        <li><a href="#t5_6_1">5.6.1 Joc de plataformes</a>
+          <p><em>Objectiu:</em> Desenvolupar un joc de plataformes amb salts, obstacles i punts de
+            control.<br><strong>Pràctica:</strong> Crear un nivell complet amb física bàsica. (🏃‍♂️ Corre i salta!)</p>
+        </li>
+
+        <li><a href="#t5_7">5.7 Optimització</a>
+          <p><em>Objectiu:</em> Millorar el rendiment i la fluïdesa de les aplicacions.<br><strong>Pràctica:</strong> Ús
+            de GPU profiler i reducció de càrregues. (🚀 Que vagi com un coet!)</p>
+        </li>
+
+        <li><a href="#t5_7_1">5.7.1 Joc multiplataforma</a>
+          <p><em>Objectiu:</em> Publicar i optimitzar el joc per a diverses plataformes mòbils i
+            desktop.<br><strong>Pràctica:</strong> Exportació d’un projecte Unity o Godot a Android i WebGL. (🌍 Un sol
+            joc, molts mons!)</p>
+        </li>
+      </ul>
+    </details>
+
+  </main>
+
+  <footer>
+    © 2025-2026 Institut Puig Castellar – Material Didàctic.<br>
+    💚 May the Code Be With You · Wubba Lubba Dub Code · Bazinga!
+  </footer>
+
+  <script defer src="contenido.js"></script>
+</body>
+
+</html>

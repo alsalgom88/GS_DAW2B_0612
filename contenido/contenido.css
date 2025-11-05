@@ -1,0 +1,113 @@
+:root {
+  --bg: #f6f8fa;
+  --fg: #111;
+  --accent: #00c853;
+  --accent2: #00bfa5;
+  --menu-bg: #004d40;
+  --shadow: rgba(0,0,0,0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d0d;
+    --fg: #eaeaea;
+    --menu-bg: #00251a;
+    --shadow: rgba(255,255,255,0.1);
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  animation: fadeIn 2s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,255,128,.1) 2px 4px),
+    repeating-linear-gradient(90deg, transparent 0 2px, rgba(0,255,128,.08) 2px 4px);
+  animation: flicker 3s linear infinite alternate;
+  opacity: .2;
+}
+
+@keyframes flicker { from {opacity:.1;} to {opacity:.25;} }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  box-shadow: 0 4px 10px var(--shadow);
+  z-index: 1000;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+
+nav {
+  position: fixed;
+  top: 62px; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: var(--menu-bg);
+  padding: 10px;
+  z-index: 999;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: var(--accent);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 3px 6px var(--shadow);
+  transition: all .3s;
+}
+nav a:hover { background: var(--accent2); transform: translateY(-2px); }
+nav a.active { background: var(--accent2); box-shadow: 0 0 10px var(--accent); }
+
+main {
+  max-width: 1000px;
+  margin: 150px auto 80px;
+  padding: 0 18px;
+}
+
+details {
+  margin: 18px 0;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  overflow: hidden;
+}
+summary {
+  cursor: pointer;
+  background: rgba(0,255,128,0.1);
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+details[open] summary { background: rgba(0,25
