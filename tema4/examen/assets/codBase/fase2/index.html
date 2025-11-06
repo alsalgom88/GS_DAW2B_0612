@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Fase 2 — Aplicació web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Fase 2 — Gestió de vendes setmanals</h1>
+  <p>💻 Ara farem servir inputs, botons i el DOM per crear una miniaplicació web.</p>
+
+  <section>
+    <label>Nom del venedor: <input id="nom"></label>
+    <label>Import total de vendes (€): <input id="vendes" type="number" min="0"></label>
+    <label>Objectiu setmanal (€): <input id="objectiu" type="number" min="0"></label>
+    <button id="btnAfegir">Afegir venedor</button>
+    <button id="btnResum">Mostrar resum</button>
+
+    <div id="missatge" class="resultat"></div>
+    <div id="sortida" class="resultat"></div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

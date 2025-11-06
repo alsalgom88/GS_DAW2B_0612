@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💼 Examen NF2 — 2DAW A | Tema 2: Sintaxi bàsica de JavaScript</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9fafb;
+      color: #1e293b;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    section {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+    h1, h2, h3 {
+      color: #1e3a8a;
+    }
+    code, pre {
+      background: #f3f4f6;
+      padding: 10px;
+      border-radius: 8px;
+      display: block;
+      white-space: pre-wrap;
+    }
+    ul { margin-left: 20px; }
+    .nota {
+      background: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .btn:hover { background: #1e40af; }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #f1f5f9;
+      font-size: 0.9em;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💼 Examen NF2 — 2DAW A</h1>
+    <p>Tema 2: Sintaxi bàsica de JavaScript</p>
+  </header>
+
+  <main>
+
+    <!-- OBJECTIU -->
+    <section>
+      <h2>🎯 Objectiu general</h2>
+      <p>
+        Desenvolupar una <strong>miniaplicació web</strong> que permeti gestionar els <strong>torns de treballadors</strong> d’una empresa,
+        aplicant la sintaxi bàsica de JavaScript: declaració de variables i constants, operadors, condicions, bucles,
+        tractament d’errors i bones pràctiques de codi.
+      </p>
+      <p>
+        El projecte s’ha de fer amb <strong>HTML, CSS i JavaScript pur</strong> (sense frameworks).
+        Tot el codi ha de ser propi, clar i comentat.
+      </p>
+    </section>
+
+    <!-- ESTRUCTURA -->
+    <section>
+      <h2>📦 Estructura del projecte</h2>
+      <pre><code>ExamenNF2_2DAWA_CognomNom/
+├── fase1/
+│   ├── index.html
+│   ├── style.css
+│   └── main.js
+├── fase1_5/
+│   ├── index.html
+│   ├── style.css
+│   └── main.js
+├── fase2/
+│   ├── index.html
+│   ├── style.css
+│   └── main.js
+└── notes.txt</code></pre>
+      <div class="nota">Cada fase amplia l’anterior amb noves funcionalitats i millora el codi.</div>
+    </section>
+
+    <!-- FASE 1 -->
+    <section>
+      <h2>🧩 Fase 1 — Variables i càlculs bàsics</h2>
+      <p><strong>Objectiu:</strong> treballar amb variables, constants, operadors i validacions bàsiques amb <code>prompt()</code> i <code>alert()</code>.</p>
+
+      <h3>🪜 Passos a seguir:</h3>
+      <ul>
+        <li>Demanar <strong>nom, hores treballades i tarifa per hora</strong> amb <code>prompt()</code>.</li>
+        <li>Convertir valors amb <code>Number()</code> i comprovar si són vàlids.</li>
+        <li>Calcular el <strong>sou setmanal</strong> (<code>hores * tarifa</code>).</li>
+        <li>Mostrar els resultats amb <code>alert()</code> i <code>console.log()</code>.</li>
+        <li>Si supera les 40 hores, indicar que ha fet hores extres.</li>
+      </ul>
+
+      <h3>📄 Codi base</h3>
+      <pre><code>'use strict';
+
+const nom = prompt("Nom del treballador:");
+const hores = Number(prompt("Hores treballades:"));
+const tarifa = Number(prompt("Tarifa per hora (€):"));
+
+if (!nom || isNaN(hores) || isNaN(tarifa) || hores <= 0 || tarifa <= 0) {
+  alert("❌ Dades incorrectes! Torna-ho a provar.");
+  throw new Error("Dades no vàlides");
+}
+
+const sou = hores * tarifa;
+const missatge = hores > 40
+  ? `✅ ${nom} ha fet hores extres!\nSou total: ${sou.toFixed(2)} €`
+  : `ℹ️ ${nom} no ha fet hores extres.\nSou total: ${sou.toFixed(2)} €`;
+
+alert(missatge);
+console.log(missatge);</code></pre>
+    </section>
+
+    <!-- FASE 1.5 -->
+    <section>
+      <h2>🧩 Fase 1.5 — Diversos treballadors amb bucle i arrays</h2>
+      <p><strong>Objectiu:</strong> repetir la fase 1 per a diversos treballadors utilitzant bucles i arrays.</p>
+
+      <h3>🪜 Passos a seguir:</h3>
+      <ul>
+        <li>Demanar amb <code>prompt()</code> quants treballadors vols afegir.</li>
+        <li>Usar un <code>for</code> per repetir la lectura de dades.</li>
+        <li>Guardar cada treballador dins un array <code>treballadors</code> com a objecte <code>{ nom, hores, sou }</code>.</li>
+        <li>Mostrar el resum a la consola amb mitjanes i hores extres.</li>
+      </ul>
+
+      <h3>📄 Codi base</h3>
+      <pre><code>'use strict';
+
+const treballadors = [];
+const TARIFA_HORA = 15;
+
+const total = Number(prompt("Quants treballadors vols afegir?"));
+
+for (let i = 0; i < total; i++) {
+  const nom = prompt(`Nom del treballador ${i + 1}:`);
+  const hores = Number(prompt(`Hores treballades per ${nom}:`));
+
+  if (!nom || isNaN(hores) || hores < 0) {
+    alert(`❌ Dades incorrectes per ${nom || 'treballador desconegut'}`);
+    continue;
+  }
+
+  const sou = hores * TARIFA_HORA;
+  const horesExtres = hores > 40;
+  treballadors.push({ nom, hores, sou, horesExtres });
+}
+
+console.log("📋 Resum de treballadors:");
+for (const t of treballadors) {
+  console.log(`${t.nom}: ${t.hores}h → ${t.sou.toFixed(2)} € (${t.horesExtres ? 'Hores extres' : 'Normal'})`);
+}</code></pre>
+    </section>
+
+    <!-- FASE 2 -->
+    <section>
+      <h2>🧩 Fase 2 — Aplicació amb formulari HTML i DOM</h2>
+      <p><strong>Objectiu:</strong> capturar dades d’un formulari, validar-les i mostrar els resultats al DOM.</p>
+
+      <h3>🪜 Passos a seguir:</h3>
+      <ul>
+        <li>Dissenya un formulari amb <code>input</code> per nom i hores.</li>
+        <li>Crea botons per <strong>afegir</strong> i <strong>mostrar resum</strong>.</li>
+        <li>Utilitza <code>addEventListener</code> per controlar els clics.</li>
+        <li>Mostra errors i resultats dins del DOM amb <code>textContent</code>.</li>
+      </ul>
+
+      <h3>📄 Codi base</h3>
+      <pre><code>'use strict';
+const $ = (sel) => document.querySelector(sel);
+const treballadors = [];
+const TARIFA_HORA = 15;
+
+$('#btnAfegir').addEventListener('click', afegirTreballador);
+$('#btnResum').addEventListener('click', mostrarResum);
+
+function mostrarMissatge(text, esError = false) {
+  const box = $('#missatge');
+  box.textContent = text;
+  box.classList.toggle('error', esError);
+}
+
+function afegirTreballador() {
+  const nom = $('#nom').value.trim();
+  const hores = Number($('#hores').value);
+
+  if (!nom || isNaN(hores) || hores <= 0) {
+    mostrarMissatge("❌ Dades incorrectes.", true);
+    return;
+  }
+
+  const sou = hores * TARIFA_HORA;
+  const horesExtres = hores > 40;
+  treballadors.push({ nom, hores, sou, horesExtres });
+
+  mostrarMissatge(`✅ ${nom} afegit correctament.`);
+  $('#nom').value = '';
+  $('#hores').value = '';
+}
+
+function mostrarResum() {
+  if (treballadors.length === 0) {
+    mostrarMissatge("❌ Encara no hi ha treballadors.", true);
+    return;
+  }
+
+  let totalSou = 0;
+  let sortida = "📊 Resum de torns:\n\n";
+  for (const t of treballadors) {
+    sortida += `${t.nom}: ${t.hores}h → ${t.sou.toFixed(2)} € ${t.horesExtres ? '(🏆 Hores extres)' : ''}\n`;
+    totalSou += t.sou;
+  }
+
+  const mitjanaSou = totalSou / treballadors.length;
+  sortida += `\n💰 Sou mitjà: ${mitjanaSou.toFixed(2)} €`;
+
+  $('#sortida').textContent = sortida;
+}</code></pre>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section>
+      <h2>✅ Checklist abans d’entregar</h2>
+      <ul>
+        <li>El codi comença amb <code>'use strict';</code></li>
+        <li>No hi ha <code>var</code> ni <code>==</code>.</li>
+        <li>Les validacions funcionen correctament.</li>
+        <li>Hi ha comentaris al codi.</li>
+        <li>El fitxer <code>notes.txt</code> està complet amb reflexió.</li>
+        <li>HTML i CSS validats amb <a href="https://validator.w3.org/" target="_blank">W3C</a> i <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a>.</li>
+      </ul>
+      <p class="nota">
+        💡 Nom del fitxer final: <strong>ExamenNF2_2DAWA_CognomNom.zip</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Institut Puig Castellar · 2n DAW A · Mòdul 0612 — Desenvolupament Web en Entorn Client
+  </footer>
+
+</body>
+</html>

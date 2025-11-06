@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔍 SEO i metadades bàsiques -->
+  <title>Tema X · En construcció | Mòdul 0612 · Desenvolupament Web en Entorn Client</title>
+  <meta name="description" content="Pàgina temporal del Mòdul 0612 — Desenvolupament web en entorn client (DAW). Aquest tema està actualment en construcció.">
+  <meta name="author" content="Institut Puig Castellar · DAW">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#00ff9d">
+
+  <!-- 🧩 Tipografia i estils -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       💾 Pàgina de tema en construcció
+       Estil coherent amb el mòdul Matrix verd-neó
+       ========================================================= */
+
+    :root {
+      --verd-neon: #00ff9d;
+      --verd-clar: #a8ffdf;
+      --fons-fosc: #0a0f0d;
+      --text-clar: #e2e8f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: var(--fons-fosc);
+      color: var(--text-clar);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* 🌌 Efecte fons Matrix */
+    canvas#matrix-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background: var(--fons-fosc);
+      filter: brightness(0.6) saturate(0.8);
+    }
+
+    /* 🧩 Títol */
+    h1 {
+      color: var(--verd-neon);
+      font-size: 2em;
+      text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+      margin-bottom: 10px;
+      animation: flicker 3s infinite;
+    }
+
+    /* 💬 Text informatiu */
+    p {
+      color: var(--verd-clar);
+      font-size: 1em;
+      max-width: 650px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    /* ✨ Efecte parpelleig “neó” */
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.3; }
+    }
+
+    /* 🔙 Botó de retorn a l’inici */
+    a.btn-home {
+      display: inline-block;
+      background: rgba(0, 255, 153, 0.12);
+      border: 1px solid var(--verd-neon);
+      color: var(--verd-neon);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 0 12px rgba(0, 255, 153, 0.25);
+    }
+
+    a.btn-home:hover {
+      background: var(--verd-neon);
+      color: #0f172a;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* 📘 Peu de pàgina */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 8px;
+      color: var(--verd-clar);
+      font-size: 0.85em;
+      background: rgba(15, 23, 42, 0.8);
+      border-top: 1px solid rgba(0,255,153,0.3);
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 1.6em; }
+      p { font-size: 0.9em; padding: 0 10px; }
+      a.btn-home { font-size: 0.9em; padding: 8px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🌌 Fons Matrix -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- 🧱 Contingut central -->
+  <h1>🧩 Tema X – En construcció</h1>
+  <p>
+    Aquesta secció del <strong>Mòdul 0612 — Desenvolupament Web en Entorn Client</strong> 
+    encara està en procés de desenvolupament.  
+    Aviat trobaràs aquí el contingut complet del tema, amb exemples, activitats i exercicis pràctics. 🚧
+  </p>
+
+  <!-- 🔙 Botó per tornar a la portada del mòdul -->
+  <a href="https://alsalgom88.github.io/GS_DAW2A_0612/index.html" class="btn-home">← Tornar a l'inici</a>
+
+  <!-- 📘 Peu -->
+  <footer>
+    Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
+  </footer>
+</body>
+</html>

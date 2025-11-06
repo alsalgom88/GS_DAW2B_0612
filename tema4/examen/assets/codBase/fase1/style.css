@@ -1,0 +1,11 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 20px;
+  background: #f9fafb;
+  color: #0f172a;
+}
+h1 {
+  border-bottom: 3px solid #1e3a8a;
+  padding-bottom: 6px;
+}
+p { max-width: 600px; }
