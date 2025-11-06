@@ -39,106 +39,184 @@
   <!-- 📘 CONTINGUT PRINCIPAL -->
   <main>
 
-    <!-- 🧠 INTRODUCCIÓ -->
-    <section class="benvinguda">
-      <h2>🧠 Què són els objectes natius?</h2>
-      <p>
-        Els <strong>objectes natius</strong> són aquells que formen part del <em>nucli de JavaScript</em>.
-        No cal importar-los ni declarar-los: ja existeixen i estan disponibles per a tots els programes.
-        Ens permeten realitzar operacions bàsiques amb dades de text, números, dates i càlculs matemàtics.
-      </p>
+   <!-- 🧠 INTRODUCCIÓ ALS OBJECTES NATIUS -->
+<section class="benvinguda">
+  <h2>🧠 Què són els objectes natius?</h2>
+  <p>
+    Els <strong>objectes natius</strong> formen part del <em>nucli del llenguatge JavaScript</em>.  
+    No cal importar-los ni declarar-los: ja estan disponibles automàticament en qualsevol programa.  
+    Gràcies a ells, JavaScript pot manipular i transformar dades de <strong>text</strong>, <strong>números</strong>,
+    <strong>dates</strong> o realitzar <strong>càlculs matemàtics</strong> sense necessitat de biblioteques externes.
+  </p>
 
-      <div class="consell-jedi">
-        💡 <em>“Conèixer els objectes natius és el primer pas per dominar la lògica interna de JavaScript.”</em>
-        <span class="firma-jedi">— Mestre del Codi</span>
-      </div>
-    </section>
+  <p>
+    Cada objecte natiu inclou un conjunt de <strong>propietats</strong> (informació o valors interns) i <strong>mètodes</strong> (accions que pot fer).  
+    Conèixer aquests objectes t’ajudarà a comprendre com pensa JavaScript i com manipula la informació que reps o generes dins d’un programa.
+  </p>
 
-    <!-- 🧩 STRING -->
-    <section>
-      <h2>🔠 Objecte <code>String</code></h2>
-      <p>
-        L’objecte <code>String</code> representa cadenes de text. Inclou mètodes per modificar-les i analitzar-les.
-      </p>
-      <pre><code>
-// Exemple:
+  <div class="consell-jedi">
+    💡 <em>“Conèixer els objectes natius és el primer pas per dominar la lògica interna de JavaScript.”</em>
+    <span class="firma-jedi">— Mestre del Codi</span>
+  </div>
+</section>
+
+<!-- 🔠 OBJECTE STRING -->
+<section>
+  <h2>🔠 Objecte <code>String</code></h2>
+  <p>
+    L’objecte <code>String</code> representa una <strong>cadena de text</strong>.  
+    Permet analitzar, modificar i transformar paraules o frases de múltiples maneres.
+  </p>
+
+  <pre><code>
+// Exemple bàsic:
 const nom = "Puig Castellar";
-console.log(nom.length);         // Longitud
-console.log(nom.toUpperCase());  // En majúscules
-console.log(nom.includes("Cast")); // true
-      </code></pre>
-      <p>
-        Altres mètodes útils: <code>toLowerCase()</code>, <code>slice()</code>, <code>replace()</code>, <code>trim()</code>.
-      </p>
-    </section>
+console.log(nom.length);           // Mostra la longitud de la cadena
+console.log(nom.toUpperCase());    // Converteix tot el text a majúscules
+console.log(nom.includes("Cast")); // Retorna true si conté la paraula "Cast"
+  </code></pre>
 
-    <!-- 🔢 NUMBER -->
-    <section>
-      <h2>🔢 Objecte <code>Number</code></h2>
-      <p>
-        Representa valors numèrics i ofereix mètodes per convertir, arrodonir i formatar números.
-      </p>
-      <pre><code>
-// Exemple:
+  <p>
+    Altres mètodes habituals són:
+    <code>toLowerCase()</code> (minúscules),
+    <code>slice()</code> (retalla un fragment),
+    <code>replace()</code> (substitueix text),
+    i <code>trim()</code> (elimina espais en blanc).
+  </p>
+
+  <p>
+    🔍 <strong>Propietats destacades:</strong>  
+    <code>.length</code> (longitud del text)
+  </p>
+</section>
+
+<!-- 🔢 OBJECTE NUMBER -->
+<section>
+  <h2>🔢 Objecte <code>Number</code></h2>
+  <p>
+    Representa valors numèrics, ja siguin enters o decimals.  
+    Inclou mètodes per <strong>arrodonir, convertir i validar</strong> números.
+  </p>
+
+  <pre><code>
+// Exemple bàsic:
 const preu = 12.3456;
-console.log(preu.toFixed(2)); // "12.35"
-console.log(Number.isInteger(preu)); // false
-      </code></pre>
-      <p>
-        Altres mètodes: <code>parseInt()</code>, <code>parseFloat()</code>, <code>isNaN()</code>.
-      </p>
-    </section>
+console.log(preu.toFixed(2));          // Retorna "12.35" (2 decimals)
+console.log(Number.isInteger(preu));   // Retorna false, no és un enter
+  </code></pre>
 
-    <!-- 🧮 MATH -->
-    <section>
-      <h2>🧮 Objecte <code>Math</code></h2>
-      <p>
-        L’objecte <code>Math</code> conté funcions matemàtiques i constants.
-        S’utilitza per càlculs, arrodoniments i números aleatoris.
-      </p>
-      <pre><code>
-// Exemple:
-console.log(Math.PI);           // 3.14159
-console.log(Math.round(4.6));   // 5
-console.log(Math.random());     // Nombre aleatori entre 0 i 1
-      </code></pre>
-      <p>
-        Altres funcions útils: <code>Math.max()</code>, <code>Math.min()</code>, <code>Math.sqrt()</code>, <code>Math.pow()</code>.
-      </p>
-    </section>
+  <p>
+    Altres mètodes útils són:
+    <code>parseInt()</code> (converteix text a enter),
+    <code>parseFloat()</code> (converteix text a decimal),
+    i <code>isNaN()</code> (comprova si un valor “no és un número”).
+  </p>
 
-    <!-- 🗓️ DATE -->
-    <section>
-      <h2>🗓️ Objecte <code>Date</code></h2>
-      <p>
-        L’objecte <code>Date</code> s’utilitza per gestionar temps i dates. Pots obtenir el dia actual, calcular diferències o formatar dates.
-      </p>
-      <pre><code>
-// Exemple:
+  <p>
+    🔍 <strong>Propietats destacades:</strong>  
+    <code>Number.MAX_VALUE</code>, <code>Number.MIN_VALUE</code>, <code>Number.NaN</code>
+  </p>
+</section>
+
+<!-- 🧮 OBJECTE MATH -->
+<section>
+  <h2>🧮 Objecte <code>Math</code></h2>
+  <p>
+    L’objecte <code>Math</code> no és una classe, sinó un conjunt de funcions i constants matemàtiques.  
+    Permet fer càlculs, arrodoniments, generació de nombres aleatoris i molt més.
+  </p>
+
+  <pre><code>
+// Exemple bàsic:
+console.log(Math.PI);         // 3.1415926535
+console.log(Math.round(4.6)); // Arrodoneix a 5
+console.log(Math.random());   // Nombre aleatori entre 0 i 1
+  </code></pre>
+
+  <p>
+    Altres funcions comunes:
+    <code>Math.max()</code>, <code>Math.min()</code>,
+    <code>Math.sqrt()</code> (arrel quadrada),
+    <code>Math.pow(a,b)</code> (a elevat a b).
+  </p>
+
+  <p>
+    🔍 <strong>Propietats destacades:</strong>  
+    <code>Math.PI</code>, <code>Math.E</code>, <code>Math.LN2</code>
+  </p>
+</section>
+
+<!-- 🗓️ OBJECTE DATE -->
+<section>
+  <h2>🗓️ Objecte <code>Date</code></h2>
+  <p>
+    L’objecte <code>Date</code> ens permet treballar amb <strong>dates i hores</strong>.  
+    Es pot utilitzar per obtenir el moment actual, calcular diferències temporals o mostrar dates en diferents formats.
+  </p>
+
+  <pre><code>
+// Exemple bàsic:
 const avui = new Date();
-console.log(avui.toDateString()); // "Tue Nov 6 2025"
+console.log(avui.toDateString()); // Mostra la data en format llegible
 console.log(avui.getFullYear());  // Any actual
-      </code></pre>
-      <p>
-        Altres mètodes: <code>getMonth()</code>, <code>getDay()</code>, <code>setDate()</code>, <code>toLocaleDateString()</code>.
-      </p>
-    </section>
+  </code></pre>
 
-    <!-- 🧩 ACTIVITAT -->
-    <section class="activitat">
-      <h2>🧠 Activitat pràctica</h2>
-      <p>
-        ✍️ Escriu un programa que demani el teu nom i data de naixement.  
-        Mostra un missatge personalitzat amb:
-      </p>
-      <ul>
-        <li>El teu nom en majúscules (<code>String</code>).</li>
-        <li>La teva edat calculada amb <code>Date</code> i <code>Math.floor()</code>.</li>
-        <li>Un missatge final amb la data actual formatejada.</li>
-      </ul>
-      <p>
-        💡 Pots provar-ho a la consola del navegador o crear un petit <code>alert()</code> amb el resultat.
-      </p>
+  <p>
+    Altres mètodes útils:
+    <code>getMonth()</code> (0-11),
+    <code>getDay()</code> (dia de la setmana),
+    <code>setDate()</code> (modifica el dia),
+    i <code>toLocaleDateString()</code> (format localitzat).
+  </p>
+
+  <p>
+    🔍 <strong>Propietats destacades:</strong>  
+    <code>Date.now()</code> (temps actual en mil·lisegons)
+  </p>
+</section>
+
+<!-- 🧠 ACTIVITAT PRÀCTICA -->
+<section class="activitat">
+  <h2>🧩 Activitat pràctica guiada</h2>
+  <p>
+    Aquesta activitat té com a objectiu consolidar el coneixement dels objectes natius i aprendre a consultar la seva documentació.
+  </p>
+
+  <h3>📚 Pas 1 — Investigació</h3>
+  <p>
+    Accedeix a la documentació oficial de <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Reference/Global_Objects" target="_blank">MDN Web Docs</a> i busca:
+  </p>
+  <ul>
+    <li>Les <strong>propietats</strong> i <strong>mètodes</strong> principals dels objectes: <code>String</code>, <code>Number</code>, <code>Math</code> i <code>Date</code>.</li>
+    <li>Descriu breument per a què serveix cadascun i prova almenys dos exemples a la consola.</li>
+  </ul>
+
+  <h3>💻 Pas 2 — Mini repte de programació</h3>
+  <p>
+    Escriu un petit programa que demani el teu nom i la teva data de naixement, i que mostri:
+  </p>
+  <ol>
+    <li>El teu nom en majúscules (<code>String.toUpperCase()</code>).</li>
+    <li>La teva edat aproximada (calculada amb <code>Date</code> i <code>Math.floor()</code>).</li>
+    <li>La data actual en format llegible (<code>toLocaleDateString()</code>).</li>
+  </ol>
+
+  <pre><code>
+// Exemple orientatiu:
+const nom = prompt("Com et dius?");
+const dataNaix = prompt("Introdueix la teva data de naixement (YYYY-MM-DD):");
+const avui = new Date();
+const naixement = new Date(dataNaix);
+const edat = Math.floor((avui - naixement) / (1000 * 60 * 60 * 24 * 365));
+
+alert(`Hola ${nom.toUpperCase()}! Tens aproximadament ${edat} anys.
+Avui és ${avui.toLocaleDateString()}.`);
+  </code></pre>
+
+  <p>
+    💡 Pots fer les proves a la <strong>consola del navegador</strong> (F12 → Console) o utilitzant <code>alert()</code> per mostrar el resultat.
+  </p>
+</section>
     </section>
 
     <!-- 🔗 Tornar -->
