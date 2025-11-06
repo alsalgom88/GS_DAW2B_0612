@@ -42,30 +42,107 @@
     <a href="../index.html" class="btn-home" aria-label="Tornar a l’inici del curs">← Tornar a l’inici</a>
   </header>
 
-  <!-- 🧩 CONTINGUT -->
-  <main>
-    <section class="benvinguda">
-      <h2>🧠 Introducció</h2>
-      <p>
-        En aquest tercer tema ens centrarem en l’ús dels <strong>objectes predefinits del llenguatge JavaScript</strong> i com aquests ens permeten manipular
-        informació, treballar amb dades, temps, finestres i emmagatzematge local.  
-      </p>
-      <p>
-        L’objectiu és dominar les eines internes que ofereix JavaScript per construir aplicacions riques, dinàmiques i fiables dins del navegador.
-      </p>
-    </section>
+  
 
-    <!-- 🎯 OBJECTIUS -->
-    <section class="objectius">
-      <h2>🎯 Objectius específics</h2>
+  
+    <!-- 🧠 INTRODUCCIÓ -->
+<section class="benvinguda">
+  <h2>🧠 Introducció</h2>
+  <p>
+    En aquest <strong>tercer tema</strong> aprofundirem en un dels aspectes fonamentals del llenguatge 
+    <strong>JavaScript</strong>: els <strong>objectes predefinits o natius</strong>.
+    Aquests objectes formen part del <strong>nucli del llenguatge</strong> i ens ofereixen
+    funcionalitats essencials per treballar amb <em>textos, números, dates, operacions
+    matemàtiques, finestres del navegador</em> i <em>dades emmagatzemades localment</em>.
+  </p>
+
+  <p>
+    A diferència dels elements que creem nosaltres amb variables o funcions, aquests objectes 
+    ja venen incorporats en JavaScript, llestos per utilitzar-los. Per exemple:
+  </p>
+
+  <ul>
+    <li>
+      L’objecte <code>String</code> ens permet transformar i analitzar cadenes de text.
+    </li>
+    <li>
+      L’objecte <code>Math</code> ens ofereix funcions matemàtiques per a càlculs complexos.
+    </li>
+    <li>
+      L’objecte <code>Date</code> ens ajuda a gestionar hores, dies, mesos i anys automàticament.
+    </li>
+    <li>
+      Els objectes globals com <code>window</code>, <code>alert()</code> o <code>console</code> 
+      faciliten la comunicació amb l’usuari i el control del navegador.
+    </li>
+  </ul>
+
+  <p>
+    També explorarem <strong>l’emmagatzematge local</strong> com una eina per guardar preferències
+    o configuracions d’usuari sense necessitat de bases de dades, utilitzant 
+    <code>localStorage</code> i <code>sessionStorage</code>.
+  </p>
+
+  <p>
+    Finalment, introduirem <strong>bones pràctiques professionals</strong> com la gestió d’errors amb
+    <code>try...catch</code>, la depuració amb <strong>DevTools</strong> i la documentació amb 
+    <strong>JSDoc</strong>, que ens ajudaran a escriure un codi més segur, clar i mantenible.
+  </p>
+
+  <div class="consell-jedi" style="margin-top:20px;">
+    💡 <em>“Entendre els objectes de JavaScript és entendre l’essència del llenguatge. 
+    Amb ells pots crear, calcular i comunicar dins del navegador com un veritable desenvolupador.”</em>
+    <span class="firma-jedi">— Mestre del Codi</span>
+  </div>
+
+  <p>
+    🎓 En resum, aquest tema t’ajudarà a entendre com 
+    <strong>JavaScript “pensa i actua per dins”</strong>, 
+    donant-te el control sobre les seves eines internes per desenvolupar aplicacions web més completes i intel·ligents.
+  </p>
+</section>
+
+<!-- 🎯 OBJECTIUS ESPECÍFICS -->
+<section class="objectius">
+  <h2>🎯 Objectius específics</h2>
+  <ul>
+    <li>
+      <strong>Conèixer i utilitzar objectes natius</strong> com 
+      <code>String</code>, <code>Number</code>, <code>Math</code> i <code>Date</code>, 
+      aplicant-ne els principals mètodes i propietats per treballar amb dades de manera eficient.
+      <br>
+      <em>Exemple:</em> calcular l’edat d’una persona a partir de la seva data de naixement amb 
+      <code>Date</code> i <code>Math.floor()</code>.
+    </li>
+
+    <li>
+      <strong>Aplicar els objectes globals del navegador</strong> 
+      (<code>window</code>, <code>alert()</code>, <code>prompt()</code>, <code>confirm()</code>)
+      per crear interaccions bàsiques amb l’usuari i mostrar missatges informatius.
+    </li>
+
+    <li>
+      <strong>Aprendre a obrir i gestionar finestres emergents</strong> amb 
+      <code>window.open()</code>, i comunicar informació entre la pàgina principal i la finestra filla 
+      (relació <em>parent ↔ child</em>).
+    </li>
+
+    <li>
+      <strong>Fer servir l’emmagatzematge local</strong> amb 
+      <code>localStorage</code> i <code>sessionStorage</code> per desar informació com 
+      el nom de l’usuari, el color de tema o l’idioma preferit, mantenint la persistència entre sessions.
+    </li>
+
+    <li>
+      <strong>Millorar la qualitat i robustesa del codi</strong> mitjançant:
       <ul>
-        <li>Conèixer i utilitzar objectes natius com <code>String</code>, <code>Number</code>, <code>Math</code> i <code>Date</code>.</li>
-        <li>Aplicar objectes globals del navegador (<code>window</code>, <code>alert()</code>, <code>prompt()</code>, etc.).</li>
-        <li>Aprendre a obrir finestres i comunicar contingut entre pàgines amb <code>window.open()</code>.</li>
-        <li>Fer servir <strong>localStorage</strong> i <strong>sessionStorage</strong> per desar preferències d’usuari.</li>
-        <li>Millorar la qualitat del codi amb <strong>try...catch</strong>, <strong>errors personalitzats</strong> i <strong>JSDoc</strong>.</li>
+        <li>l’ús d’instruccions de control d’errors (<code>try...catch</code>, <code>throw</code>),</li>
+        <li>la depuració amb eines de navegador com <strong>Chrome DevTools</strong>,</li>
+        <li>i la documentació tècnica amb <strong>JSDoc</strong>, seguint les bones pràctiques del desenvolupament professional.</li>
       </ul>
-    </section>
+    </li>
+  </ul>
+</section>
 
     <!-- 💻 ESQUEMA VISUAL -->
     <section>
