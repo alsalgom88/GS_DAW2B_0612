@@ -3,100 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🧠 Tema 3 — RA3: Ús dels objectes predefinits del llenguatge</title>
+  <title>Tema 3 · RA3: Ús dels objectes predefinits del llenguatge | Mòdul 0612</title>
 
   <!-- 🔍 SEO -->
-  <meta name="description" content="Tema 3 — RA3 del mòdul 0612 de Desenvolupament Web en Entorn Client · Institut Puig Castellar. Objectes natius, globals, finestres, emmagatzematge i depuració en JavaScript." />
-  <meta name="keywords" content="JavaScript, Objectes, String, Number, Math, Date, Window, LocalStorage, DAW, Puig Castellar, Mòdul 0612" />
-  <meta name="author" content="Institut Puig Castellar · Departament d’Informàtica" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Tema 3 del Mòdul 0612 — Desenvolupament web en entorn client. Objectes natius, globals, finestres, emmagatzematge i depuració en JavaScript.">
+  <meta name="keywords" content="JavaScript, Objectes, String, Number, Math, Date, Window, LocalStorage, DAW, Puig Castellar, Mòdul 0612">
+  <meta name="author" content="Institut Puig Castellar · Departament d’Informàtica">
+  <meta name="theme-color" content="#00ff9d">
 
-  <!-- 🌈 Fonts i estils -->
-  
-  <link rel="stylesheet" href="style.css" />
+  <!-- 🧩 Fonts i estils -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- 🎬 CANVAS MATRIX -->
-  <canvas id="matrixCanvas"></canvas>
-  <!-- 🧭 HEADER FIX -->
-  <header class="header">
-    <div class="header-content">
-      <img src="./assets/logo.png" alt="Logo Institut Puig Castellar" class="logo" />
-      <div>
-        <h1>Institut Puig Castellar</h1>
-        <p>CFGS Desenvolupament d'Aplicacions Web</p>
-        <p class="modul">Mòdul 0612 · Desenvolupament Web en Entorn Client</p>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="#objectiu">Objectiu</a>
-      <a href="#subtemes">Subtemes</a>
-      <a href="#recursos">Recursos</a>
+  <!-- 🌌 Fons Matrix -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- 🧭 HEADER -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo Institut Puig Castellar" class="logo">
+    <h1>Institut Puig Castellar</h1>
+    <p>Cicle Formatiu de Grau Superior · Desenvolupament d’Aplicacions Web</p>
+    <h2 style="font-size:1.6em;margin-top:4px;">Tema 3 — RA3: Ús dels objectes predefinits del llenguatge</h2>
+
+    <!-- 🔗 Navegació -->
+    <nav class="menu-temes" aria-label="Subtemes del tema 3">
+      <a href="3.1_objectes_natius.html">3.1 Objectes natius</a>
+      <a href="3.2_objectes_globals.html">3.2 Objectes globals</a>
+      <a href="3.3_interaccio_usuari.html">3.3 Interacció amb l’usuari</a>
+      <a href="3.4_emmagatzematge_local.html">3.4 Emmagatzematge local</a>
+      <a href="3.5_metodes_avancats.html">3.5 Mètodes avançats i depuració</a>
+      <a href="examen/index.html" class="btn-examen">🧪 Examen del Tema 3</a>
     </nav>
+
+    <a href="../index.html" class="btn-home" aria-label="Tornar a l’inici del curs">← Tornar a l’inici</a>
   </header>
 
-
-
-  <!-- 📘 CONTINGUT PRINCIPAL -->
+  <!-- 🧩 CONTINGUT -->
   <main>
-    <section id="objectiu" class="intro">
-      <h2>🧠 Tema 3 — RA3: Ús dels objectes predefinits del llenguatge</h2>
+    <section class="benvinguda">
+      <h2>🧠 Introducció</h2>
       <p>
-        En aquest tema aprofundirem en l’ús dels <strong>objectes natius i globals de JavaScript</strong>,
-        aprenent a manipular dades, treballar amb temps, números, cadenes i dates, i a crear aplicacions
-        més dinàmiques i interactives amb l’usuari.
+        En aquest tercer tema ens centrarem en l’ús dels <strong>objectes predefinits del llenguatge JavaScript</strong> i com aquests ens permeten manipular
+        informació, treballar amb dades, temps, finestres i emmagatzematge local.  
       </p>
-      <div class="info-box">
-        <p><strong>Durada:</strong> 12 hores</p>
-        <p><strong>Objectiu general:</strong> Utilitzar objectes natius i globals del navegador per interactuar amb l’usuari i manipular contingut.</p>
-      </div>
+      <p>
+        L’objectiu és dominar les eines internes que ofereix JavaScript per construir aplicacions riques, dinàmiques i fiables dins del navegador.
+      </p>
     </section>
 
-    <section id="subtemes" class="subtemes">
-      <h3>📚 Estructura del Tema 3</h3>
-      <ul class="subtema-lista">
-        <li>
-          <a href="3.1_objectes_natius.html">🧩 3.1. Objectes natius: String, Number, Math, Date</a>
-          <p>Propietats i mètodes bàsics. Exercicis amb concatenació, càlculs i formats de data. Mini projecte: “Calculadora d’edat”.</p>
-        </li>
-        <li>
-          <a href="3.2_objectes_globals.html">🌐 3.2. Objectes globals: window, console, alert, prompt, confirm</a>
-          <p>Ús de finestres i mètodes globals del navegador. Exercici: “Test interactiu amb prompt()”.</p>
-        </li>
-        <li>
-          <a href="3.3_interaccio_usuari.html">💬 3.3. Interacció amb l’usuari i finestres emergents</a>
-          <p>Creació de finestres amb window.open() i comunicació entre pàgines. Exercici: “Missatge entre finestres”.</p>
-        </li>
-        <li>
-          <a href="3.4_emmagatzematge_local.html">💾 3.4. Emmagatzematge local (localStorage, sessionStorage)</a>
-          <p>Guardar i recuperar preferències de l’usuari. Exercici: “Selector de tema fosc/clar”.</p>
-        </li>
-        <li>
-          <a href="3.5_metodes_avancats.html">⚙️ 3.5. Mètodes avançats, depuració i documentació</a>
-          <p>Ús combinat d’objectes natius, gestió d’errors amb try...catch i bones pràctiques amb JSDoc.</p>
-        </li>
+    <!-- 🎯 OBJECTIUS -->
+    <section class="objectius">
+      <h2>🎯 Objectius específics</h2>
+      <ul>
+        <li>Conèixer i utilitzar objectes natius com <code>String</code>, <code>Number</code>, <code>Math</code> i <code>Date</code>.</li>
+        <li>Aplicar objectes globals del navegador (<code>window</code>, <code>alert()</code>, <code>prompt()</code>, etc.).</li>
+        <li>Aprendre a obrir finestres i comunicar contingut entre pàgines amb <code>window.open()</code>.</li>
+        <li>Fer servir <strong>localStorage</strong> i <strong>sessionStorage</strong> per desar preferències d’usuari.</li>
+        <li>Millorar la qualitat del codi amb <strong>try...catch</strong>, <strong>errors personalitzats</strong> i <strong>JSDoc</strong>.</li>
       </ul>
     </section>
 
-    <section id="recursos" class="recursos">
-      <h3>🔗 Recursos i documentació recomanada</h3>
+    <!-- 💻 ESQUEMA VISUAL -->
+    <section>
+      <h2>⚙️ Tipus d’objectes i aplicacions</h2>
+      <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:block;margin:auto;">
+        <rect x="30" y="40" width="120" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="90" y="65" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">Objectes Natius</text>
+
+        <line x1="150" y1="60" x2="230" y2="60" stroke="#00ff9d" stroke-width="2" marker-end="url(#arrow)" />
+        <rect x="230" y="40" width="120" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="290" y="65" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">Objectes Globals</text>
+
+        <line x1="350" y1="60" x2="440" y2="60" stroke="#00ff9d" stroke-width="2" marker-end="url(#arrow)" />
+        <rect x="440" y="40" width="60" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="470" y="65" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">App</text>
+
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0,0 8,3 0,6" fill="#00ff9d" />
+          </marker>
+        </defs>
+      </svg>
+      <p style="text-align:center;color:#a8ffdf;margin-top:5px;">
+        Els objectes són la base del llenguatge: proporcionen funcionalitats per gestionar dades i interaccions.
+      </p>
+    </section>
+
+    <!-- 📘 CONTINGUT -->
+    <section>
+      <h2>📘 Estructura del Tema 3</h2>
       <ul>
-        <li><a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Reference" target="_blank">📘 MDN Web Docs — Referència completa de JavaScript</a></li>
-        <li><a href="https://javascript.info/" target="_blank">📚 JavaScript.info — Guia pràctica per conceptes</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="_blank">🌐 Documentació Window API</a></li>
-        <li><a href="https://www.w3schools.com/js/" target="_blank">🧩 W3Schools — JavaScript Object Reference</a></li>
-        <li><a href="../index.html">🏠 Tornar a l’inici del mòdul</a></li>
+        <li><strong>3.1 Objectes natius:</strong> manipulació de cadenes, números, dates i operacions matemàtiques.</li>
+        <li><strong>3.2 Objectes globals:</strong> ús de funcions i propietats del navegador per interactuar amb l’usuari.</li>
+        <li><strong>3.3 Interacció amb l’usuari:</strong> finestres, alertes i comunicació entre documents.</li>
+        <li><strong>3.4 Emmagatzematge local:</strong> persistència de dades amb localStorage i sessionStorage.</li>
+        <li><strong>3.5 Mètodes avançats:</strong> depuració, errors, documentació i bones pràctiques professionals.</li>
+      </ul>
+    </section>
+
+    <!-- 🌐 RECURSOS -->
+    <section class="recursos-tema">
+      <h2>🧰 Recursos recomanats</h2>
+      <ul class="llista-recursos">
+        <li><a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Reference/Global_Objects" target="_blank">📘 MDN Objectes Globals</a></li>
+        <li><a href="https://javascript.info/" target="_blank">📚 JavaScript.info — Guia pràctica</a></li>
+        <li><a href="https://www.w3schools.com/js/js_window.asp" target="_blank">🌐 Window i BOM — W3Schools</a></li>
+        <li><a href="https://developer.chrome.com/docs/devtools/" target="_blank">🧰 Chrome DevTools — Depuració</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">💾 localStorage API</a></li>
       </ul>
     </section>
   </main>
 
-  <!-- 🧠 FOOTER FIX -->
+  <!-- 🧠 FOOTER -->
   <footer>
-    <button id="backTopBtn" class="btn-top" title="Torna a dalt">⬆</button>
-    <p>© 2025 Institut Puig Castellar · Mòdul 0612 — Desenvolupament Web en Entorn Client</p>
+    Material docent · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
   </footer>
 
-  <script src="main.js"></script>
+  <script defer src="main.js"></script>
 </body>
 </html>
