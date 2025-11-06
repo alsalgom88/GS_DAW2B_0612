@@ -1,31 +1,18 @@
-/* =========================================================
-   🌐 Mòdul 0612 · Tema 2
+/* ======================================================
+   🎨 Subtema 3.1 — Objectes natius
    Estil Matrix verd suau — Institut Puig Castellar
-   ---------------------------------------------------------
-   ▫ Verd menys intens i més llegible
-   ▫ Fons opacs per contrast òptim
-   ▫ Accessibilitat i coherència visual millorades
-   ========================================================= */
+   ====================================================== */
 
-/* ────────────────────────────── */
-/* 🎨 PALETA DE COLORS GLOBALS */
-/* ────────────────────────────── */
+/* 🎨 Paleta i base */
 :root {
   --verd-neon: #47f5b0;
-  /* Verd més suau i agradable */
   --verd-clar: #b8ffe4;
-  /* Verd clar per textos i detalls */
   --fons-fosc: #0b1110;
-  /* Fons fosc principal */
   --text-clar: #e5edf2;
-  /* Text principal alt contrast */
-  --fons-seccio: rgba(255, 255, 255, 0.06);
-  /* Fons suau per seccions */
+  --fons-seccio: rgba(255, 255, 255, 0.05);
 }
 
-/* ────────────────────────────── */
-/* 🌌 FONS MATRIX */
-/* ────────────────────────────── */
+/* Fons Matrix */
 #matrix-bg {
   position: fixed;
   top: 0;
@@ -37,82 +24,51 @@
   filter: brightness(0.6) saturate(0.8);
 }
 
-/* ────────────────────────────── */
-/* 🧩 COS GLOBAL */
-/* ────────────────────────────── */
+/* Cos */
 body {
   margin: 0;
   font-family: 'Fira Code', monospace;
   color: var(--text-clar);
-  line-height: 1.6;
   background: var(--fons-fosc);
+  line-height: 1.6;
+  padding-top: 160px;
   overflow-x: hidden;
-  padding-top: 150px;
 }
 
-/* ────────────────────────────── */
-/* 🔝 HEADER FIX */
-/* ────────────────────────────── */
+/* Header */
 .hero {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background: rgba(15, 23, 42, 0.9);
-  /* més opac */
-  backdrop-filter: blur(6px);
   text-align: center;
-  padding: 15px 0 45px;
+  padding: 15px 0 40px;
+  backdrop-filter: blur(6px);
   box-shadow: 0 0 15px rgba(71, 245, 176, 0.15);
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
   height: 55px;
   margin-bottom: 6px;
   animation: pulseGlow 3s ease-in-out infinite;
 }
 
-/* Títols */
-.hero h1 {
-  color: var(--verd-neon);
-  font-size: 1.35em;
-  margin: 2px 0;
-  text-shadow: 0 0 10px rgba(71, 245, 176, 0.3);
-}
-
-.hero p,
-.hero h2 {
-  color: var(--verd-clar);
-  font-size: 0.9em;
-  margin: 0;
-}
-
-/* Animació suau del logo */
 @keyframes pulseGlow {
-
-  0%,
-  100% {
-    filter: drop-shadow(0 0 0 var(--verd-neon));
-    transform: scale(1);
-  }
-
-  50% {
-    filter: drop-shadow(0 0 8px var(--verd-neon));
-    transform: scale(1.04);
-  }
+  0%, 100% { filter: drop-shadow(0 0 0 var(--verd-neon)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 8px var(--verd-neon)); transform: scale(1.05); }
 }
 
-/* ────────────────────────────── */
-/* 🧭 MENÚ DE SUBTEMES */
-/* ────────────────────────────── */
+.hero h1 { color: var(--verd-neon); font-size: 1.3em; margin: 4px 0; }
+.hero h2 { color: var(--verd-clar); font-size: 1.1em; margin: 2px 0; }
+
+/* Navegació */
 .menu-temes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .menu-temes a {
@@ -123,7 +79,6 @@ body {
   text-decoration: none;
   font-weight: 600;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
   transition: all 0.3s ease;
 }
 
@@ -133,74 +88,52 @@ body {
   box-shadow: 0 0 10px rgba(71, 245, 176, 0.5);
 }
 
-/* 🔙 Botó flotant "Tornar" */
-.btn-home {
-  position: absolute;
-  top: 50%;
-  right: 7%;
-  transform: translateY(-50%);
-  background: rgba(71, 245, 176, 0.1);
-  border: 1px solid var(--verd-neon);
-  color: var(--verd-neon);
-  padding: 8px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(71, 245, 176, 0.2);
-}
-
-.btn-home:hover {
-  background: var(--verd-neon);
-  color: #0a0f0d;
-  box-shadow: 0 0 20px rgba(71, 245, 176, 0.6);
-}
-
-/* ────────────────────────────── */
-/* 📘 COS PRINCIPAL */
-/* ────────────────────────────── */
+/* Main */
 main {
   max-width: 950px;
-  margin: 200px auto 80px;
+  margin: 200px auto 100px;
   padding: 25px;
   background: var(--fons-seccio);
   border: 1px solid rgba(71, 245, 176, 0.25);
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(71, 245, 176, 0.05);
-  animation: fadeIn 1.2s ease forwards;
+  box-shadow: 0 0 20px rgba(71, 245, 176, 0.05);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Seccions i aparició suau */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin-bottom: 40px;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Títols */
-h1,
-h2,
-h3 {
-  color: var(--verd-neon);
-  text-shadow: 0 0 6px rgba(71, 245, 176, 0.35);
-}
-
 h2 {
+  color: var(--verd-neon);
   border-bottom: 1px solid rgba(71, 245, 176, 0.3);
   padding-bottom: 6px;
-  margin-top: 30px;
 }
 
-/* ────────────────────────────── */
-/* 💬 Consell Jedi */
-/* ────────────────────────────── */
+/* Codi */
+pre {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid var(--verd-neon);
+  overflow-x: auto;
+}
+code {
+  color: var(--verd-clar);
+  font-family: 'Fira Code', monospace;
+}
+
+/* Consell Jedi */
 .consell-jedi {
-  margin: 25px 0;
+  margin: 20px 0;
   background: rgba(71, 245, 176, 0.06);
   border-left: 3px solid var(--verd-neon);
   padding: 10px 15px;
@@ -208,67 +141,62 @@ h2 {
   border-radius: 6px;
   color: var(--verd-clar);
 }
-
 .consell-jedi .firma-jedi {
   display: block;
   text-align: right;
+  color: var(--verd-neon);
   font-size: 0.85em;
-  color: var(--verd-neon);
 }
 
-/* ────────────────────────────── */
-/* 🌐 SECCIÓ DE RECURSOS */
-/* ────────────────────────────── */
-.recursos-tema {
-  margin-top: 50px;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.05);
-  /* més opac i menys verd */
-  border: 1px solid rgba(71, 245, 176, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(71, 245, 176, 0.05);
-}
-
-.recursos-tema h2 {
-  color: var(--verd-neon);
-  text-shadow: 0 0 10px rgba(71, 245, 176, 0.4);
-}
-
-.llista-recursos li {
-  margin: 10px 0;
-  padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid var(--verd-neon);
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.llista-recursos li:hover {
-  background: rgba(71, 245, 176, 0.12);
-  transform: translateX(4px);
-}
-
-.llista-recursos a {
+/* Botó “Tornar” */
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: 1px solid var(--verd-neon);
+  border-radius: 8px;
   color: var(--verd-neon);
   text-decoration: none;
   font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
-
-.llista-recursos a:hover {
-  color: #0f172a;
+.btn-home:hover {
   background: var(--verd-neon);
-  padding: 3px 8px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(71, 245, 176, 0.4);
+  color: #0a0f0d;
 }
 
-/* ────────────────────────────── */
-/* 🧠 FOOTER */
-/* ────────────────────────────── */
+/* Botó “Tornar amunt” */
+.back-top {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  background: rgba(71, 245, 176, 0.1);
+  border: 1px solid var(--verd-neon);
+  color: var(--verd-neon);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+.back-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-4px);
+}
+.back-top:hover {
+  background: var(--verd-neon);
+  color: #0a0f0d;
+}
+
+/* Footer */
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   background: rgba(15, 23, 42, 0.9);
   color: var(--verd-clar);
@@ -279,68 +207,9 @@ footer {
   backdrop-filter: blur(5px);
 }
 
-/* ────────────────────────────── */
-/* 📱 RESPONSIVE */
-/* ────────────────────────────── */
+/* Responsive */
 @media (max-width: 750px) {
-  .hero .logo {
-    height: 45px;
-  }
-
-  .hero h1 {
-    font-size: 1.1em;
-  }
-
-  .btn-home {
-    position: static;
-    display: block;
-    margin: 8px auto;
-    transform: none;
-  }
-
-  main {
-    margin: 160px 10px 80px;
-    padding: 18px;
-  }
-
-  .recursos-tema {
-    padding: 18px;
-  }
-}
-/* ────────────────────────────── */
-/* 🧩 BOTÓ D’ACTIVITATS */
-/* ────────────────────────────── */
-.btn-activitats {
-  position: fixed;
-  bottom: 90px;             /* sobre el footer */
-  right: 25px;
-  background: rgba(71, 245, 176, 0.1);
-  color: var(--verd-neon);
-  border: 1px solid var(--verd-neon);
-  padding: 10px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: 'Fira Code', monospace;
-  box-shadow: 0 0 10px rgba(71, 245, 176, 0.3);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(4px);
-  z-index: 999;
-}
-
-.btn-activitats:hover {
-  background: var(--verd-neon);
-  color: #0a0f0d;
-  box-shadow: 0 0 20px rgba(71, 245, 176, 0.6);
-  transform: translateY(-2px);
-}
-
-/* Versió per a mòbil */
-@media (max-width: 700px) {
-  .btn-activitats {
-    bottom: 110px;
-    right: 15px;
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
+  .logo { height: 45px; }
+  main { margin: 160px 10px 80px; padding: 18px; }
+  .menu-temes { flex-direction: column; gap: 6px; }
 }

@@ -1,7 +1,8 @@
-// =========================================================
-// 💻 Tema 3 — Desenvolupament Web en Entorn Client
-// Animació Matrix + Scroll suau + Botó "Tornar amunt"
-// =========================================================
+'use strict';
+/* ======================================================
+   💻 Subtema 3.1 — Objectes natius
+   Efecte Matrix + Aparició suau + Botó “Tornar amunt”
+   ====================================================== */
 
 // 🌌 Efecte Matrix
 const canvas = document.getElementById('matrix-bg');
@@ -23,6 +24,7 @@ function drawMatrix() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#00ff9d";
   ctx.font = fontSize + "px monospace";
+
   for (let i = 0; i < drops.length; i++) {
     const text = letters.charAt(Math.floor(Math.random() * letters.length));
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -33,19 +35,21 @@ function drawMatrix() {
 setInterval(drawMatrix, 35);
 window.addEventListener('resize', resizeCanvas);
 
-// ✨ Animació d’aparició
+// ✨ Animació d’aparició de seccions
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.2 });
-sections.forEach(sec => observer.observe(sec));
+}, { threshold: 0.15 });
+
+sections.forEach(s => observer.observe(s));
 
 // 🆙 Botó “Tornar amunt”
 const backTop = document.createElement('button');
 backTop.classList.add('back-top');
 backTop.textContent = "↑";
+backTop.title = "Tornar a dalt";
 document.body.appendChild(backTop);
 
 window.addEventListener('scroll', () => {
