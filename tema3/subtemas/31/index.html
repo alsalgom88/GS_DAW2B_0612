@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1 · Objectes natius: String, Number, Math i Date | Mòdul 0612</title>
+
+  <!-- 🔍 SEO -->
+  <meta name="description" content="Subtema 3.1 del Mòdul 0612 — Ús dels objectes natius de JavaScript: String, Number, Math i Date.">
+  <meta name="keywords" content="JavaScript, Objectes Natius, String, Number, Math, Date, DAW, Puig Castellar, Mòdul 0612">
+  <meta name="author" content="Institut Puig Castellar · Departament d’Informàtica">
+  <meta name="theme-color" content="#00ff9d">
+
+  <!-- 🌈 Fonts i estils -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- 🌌 Fons Matrix -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- 🧭 HEADER -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo Institut Puig Castellar" class="logo">
+    <h1>Institut Puig Castellar</h1>
+    <p>Cicle Formatiu de Grau Superior · Desenvolupament d’Aplicacions Web</p>
+    <h2>3.1 · Objectes natius: String, Number, Math i Date</h2>
+
+    <!-- 🔗 Navegació -->
+    <nav class="menu-temes">
+      <a href="3.2_objectes_globals.html">➡ 3.2 Objectes globals</a>
+      <a href="index.html" class="btn-home">🏠 Tornar al Tema 3</a>
+    </nav>
+  </header>
+
+  <!-- 📘 CONTINGUT PRINCIPAL -->
+  <main>
+
+    <!-- 🧠 INTRODUCCIÓ -->
+    <section class="benvinguda">
+      <h2>🧠 Què són els objectes natius?</h2>
+      <p>
+        Els <strong>objectes natius</strong> són aquells que formen part del <em>nucli de JavaScript</em>.
+        No cal importar-los ni declarar-los: ja existeixen i estan disponibles per a tots els programes.
+        Ens permeten realitzar operacions bàsiques amb dades de text, números, dates i càlculs matemàtics.
+      </p>
+
+      <div class="consell-jedi">
+        💡 <em>“Conèixer els objectes natius és el primer pas per dominar la lògica interna de JavaScript.”</em>
+        <span class="firma-jedi">— Mestre del Codi</span>
+      </div>
+    </section>
+
+    <!-- 🧩 STRING -->
+    <section>
+      <h2>🔠 Objecte <code>String</code></h2>
+      <p>
+        L’objecte <code>String</code> representa cadenes de text. Inclou mètodes per modificar-les i analitzar-les.
+      </p>
+      <pre><code>
+// Exemple:
+const nom = "Puig Castellar";
+console.log(nom.length);         // Longitud
+console.log(nom.toUpperCase());  // En majúscules
+console.log(nom.includes("Cast")); // true
+      </code></pre>
+      <p>
+        Altres mètodes útils: <code>toLowerCase()</code>, <code>slice()</code>, <code>replace()</code>, <code>trim()</code>.
+      </p>
+    </section>
+
+    <!-- 🔢 NUMBER -->
+    <section>
+      <h2>🔢 Objecte <code>Number</code></h2>
+      <p>
+        Representa valors numèrics i ofereix mètodes per convertir, arrodonir i formatar números.
+      </p>
+      <pre><code>
+// Exemple:
+const preu = 12.3456;
+console.log(preu.toFixed(2)); // "12.35"
+console.log(Number.isInteger(preu)); // false
+      </code></pre>
+      <p>
+        Altres mètodes: <code>parseInt()</code>, <code>parseFloat()</code>, <code>isNaN()</code>.
+      </p>
+    </section>
+
+    <!-- 🧮 MATH -->
+    <section>
+      <h2>🧮 Objecte <code>Math</code></h2>
+      <p>
+        L’objecte <code>Math</code> conté funcions matemàtiques i constants.
+        S’utilitza per càlculs, arrodoniments i números aleatoris.
+      </p>
+      <pre><code>
+// Exemple:
+console.log(Math.PI);           // 3.14159
+console.log(Math.round(4.6));   // 5
+console.log(Math.random());     // Nombre aleatori entre 0 i 1
+      </code></pre>
+      <p>
+        Altres funcions útils: <code>Math.max()</code>, <code>Math.min()</code>, <code>Math.sqrt()</code>, <code>Math.pow()</code>.
+      </p>
+    </section>
+
+    <!-- 🗓️ DATE -->
+    <section>
+      <h2>🗓️ Objecte <code>Date</code></h2>
+      <p>
+        L’objecte <code>Date</code> s’utilitza per gestionar temps i dates. Pots obtenir el dia actual, calcular diferències o formatar dates.
+      </p>
+      <pre><code>
+// Exemple:
+const avui = new Date();
+console.log(avui.toDateString()); // "Tue Nov 6 2025"
+console.log(avui.getFullYear());  // Any actual
+      </code></pre>
+      <p>
+        Altres mètodes: <code>getMonth()</code>, <code>getDay()</code>, <code>setDate()</code>, <code>toLocaleDateString()</code>.
+      </p>
+    </section>
+
+    <!-- 🧩 ACTIVITAT -->
+    <section class="activitat">
+      <h2>🧠 Activitat pràctica</h2>
+      <p>
+        ✍️ Escriu un programa que demani el teu nom i data de naixement.  
+        Mostra un missatge personalitzat amb:
+      </p>
+      <ul>
+        <li>El teu nom en majúscules (<code>String</code>).</li>
+        <li>La teva edat calculada amb <code>Date</code> i <code>Math.floor()</code>.</li>
+        <li>Un missatge final amb la data actual formatejada.</li>
+      </ul>
+      <p>
+        💡 Pots provar-ho a la consola del navegador o crear un petit <code>alert()</code> amb el resultat.
+      </p>
+    </section>
+
+    <!-- 🔗 Tornar -->
+    <a href="index.html" class="btn-home">← Tornar al Tema 3</a>
+  </main>
+
+  <!-- 🧠 FOOTER -->
+  <footer>
+    Material docent · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
+  </footer>
+
+  <script defer src="main.js"></script>
+</body>
+</html>
