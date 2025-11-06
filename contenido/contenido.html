@@ -1,376 +1,795 @@
 <!DOCTYPE html>
 <html lang="ca">
+<!-- 🌐 Idioma declarat per accessibilitat i SEO -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MP0612 · Desenvolupament web en entorn client</title>
-  <link rel="stylesheet" href="contenido.css">
 
+  <!-- 🔍 SEO i metadades educatives -->
+  <title>🌐 MP0612 — Índex complet del mòdul | Desenvolupament web en entorn client</title>
+  <meta name="description"
+    content="Índex complet del mòdul 0612 — Desenvolupament web en entorn client del cicle DAW. Consulta temes, resultats d’aprenentatge i objectius amb enllaços al Moodle.">
+  <meta name="keywords"
+    content="DAW, Mòdul 0612, Desenvolupament Web, Client, JavaScript, TypeScript, DOM, APIs, HTML, CSS, Institut Puig Castellar">
+  <meta name="author" content="Institut Puig Castellar · Departament d’Informàtica">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00ff99"> <!-- Color del navegador mòbil -->
+
+  <!-- 📱 PWA i accessibilitat bàsica -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="language" content="ca">
+
+  <!-- 🌐 Open Graph (per xarxes socials i SEO visual) -->
+  <meta property="og:title" content="Índex complet MP0612 — Desenvolupament web en entorn client">
+  <meta property="og:description"
+    content="Consulta tots els temes, resultats d’aprenentatge i objectius del mòdul 0612 — DAW (Desenvolupament Web en entorn client).">
+  <meta property="og:image" content="assets/og-index0612.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elpuig.xeill.net/daw/modul0612/contenido.html">
+
+  <!-- 🔖 Favicons i icones per dispositius -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- 🎨 Full d’estils i JS -->
+  <link rel="stylesheet" href="contenido.css">
+  <!-- ✅ El script defer només és necessari una vegada (no cal repetir-lo al final del <body>) -->
+  <script defer src="contenido.js"></script>
+
+  <!-- 🧩 Tipografia coherent amb la portada -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Logo" class="logo">
+  <!-- 🌌 Canvas del fons Matrix -->
+  <canvas id="matrix-bg"></canvas>
+  <!-- 🧠 HEADER FIX AMB NAVEGACIÓ INTERNA -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo Institut Puig Castellar" class="logo">
     <h1>Institut Puig Castellar</h1>
     <p>Cicle Formatiu de Grau Superior · Desenvolupament d'Aplicacions Web</p>
     <h2>Mòdul professional 0612 · Desenvolupament web en entorn client</h2>
-    
+
+    <!-- 🔗 Navegació interna amb àncores de secció -->
+    <nav class="menu-temes" aria-label="Navegació del mòdul">
+      <a href="#tema1">Tema 1</a>
+      <a href="#tema2">Tema 2</a>
+      <a href="#tema3">Tema 3</a>
+      <a href="#tema4">Tema 4</a>
+      <a href="#tema5">Tema 5</a>
+      <a href="#tema6">Tema 6</a>
+      <a href="#tema7">Tema 7</a>
+    </nav>
+
+    <!-- 🔙 Botó flotant cap a la portada (correcte, substitueix l’antic .back-home) -->
+    <a href="../index.html" class="btn-home">← Tornar a l'inici</a>
   </header>
-  <nav>
-    <a href="#tema1">Tema 1</a>
-    <a href="#tema2">Tema 2</a>
-    <a href="#tema3">Tema 3</a>
-    <a href="#tema4">Tema 4</a>
-    <a href="#tema5">Tema 5</a>
-    <a href="#tema6">Tema 6</a>
-    <a href="#tema7">Tema 7</a>
-    <button class="btn-back" onclick="location.href='../index.html'">← Tornar a l’índex</button>
-  </nav>
 
-  <section id="intro">
-    <h2>Benvinguts al mòdul!</h2>
-    <p><strong>Com funciona aquest índex interactiu:</strong>
-      A continuació trobaràs tots els temes del mòdul amb els seus objectius i subtemes.
-      <u>Cada enllaç del tema</u> (tant els principals com els subtemes) està preparat per obrir directament la seva
-      secció corresponent al Moodle en una pestanya nova.
-      Només has de fer clic i… *warp!* 🚀 et transportarà al contingut complet del tema, amb activitats, materials i
-      pràctiques.
-    </p>
+  <!-- 📘 Contingut principal -->
+  <main>
+    <!-- ✅ Secció d’introducció -->
+    <section id="intro">
+      <h2>Benvinguts al mòdul!</h2>
+      <p><strong>Com funciona aquest índex interactiu:</strong>
+        A continuació trobaràs tots els temes del mòdul amb els seus objectius i subtemes.
+        <u>Cada enllaç del tema</u> (tant els principals com els subtemes) està preparat per obrir directament la seva
+        secció corresponent al Moodle en una pestanya nova.
+        Només has de fer clic i… *warp!* 🚀 et transportarà al contingut complet del tema, amb activitats, materials i
+        pràctiques.
+      </p>
 
-    <p><em>Consell Jedi:</em> guarda aquest índex com a punt de partida del teu viatge — és la teva holocròn del codi. ✨
-    </p>
+      <p><em>Consell Jedi:</em> guarda aquest índex com a punt de partida del teu viatge — és la teva holocròn del codi.
+        ✨
+      </p>
 
-    <p><strong>Descripció general:</strong> Aquest mòdul introdueix els fonaments del desenvolupament web en entorn
-      client. Treballarem amb JavaScript i TypeScript, aprendrem a manipular el DOM, gestionar esdeveniments, validar
-      formularis, crear aplicacions dinàmiques i connectar-nos a APIs. En definitiva, ens formarem per construir
-      interfícies web modernes, accessibles i reactives. 🌐</p>
-    <p><strong>Objectius del mòdul:</strong> Entendre la diferència entre client i servidor, escriure codi eficient i
-      net, manipular contingut web dinàmicament, i implementar aplicacions interactives amb asincronia i bones
-      pràctiques professionals. 🚀</p>
-  </section>
+      <p><strong>Descripció general:</strong> Aquest mòdul introdueix els fonaments del desenvolupament web en entorn
+        client. Treballarem amb JavaScript i TypeScript, aprendrem a manipular el DOM, gestionar esdeveniments, validar
+        formularis, crear aplicacions dinàmiques i connectar-nos a APIs. En definitiva, ens formarem per construir
+        interfícies web modernes, accessibles i reactives. 🌐</p>
+      <p><strong>Objectius del mòdul:</strong> Entendre la diferència entre client i servidor, escriure codi eficient i
+        net, manipular contingut web dinàmicament, i implementar aplicacions interactives amb asincronia i bones
+        pràctiques professionals. 🚀</p>
+    </section>
+    <!-- ============================= -->
+    <!-- TEMA 1-->
+    <!-- ============================= -->
+    <section id="tema1">
+      <h2>🧩 Tema 1 – RA1: Selecció d’arquitectures i tecnologies de programació sobre clients web</h2>
+      <p><strong>Durada:</strong> 6 h</p>
+      <p><strong>Objectiu general:</strong> Comprendre de manera pràctica les diferències entre l’execució en el costat
+        client i el costat servidor, així com conèixer les principals tecnologies i eines utilitzades en el
+        desenvolupament web modern. L’alumne aprendrà a identificar quina part del codi s’executa al navegador i quina
+        al servidor, establint les bases per crear aplicacions web ben estructurades i eficients. ⚙️</p>
 
-  <section id="tema1">
-    <h2>Tema 1 – RA1: Selecció d’arquitectures i tecnologies de programació sobre clients web</h2>
-    <p><strong>Durada:</strong> 6 h</p>
-    <p><strong>Objectiu general:</strong> Comprendre les diferències entre l’execució client i servidor, i conèixer les
-      principals tecnologies del desenvolupament web client.</p>
-    <p>En aquest primer tema introduirem les bases de com funciona una aplicació web: què passa al client i què al
-      servidor. Ens familiaritzarem amb les eines i tecnologies essencials, començant a configurar el nostre entorn de
-      desenvolupament com tot bon Jedi del codi. ⚔️</p>
-    <ul>
-      <li><a href="#" class="subtema" target="_blank">1.1. Model d’execució client vs servidor</a><br>Analitzarem el
-        funcionament del model client-servidor i les seves interaccions, identificant quin paper juga cada component.
-      </li>
-      <li><a href="#" class="subtema" target="_blank">1.2. Capacitats i limitacions dels navegadors</a><br>Explorarem el
-        poder (i els límits) dels navegadors moderns, i com gestionar compatibilitats i rendiment.</li>
-      <li><a href="#" class="subtema" target="_blank">1.3. Llenguatges d’etiquetes i programació web: HTML, CSS i
-          JavaScript</a><br>Farem un recorregut per la Santíssima Trinitat del web: estructura, estil i lògica. 🧙‍♂️
-      </li>
-      <li><a href="#" class="subtema" target="_blank">1.4. Eines i entorns de desenvolupament (VS Code, Chrome
-          DevTools)</a><br>Configurarem entorns de treball i aprendrem a depurar amb eines professionals.</li>
-      <li><a href="#" class="subtema" target="_blank">1.5. Integració HTML + JavaScript</a><br>Entendrem com interactuen
-        els fitxers HTML i JS per crear comportament dinàmic.</li>
-      <li><a href="#" class="subtema" target="_blank">1.6. Frameworks i llibreries actuals (React, Vue,
-          Svelte...)</a><br>Una mirada cap al futur del desenvolupament client amb frameworks populars.</li>
-      <li><a href="#" class="subtema" target="_blank">1.7. Depuració i proves en entorns client</a><br>Aprendrem a
-        detectar i resoldre errors com veritables detectius del codi. 🕵️‍♀️</li>
-    </ul>
-  </section>
-  <!-- ============================= -->
-  <!-- TEMES 2 A 7 -->
-  <!-- ============================= -->
+      <p>En aquest primer tema es posen els fonaments tècnics del desenvolupament web: entendre com funciona Internet,
+        quins components intervenen i com es comuniquen. També es configurarà l’entorn de treball professional i
+        s’aplicaran bones pràctiques de codi. Com diria un mestre Jedi del codi: <em>«Coneix l’estructura del web i la
+          Força del client estarà amb tu.»</em> ⚔️</p>
 
-  <section id="tema2">
-    <h2>Tema 2 – RA2: Escriptura de sentències simples i sintaxi del llenguatge</h2>
-    <p><strong>Durada:</strong> 10 h</p>
-    <p><strong>Objectiu general:</strong> Dominar la sintaxi bàsica de JavaScript i crear scripts senzills que
-      s’executin correctament al navegador.</p>
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.1. Model d’execució client vs servidor</a><br>
+          Analitzarem el funcionament del model <strong>client-servidor</strong> i les seves interaccions, identificant
+          quin paper juga cada component dins d’una aplicació web.
+          Es compararan els processos de renderització <em>client-side</em> i <em>server-side</em> i es farà un esquema
+          del cicle de petició i resposta HTTP.
+          <br><em>🧪 Activitat:</em> “Simula una conversa client-servidor amb Postman i DevTools”.
+        </li>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">2.1. Variables, constants i tipus de dades</a><br>
-        Aprendrem a declarar variables, constants i identificar els principals tipus de dades en JavaScript (string,
-        number, boolean, object, null i undefined).
-        Es realitzaran exemples pràctics de declaració i conversió de tipus.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">2.2. Operadors (aritmètics, lògics, de comparació i
-          assignació)</a><br>
-        Es treballaran els operadors fonamentals del llenguatge: aritmètics (+, -, *, /), de comparació (==, ===, !=,
-        <,>) i lògics (&&, ||, !),
-          així com els d’assignació. Es faran exercicis per comprendre el flux de valors i resultats.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">2.3. Estructures de decisió (if, else, switch)</a><br>
-        Analitzarem com prendre decisions en un programa mitjançant condicions, utilitzant if, else i switch.
-        Crearem mini-programes amb resultats diferents segons les dades d’entrada de l’usuari.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">2.4. Estructures iteratives (for, while, do while)</a><br>
-        Aprendrem a repetir instruccions amb bucles controlats i condicionats, aplicant-los a exercicis de càlcul,
-        recorregut de dades i validació de valors.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">2.5. Comentaris, bones pràctiques i estil de codi (JSDoc)</a><br>
-        Introduirem la importància dels comentaris i l’escriptura clara de codi.
-        Es treballarà amb l’estil recomanat d’indentació, noms de variables i documentació amb JSDoc per facilitar la
-        lectura i manteniment del projecte.
-      </li>
-    </ul>
-  </section>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.2. Capacitats i limitacions dels navegadors</a><br>
+          Explorarem el poder (i els límits) dels navegadors moderns com Chrome, Firefox o Edge.
+          Es coneixeran els motors de renderització (Blink, WebKit, Gecko) i com afecten al rendiment i compatibilitat
+          del codi.
+          <br><em>🧭 Activitat:</em> Proves de compatibilitat amb funcions modernes d’ES6 i CSS3.
+          Introducció a conceptes essencials de seguretat web: CORS i Same-Origin Policy.
+        </li>
 
+        <li>
+          <a href="#" class="subtema" target="_blank">1.3. Llenguatges d’etiquetes i programació web: HTML, CSS i
+            JavaScript</a><br>
+          Farem un recorregut per la <strong>Santíssima Trinitat del web</strong>: estructura, estil i lògica.
+          Analitzarem com HTML defineix l’esquelet, CSS el disseny i JavaScript el comportament.
+          <br><em>💡 Pràctica:</em> creació d’una mini pàgina amb una tarja interactiva responsive.
+          Introducció a bones pràctiques d’accessibilitat amb etiquetes semàntiques i atributs <code>alt</code> i
+          <code>aria-label</code>.
+        </li>
 
-  <!-- ============================= -->
-  <!-- TEMA 3 -->
-  <!-- ============================= -->
-  <section id="tema3">
-    <h2>Tema 3 – RA3: Ús dels objectes predefinits del llenguatge</h2>
-    <p><strong>Durada:</strong> 12 h</p>
-    <p><strong>Objectiu general:</strong> Utilitzar objectes natius i globals del navegador per interactuar amb l’usuari
-      i manipular contingut.</p>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.4. Eines i entorns de desenvolupament (VS Code, Chrome
+            DevTools)</a><br>
+          Configurarem <strong>Visual Studio Code</strong> amb extensions recomanades (Live Server, Prettier, ESLint) i
+          coneixerem les opcions de depuració.
+          Aprendrem a utilitzar <strong>Chrome DevTools</strong> per inspeccionar elements, comprovar rendiment i
+          detectar errors.
+          <br><em>🧩 Activitat:</em> “Localitza i resol un bug visual o de JavaScript en un projecte senzill”.
+        </li>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">3.1. Objectes natius: String, Number, Math, Date</a><br>
-        Propietats i mètodes bàsics dels objectes natius. Exercicis amb concatenació, càlculs i formats de data. Mini
-        projecte: “Calculadora d’edat”.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">3.2. Objectes globals: window, console, alert, prompt,
-          confirm</a><br>
-        Ús de window, console, alert, prompt i confirm. Pràctiques d’entrada/sortida de dades i depuració. Exercici:
-        “Test interactiu amb prompt()”.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">3.3. Interacció amb l’usuari i finestres emergents</a><br>
-        Creació de finestres emergents amb window.open(). Comunicació entre finestres (parent/child). Exercici:
-        “Missatge entre finestres”.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">3.4. Emmagatzematge local (localStorage, sessionStorage)</a><br>
-        Ús de localStorage i sessionStorage. Guardar i recuperar preferències d’usuari. Exercici: “Selector de tema
-        fosc/clar”.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">3.5. Aprofundiment en mètodes avançats, depuració professional
-          (try...catch) i documentació del codi</a><br>
-        Ús avançat d’objectes natius combinats (per exemple, Date + String). Gestió d’errors amb try...catch i throw.
-        Creació de funcions amb objectes dins d’altres objectes. Introducció a mètodes interns (toString, valueOf,
-        hasOwnProperty, etc.). Documentació amb JSDoc i bones pràctiques d’escriptura.
-      </li>
-    </ul>
-  </section>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.5. Integració HTML + JavaScript</a><br>
+          Entendrem com s’integren els fitxers HTML i JavaScript per crear comportament dinàmic.
+          Aprendrem l’ús correcte de <code>&lt;script&gt;</code>, la diferència entre <code>async</code> i
+          <code>defer</code>, i com manipular elements amb el DOM.
+          <br><em>💡 Pràctica:</em> “Fes aparèixer un missatge de benvinguda amb JS quan la pàgina es carrega”.
+        </li>
 
-  <!-- ============================= -->
-  <!-- TEMA 4 -->
-  <!-- ============================= -->
-  <section id="tema4">
-    <h2>Tema 4 – RA4: Programació amb estructures definides per l’usuari</h2>
-    <p><strong>Durada:</strong> 12 h</p>
-    <p><strong>Objectiu general:</strong> Crear funcions, col·leccions i objectes personalitzats aplicant conceptes
-      bàsics d’orientació a objectes.</p>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.6. Frameworks i llibreries actuals (React, Vue,
+            Svelte...)</a><br>
+          Una mirada cap al futur del desenvolupament client.
+          Es presentarà el concepte de <strong>framework front-end</strong>, la idea de components i el DOM virtual.
+          <br>Compararem breument React, Vue i Svelte, valorant els seus avantatges segons el tipus de projecte.
+          <br><em>🧠 Debat:</em> Quin framework triaries per a un projecte real i per què?
+        </li>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.1. Funcions predefinides i definides per l’usuari</a><br>
-        Tipus de funcions: declarades, expressades i fletxa (arrow). Creació i ús de funcions pròpies per modularitzar
-        el codi.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.2. Paràmetres, valors de retorn i arrow functions</a><br>
-        Paràmetres, valors per defecte, retorns i scope. Funcions com a objectes i ús de callbacks.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.3. Arrays i mètodes (map, filter, reduce)</a><br>
-        Creació, recorregut i manipulació d’arrays. Ús dels mètodes push, pop, splice, map, filter i reduce. Arrays
-        multidimensionals i ordenació.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.4. Objectes literals, constructors i mètodes</a><br>
-        Creació d’objectes literals i constructors. Propietats, mètodes i accés dinàmic. Ús de this, prototips i
-        encapsulació.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.5. Objectes definits per l’usuari</a><br>
-        Creació d’objectes personalitzats amb propietats i comportament propi per a cada projecte.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.6. Classes i instàncies (POO bàsica)</a><br>
-        Conceptes d’objecte, classe i instància. Constructor(), super i herència simple. Definició de mètodes i
-        propietats d’instància.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.7. Patrons de disseny senzills (Factory, Module)</a><br>
-        Aplicació de patrons bàsics per estructurar el codi i millorar la reutilització (Factory, Module).
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.8. Tipus avançats en JavaScript (spread, destructuring,
-          Object.keys, entries)</a><br>
-        Ús d’operadors spread, rest i destructuring. Manipulació d’objectes amb Object.keys, Object.entries i
-        Object.assign.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.9. Depuració i bones pràctiques de codi</a><br>
-        Aplicació de tècniques de depuració i bones pràctiques per assegurar un codi net, tipatge estàtic i mantenible.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">4.10. Extensió TypeScript: tipatge, interfícies i compilació</a><br>
-        Introducció a TypeScript, creació de classes i interfícies, compilació i avantatges en mantenibilitat i
-        depuració.
-      </li>
-    </ul>
-  </section>
+        <li>
+          <a href="#" class="subtema" target="_blank">1.7. Depuració i proves en entorns client</a><br>
+          Aprendrem a detectar i resoldre errors com veritables detectius del codi. 🕵️‍♀️
+          Ús de la consola, breakpoints i instruccions de depuració amb <code>try...catch</code>.
+          Introducció a validadors i eines com JSHint o ESLint per mantenir un codi net i fiable.
+          <br><em>🔧 Activitat final:</em> depurar un script amb errors i documentar-ne la solució amb comentaris.
+        </li>
+      </ul>
+    </section>
+    <!-- ============================= -->
+    <!-- TEMA 2 -->
+    <!-- ============================= -->
 
-  <!-- ============================= -->
-  <!-- TEMA 5 -->
-  <!-- ============================= -->
-  <section id="tema5">
-    <h2>Tema 5 – RA5: Desenvolupament d’aplicacions web interactives amb esdeveniments</h2>
-    <p><strong>Durada:</strong> 11 h</p>
-    <p><strong>Objectiu general:</strong> Implementar aplicacions web que reaccionin a les accions de l’usuari a través
-      d’esdeveniments.</p>
+    <section id="tema2">
+      <h2>🧠 Tema 2 – RA2: Escriptura de sentències simples i sintaxi del llenguatge</h2>
+      <p><strong>Durada:</strong> 10 h</p>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">5.1. Introducció a addEventListener</a><br>
-        Tipus d’esdeveniments en JS (ratolí, teclat, formularis). Objecte event i propagació (bubbling i capturing).
-        Assignació i eliminació de gestors d’esdeveniments.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">5.2. Esdeveniments de ratolí i teclat (click, keydown,
-          mousemove)</a><br>
-        Captura i resposta a esdeveniments de ratolí i teclat per crear interaccions dinàmiques com animacions o
-        moviments.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">5.3. Gestió de formularis i validació</a><br>
-        Captura d’esdeveniments submit, change, input. Validació de camps amb atributs HTML i patrons. Generació de
-        missatges d’error i feedback visual.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">5.4. Expressions regulars per validar dades</a><br>
-        Sintaxi bàsica d’expressions regulars (regex). Validació de correus, telèfons i contrasenyes amb expressions
-        personalitzades.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">5.5. Disseny d’interfícies accessibles i amb feedback visual</a><br>
-        Creació d’interfícies accessibles i usables amb retroalimentació visual i millora de l’experiència d’usuari.
-      </li>
-    </ul>
-  </section>
+      <p><strong>Objectiu general:</strong> Dominar la <strong>sintaxi bàsica de JavaScript</strong> per poder crear
+        scripts senzills, correctes i estructurats que s’executin al navegador. L’alumnat aprendrà a treballar amb
+        dades, operadors, condicions i bucles, aplicant bones pràctiques i una lògica clara per resoldre problemes reals
+        de programació.</p>
 
-  <!-- ============================= -->
-  <!-- TEMA 6 -->
-  <!-- ============================= -->
-  <section id="tema6">
-    <h2>Tema 6 – RA6: Utilització del Model d’Objectes del Document (DOM)</h2>
-    <p><strong>Durada:</strong> 18 h</p>
-    <p><strong>Objectiu general:</strong> Manipular dinàmicament el contingut i l’estil d’una pàgina web amb el DOM.</p>
+      <p>En aquest tema començarem a parlar el “llenguatge dels navegadors”. Ens introduirem en el pensament algorítmic
+        i en l’escriptura d’instruccions bàsiques que donen vida a les pàgines web. Aprendrem a declarar variables,
+        prendre decisions, repetir accions i estructurar el codi de manera neta i entenedora. 💡</p>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.1. Estructura del DOM i mètodes de selecció (getElementById,
-          querySelector)</a><br>
-        Estructura jeràrquica del DOM (nodes, elements, atributs). Mètodes de selecció i recorregut de nodes. Propietats
-        comunes.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.2. Modificació d’atributs, continguts i estils (innerHTML,
-          classList, style)</a><br>
-        Modificació d’atributs amb setAttribute, gestió d’estils i classes amb classList i style, actualització de
-        contingut textual i HTML.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.3. Creació i eliminació de nodes (createElement, appendChild,
-          removeChild)</a><br>
-        Generació, inserció i eliminació d’elements. Construcció dinàmica de contingut. Aplicació pràctica: CRUD sobre
-        DOM.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.4. Compatibilitat multi-navegador</a><br>
-        Diferències entre navegadors en la implementació del DOM i bones pràctiques per assegurar compatibilitat.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.5. Separació de capes (HTML/CSS/JS)</a><br>
-        Estructura organitzada del projecte amb separació d’estructura, estil i comportament.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">6.6. Pràctica final: CRUD sobre DOM</a><br>
-        Aplicació completa amb creació, lectura, actualització i eliminació d’elements. Documentació i depuració final
-        del projecte.
-      </li>
-    </ul>
-  </section>
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">2.1. Variables, constants i tipus de dades</a><br>
+          Comprendrem com JavaScript emmagatzema i gestiona la informació.
+          Aprendrem a declarar <code>let</code>, <code>const</code> i <code>var</code> segons la seva finalitat i abast.
+          Identificarem els tipus bàsics de dades: <em>string</em>, <em>number</em>, <em>boolean</em>, <em>object</em>,
+          <em>null</em> i <em>undefined</em>.
+          <br><em>🧩 Pràctiques:</em> càlculs simples amb variables, concatenació de textos i conversions de tipus amb
+          <code>Number()</code> i <code>String()</code>.
+          <br><em>💡 Objectiu específic:</em> comprendre la importància del tipus de dada i de la declaració clara per
+          evitar errors lògics.
+        </li>
 
-  <!-- ============================= -->
-  <!-- TEMA 7 -->
-  <!-- ============================= -->
-  <section id="tema7">
-    <h2>Tema 7 – RA7: Desenvolupament d’aplicacions web dinàmiques amb comunicació asíncrona</h2>
-    <p><strong>Durada:</strong> 18 h</p>
-    <p><strong>Objectiu general:</strong> Implementar aplicacions web que intercanviïn dades amb el servidor mitjançant
-      mecanismes asíncrons.</p>
+        <li>
+          <a href="#" class="subtema" target="_blank">2.2. Operadors (aritmètics, lògics, de comparació i
+            assignació)</a><br>
+          Es treballaran els <strong>operadors fonamentals</strong> del llenguatge:
+          - Aritmètics: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>
+          - De comparació: <code>==</code>, <code>===</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>
+          - Lògics: <code>&&</code>, <code>||</code>, <code>!</code>
+          - D’assignació: <code>=</code>, <code>+=</code>, <code>-=</code>, etc.
+          <br><em>🧮 Exercicis:</em> mini càlculadora d’operacions bàsiques i comprovació de resultats lògics amb
+          condicions booleanes.
+          <br><em>💡 Objectiu específic:</em> entendre el flux de valors i com les expressions retornen resultats que
+          determinen el comportament del programa.
+        </li>
 
-    <ul>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.1. Comunicació asíncrona: concepte i avantatges</a><br>
-        Concepte d’asincronia i diferències amb execució síncrona. Peticions HTTP GET i POST per comunicar client i
-        servidor.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.2. Fetch API i XMLHttpRequest</a><br>
-        Comparació entre Fetch API i XMLHttpRequest. Creació de peticions, tractament de respostes i gestió d’errors.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.3. Format JSON: parse i stringify</a><br>
-        Estructura i ús del format JSON. Conversió entre objectes JS i JSON. Lectura i visualització de dades remotes.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.4. Actualització dinàmica del DOM amb dades remotes</a><br>
-        Inserció i actualització de contingut al DOM amb dades obtingudes del servidor. Processament amb map, filter,
-        forEach.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.5. Llibreries de suport (Axios, jQuery AJAX)</a><br>
-        Ús de llibreries per simplificar les crides HTTP (Axios, jQuery AJAX). Gestió d’errors amb try/catch.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.6. Asincronia amb TypeScript</a><br>
-        Integració de funcions asíncrones amb tipatge en TypeScript. Declaració de Promeses tipades i respostes segures.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.7. Connexió a MySQL via API</a><br>
-        Creació de rutes GET i POST, connexió amb bases de dades mitjançant API REST i middleware.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.8. Promeses i async/await</a><br>
-        Gestió avançada d’operacions asíncrones amb Promises i async/await. Ús de try/catch/finally per controlar
-        errors.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.9. JSON Server i simulació d’APIs REST</a><br>
-        Creació d’un servidor local amb JSON Server. Peticions CRUD (GET, POST, PUT, DELETE) i proves d’API.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.10. Introducció a Node.js i Express</a><br>
-        Conceptes bàsics de Node.js i Express per crear un backend senzill i connectar-lo amb el front-end.
-      </li>
-      <li>
-        <a href="#" class="subtema" target="_blank">7.11. Projecte final integrador CRUD + API REST</a><br>
-        Desenvolupament d’una aplicació completa amb Fetch/Axios i API REST (Node + Express). Gestió d’estat,
-        validacions i documentació final.
-      </li>
-    </ul>
-  </section>
+        <li>
+          <a href="#" class="subtema" target="_blank">2.3. Estructures de decisió (if, else, switch)</a><br>
+          Analitzarem com prendre decisions dins d’un programa.
+          Aprendrem a utilitzar condicions amb <code>if</code>, <code>else if</code> i <code>else</code> per controlar
+          diferents casos.
+          També treballarem amb <code>switch</code> per situacions amb múltiples opcions.
+          <br><em>🧠 Pràctiques:</em> validació de l’edat d’un usuari, generació de missatges segons el valor d’una
+          variable i mini jocs de preguntes.
+          <br><em>💡 Objectiu específic:</em> desenvolupar la capacitat de raonament lògic i prendre decisions
+          automatitzades segons condicions.
+        </li>
 
+        <li>
+          <a href="#" class="subtema" target="_blank">2.4. Estructures iteratives (for, while, do while)</a><br>
+          Aprendrem a repetir instruccions de manera controlada i eficient.
+          - <code>for</code>: ideal per recorrer dades o comptar iteracions.
+          - <code>while</code>: per repeticions condicionades fins a complir un criteri.
+          - <code>do...while</code>: assegura almenys una execució abans de comprovar la condició.
+          <br><em>🧩 Activitats:</em> creació de taules de multiplicar, sumes acumulatives, i validacions d’entrada
+          d’usuari amb bucles.
+          <br><em>💡 Objectiu específic:</em> dominar l’ús dels bucles per automatitzar tasques repetitives sense errors
+          d’execució.
+        </li>
 
-  <button class="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+        <li>
+          <a href="#" class="subtema" target="_blank">2.5. Comentaris, bones pràctiques i estil de codi (JSDoc)</a><br>
+          Introduirem la importància dels <strong>comentaris</strong> i l’escriptura clara del codi.
+          Treballarem amb la sintaxi de comentaris de línia <code>//</code> i bloc <code>/* ... */</code>.
+          Aprendrem a documentar funcions amb <strong>JSDoc</strong> per descriure els paràmetres i el resultat que
+          retorna.
+          <br><em>🧹 Activitat:</em> reestructurar un codi amb mala indentació i afegir documentació per fer-lo llegible
+          i mantenible.
+          <br><em>💡 Objectiu específic:</em> fomentar l’hàbit de comentar el codi i aplicar convencions de nom, estil i
+          claredat professional.
+        </li>
+      </ul>
+    </section>
 
+    <!-- ============================= -->
+    <!-- TEMA 3 -->
+    <!-- ============================= -->
+    <section id="tema3">
+      <h2>💻 Tema 3 – RA3: Ús dels objectes predefinits del llenguatge</h2>
+      <p><strong>Durada:</strong> 12 h</p>
+
+      <p><strong>Objectiu general:</strong> Utilitzar i comprendre els <strong>objectes natius i globals</strong> del
+        llenguatge JavaScript per interactuar amb l’usuari, manipular dades i gestionar contingut dins del navegador.
+        L’alumnat aprendrà a aprofitar les funcionalitats que ja ofereix el llenguatge per desenvolupar aplicacions més
+        completes, organitzades i eficients.</p>
+
+      <p>En aquest tema aprofundirem en els elements fonamentals que JavaScript posa a disposició de tot desenvolupador:
+        objectes com <code>String</code>, <code>Math</code> o <code>Date</code>, i entitats globals com
+        <code>window</code> o <code>console</code>. A través de pràctiques guiades i exercicis, veurem com treballar amb
+        cadenes, nombres, dates, diàlegs interactius i l’emmagatzematge de dades locals. 🌐
+      </p>
+
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">3.1. Objectes natius: String, Number, Math, Date</a><br>
+          Descobrirem els <strong>objectes integrats</strong> que JavaScript utilitza per representar i manipular dades
+          bàsiques.
+          Aprendrem a utilitzar mètodes com <code>.toUpperCase()</code>, <code>.toFixed()</code>,
+          <code>Math.random()</code> o <code>Date.now()</code>.
+          <br><em>🧩 Activitat:</em> pràctica amb càlculs de percentatges, generació d’arrels quadrades i format de
+          dates llegibles.
+          <br><em>🎯 Mini projecte:</em> “Calculadora d’edat” — l’usuari introdueix el seu any de naixement i el
+          programa mostra la seva edat actual.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">3.2. Objectes globals: window, console, alert, prompt,
+            confirm</a><br>
+          Treballarem amb els objectes <strong>globals del navegador</strong> que permeten interactuar amb l’usuari i
+          amb el propi entorn d’execució.
+          Farem servir <code>alert()</code>, <code>prompt()</code> i <code>confirm()</code> per capturar informació i
+          mostrar missatges.
+          També aprendrem a depurar amb <code>console.log()</code> i propietats de <code>window</code>.
+          <br><em>💬 Exercici pràctic:</em> “Test interactiu amb <code>prompt()</code>” — el programa pregunta a
+          l’usuari i avalua les respostes.
+          <br><em>💡 Objectiu específic:</em> entendre com JavaScript pot dialogar amb l’usuari i controlar el flux
+          d’informació.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">3.3. Interacció amb l’usuari i finestres emergents</a><br>
+          Aprendrem a crear <strong>finestres emergents</strong> mitjançant <code>window.open()</code> i a comunicar-nos
+          entre finestres amb <code>window.opener</code> i <code>parent</code>.
+          Es treballarà la transmissió de missatges entre contextos per comprendre la gestió d’estats.
+          <br><em>🧪 Activitat:</em> “Missatge entre finestres” — una finestra filla envia un missatge personalitzat a
+          la finestra principal.
+          <br><em>💡 Objectiu específic:</em> comprendre el funcionament del context d’execució i la seguretat entre
+          dominis.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">3.4. Emmagatzematge local (localStorage, sessionStorage)</a><br>
+          Introduirem els mecanismes d’<strong>emmagatzematge persistent</strong> i temporal que ofereix el navegador.
+          Aprendrem a guardar i recuperar informació mitjançant <code>localStorage</code> (persistent) i
+          <code>sessionStorage</code> (temporal).
+          <br><em>🧠 Exercici:</em> “Selector de tema fosc/clar” — l’usuari tria un tema i el navegador recorda la seva
+          preferència.
+          <br><em>💡 Objectiu específic:</em> conèixer com gestionar dades locals sense necessitat de servidor i
+          millorar l’experiència d’usuari.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">3.5. Aprofundiment en mètodes avançats, depuració professional
+            (try...catch) i documentació del codi</a><br>
+          Aplicarem coneixements avançats sobre objectes natius combinant-los entre si (per exemple, <code>Date</code> +
+          <code>String</code> per generar missatges personalitzats).
+          Es treballarà amb mètodes interns com <code>toString()</code>, <code>valueOf()</code> o
+          <code>hasOwnProperty()</code>.
+          Introduirem la gestió d’errors amb <code>try...catch</code> i la possibilitat de generar errors propis amb
+          <code>throw</code>.
+          <br><em>🔧 Activitat final:</em> “Depura’m si pots” — localització i correcció d’errors en un script
+          defectuós.
+          <br><em>💬 Bonus:</em> documentar funcions amb <strong>JSDoc</strong> i comentar el codi per mantenir-ne la
+          qualitat i llegibilitat.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TEMA 4 -->
+    <!-- ============================= -->
+    <section id="tema4">
+      <h2>⚙️ Tema 4 – RA4: Programació amb estructures definides per l’usuari</h2>
+      <p><strong>Durada:</strong> 12 h</p>
+
+      <p><strong>Objectiu general:</strong> Crear <strong>funcions, col·leccions i objectes personalitzats</strong>
+        aplicant els fonaments de la programació estructurada i els primers conceptes d’orientació a objectes (POO).
+        L’alumnat aprendrà a modularitzar el codi, reutilitzar components i organitzar millor les dades i comportaments
+        d’una aplicació web. 🧠</p>
+
+      <p>En aquest tema passarem del simple ús de variables i sentències a la construcció de <strong>estructures
+          pròpies</strong>. Aprendrem com dividir el codi en blocs reutilitzables, treballar amb conjunts de dades,
+        definir objectes i començar a pensar en termes de classes, instàncies i mòduls. L’objectiu és aprendre a
+        escriure codi net, flexible i mantenible.</p>
+
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">4.1. Funcions predefinides i definides per l’usuari</a><br>
+          Revisarem les <strong>funcions integrades</strong> de JavaScript (com <code>parseInt()</code>,
+          <code>isNaN()</code> o <code>alert()</code>) i aprendrem a crear-ne de pròpies.
+          Diferenciarem entre <strong>funcions declarades</strong>, <strong>expressades</strong> i <strong>funcions
+            fletxa (arrow)</strong>.
+          <br><em>💡 Pràctica:</em> “Calculadora modular” — crear funcions per sumar, restar i multiplicar amb codi
+          reutilitzable.
+          <br><em>🎯 Objectiu específic:</em> entendre la modularitat i l’execució de funcions per organitzar millor el
+          codi.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.2. Paràmetres, valors de retorn i arrow functions</a><br>
+          Analitzarem com passar informació a les funcions mitjançant <strong>paràmetres</strong> i com recuperar
+          resultats amb <strong>valors de retorn</strong>.
+          Aprendrem l’ús de paràmetres per defecte i l’abast (<em>scope</em>) de les variables dins i fora de la funció.
+          Introduirem les <strong>arrow functions</strong> i la seva sintaxi simplificada.
+          <br><em>🧩 Exercici:</em> creació d’una funció que converteixi temperatures o calculi descomptes automàtics.
+          <br><em>💡 Objectiu específic:</em> escriure funcions eficients amb retorns clars i parametritzats.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.3. Arrays i mètodes (map, filter, reduce)</a><br>
+          Aprendrem a crear i manipular <strong>arrays</strong> per gestionar conjunts de dades.
+          Es treballaran mètodes fonamentals com <code>push()</code>, <code>pop()</code>, <code>splice()</code>,
+          <code>map()</code>, <code>filter()</code> i <code>reduce()</code>.
+          També veurem com ordenar i filtrar col·leccions i com tractar <strong>arrays multidimensionals</strong>.
+          <br><em>🧠 Activitat:</em> “Gestor de tasques” — afegir, eliminar i filtrar elements d’una llista d’objectes
+          amb mètodes d’array.
+          <br><em>💡 Objectiu específic:</em> dominar la manipulació de dades de manera eficient i funcional.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.4. Objectes literals, constructors i mètodes</a><br>
+          Coneixerem com crear <strong>objectes literals</strong> per agrupar propietats i mètodes relacionats.
+          Aprendrem a construir objectes amb <code>function constructors</code> i accedir a les seves propietats amb
+          <code>this</code>.
+          Es parlarà de conceptes com <strong>encapsulació</strong> i <strong>prototips</strong>.
+          <br><em>🧩 Exercici:</em> “Biblioteca d’usuaris” — creació d’un objecte que representi un usuari amb dades i
+          mètodes interns.
+          <br><em>💡 Objectiu específic:</em> entendre com estructurar dades complexes i associar comportaments dins
+          d’un mateix objecte.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.5. Objectes definits per l’usuari</a><br>
+          Practicarem la creació d’<strong>objectes personalitzats</strong> per a diferents necessitats del projecte.
+          Cada objecte tindrà propietats pròpies i mètodes que defineixin el seu comportament.
+          <br><em>🧠 Activitat:</em> “Gestor de productes” — definir objectes que representin productes amb mètodes per
+          aplicar descomptes o calcular l’IVA.
+          <br><em>💡 Objectiu específic:</em> crear entitats de codi reutilitzables i coherents amb la lògica de
+          l’aplicació.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.6. Classes i instàncies (POO bàsica)</a><br>
+          Introduirem els fonaments de la <strong>Programació Orientada a Objectes</strong> (POO) amb la sintaxi moderna
+          de classes.
+          Aprendrem els conceptes de <em>classe</em>, <em>objecte</em> i <em>instància</em>, i farem servir
+          <code>constructor()</code> per inicialitzar valors.
+          Veurem també l’ús de <code>super</code> i la <strong>herència simple</strong>.
+          <br><em>🧩 Exercici:</em> “Classe Animal” — crear una jerarquia amb subclasses com Gos i Gat, i mètodes
+          propis.
+          <br><em>💡 Objectiu específic:</em> comprendre com reutilitzar codi i construir estructures jeràrquiques amb
+          classes.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.7. Patrons de disseny senzills (Factory, Module)</a><br>
+          Coneixerem els <strong>patrons de disseny</strong> més simples per organitzar el codi i millorar-ne la
+          mantenibilitat.
+          Aplicarem el patró <strong>Factory</strong> per crear objectes de manera flexible i el patró
+          <strong>Module</strong> per encapsular funcionalitats.
+          <br><em>💡 Mini projecte:</em> “Gestor d’usuaris modular” — separar la lògica de dades i interfície usant un
+          mòdul independent.
+          <br><em>🎯 Objectiu específic:</em> aprendre bones pràctiques d’estructura i organització del codi.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.8. Tipus avançats en JavaScript (spread, destructuring,
+            Object.keys, entries)</a><br>
+          Aprendrem tècniques modernes d’ES6 per treballar amb objectes i col·leccions:
+          - <code>spread</code> i <code>rest</code> per copiar o combinar dades.
+          - <code>destructuring</code> per extreure valors fàcilment.
+          - <code>Object.keys()</code>, <code>Object.entries()</code> i <code>Object.assign()</code> per gestionar
+          propietats.
+          <br><em>🧩 Activitat:</em> “Fusiona’m si pots” — combinar dos objectes i crear una nova estructura amb spread
+          i assign.
+          <br><em>💡 Objectiu específic:</em> aplicar tècniques modernes per simplificar la manipulació de dades.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.9. Depuració i bones pràctiques de codi</a><br>
+          Aplicarem tècniques de depuració avançada amb <code>console.table()</code>, <code>debugger</code> i eines del
+          navegador.
+          Revisarem patrons de nom, comentaris útils i ús correcte de constants i variables globals.
+          <br><em>🧹 Activitat:</em> millorar un codi existent aplicant les regles de <strong>Clean Code</strong>.
+          <br><em>💡 Objectiu específic:</em> mantenir un codi comprensible, extensible i fàcil de revisar.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">4.10. Extensió TypeScript: tipatge, interfícies i
+            compilació</a><br>
+          Introducció a <strong>TypeScript</strong> com a llenguatge que amplia JavaScript amb <strong>tipatge
+            estàtic</strong>.
+          Aprendrem a definir <code>interfaces</code>, <code>types</code> i <code>classes</code> tipades.
+          Es mostrarà com compilar codi TS a JS i els avantatges en depuració i mantenibilitat.
+          <br><em>💻 Mini projecte:</em> “Classe tipada d’usuari” — definir una interfície d’usuari i una classe que la
+          implementi.
+          <br><em>💡 Objectiu específic:</em> comprendre la potència del tipatge i els beneficis del desenvolupament
+          segur i predictiu.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TEMA 5 -->
+    <!-- ============================= -->
+    <section id="tema5">
+      <h2>🖱️ Tema 5 – RA5: Desenvolupament d’aplicacions web interactives amb esdeveniments</h2>
+      <p><strong>Durada:</strong> 11 h</p>
+
+      <p><strong>Objectiu general:</strong> Implementar <strong>aplicacions web interactives</strong> que reaccionin a
+        les accions de l’usuari mitjançant la gestió d’esdeveniments. L’alumnat aprendrà com detectar, capturar i
+        respondre a accions com clics, moviments del ratolí, pulsacions de teclat o enviaments de formularis, millorant
+        així l’experiència i la interactivitat d’una pàgina web. ⚡</p>
+
+      <p>En aquest tema entrarem en el cor de la interactivitat web. Entendrem com el navegador escolta les accions de
+        l’usuari i com podem fer que la nostra aplicació respongui a cada acció de manera personalitzada. Crearem
+        aplicacions que reaccionin a clics, tecles, moviments i dades d’entrada, incorporant també bones pràctiques
+        d’accessibilitat i disseny d’interfícies amb feedback visual.</p>
+
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">5.1. Introducció a addEventListener</a><br>
+          Aprendrem el funcionament de <strong>addEventListener()</strong>, la manera més moderna i eficient d’assignar
+          esdeveniments en JavaScript.
+          Entendrem l’<strong>objecte event</strong> i les seves propietats principals (<code>target</code>,
+          <code>type</code>, <code>key</code>, etc.).
+          Analitzarem els conceptes de <strong>propagació</strong> (bubbling i capturing) i com evitar conflictes amb
+          <code>stopPropagation()</code>.
+          <br><em>🧩 Pràctica:</em> “Panell interactiu” — afegir listeners a diferents botons que canvien el color de
+          fons o el text d’una secció.
+          <br><em>💡 Objectiu específic:</em> comprendre com JavaScript escolta i respon als esdeveniments de l’usuari.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">5.2. Esdeveniments de ratolí i teclat (click, keydown,
+            mousemove)</a><br>
+          Capturarem i gestionarem accions de <strong>ratolí</strong> (<code>click</code>, <code>dblclick</code>,
+          <code>mousemove</code>) i de <strong>teclat</strong> (<code>keydown</code>, <code>keyup</code>).
+          Implementarem funcions que reaccionin amb animacions o moviments visuals.
+          <br><em>🎮 Activitat:</em> “Mini joc de reflexos” — l’usuari ha de fer clic a elements que apareixen
+          aleatòriament a la pantalla.
+          <br><em>💡 Objectiu específic:</em> aprendre a capturar diferents tipus d’esdeveniments per crear interaccions
+          dinàmiques.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">5.3. Gestió de formularis i validació</a><br>
+          Aprendrem a interceptar esdeveniments de formulari com <code>submit</code>, <code>change</code> i
+          <code>input</code> per controlar el comportament del formulari abans de ser enviat.
+          Validarem dades amb atributs HTML (<code>required</code>, <code>pattern</code>, <code>minlength</code>, etc.)
+          i amb codi JavaScript propi.
+          Crearem missatges d’error personalitzats i <strong>feedback visual</strong> per guiar l’usuari.
+          <br><em>📋 Pràctica:</em> “Formulari d’inscripció intel·ligent” — el sistema comprova en temps real si les
+          dades introduïdes són vàlides.
+          <br><em>💡 Objectiu específic:</em> dominar la validació client-side per millorar la qualitat i seguretat de
+          les dades d’entrada.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">5.4. Expressions regulars per validar dades</a><br>
+          Introduirem la sintaxi i ús de les <strong>expressions regulars (regex)</strong> per validar textos de manera
+          precisa.
+          Crearem patrons per comprovar correus electrònics, telèfons i contrasenyes complexes.
+          <br><em>🧠 Exercici:</em> validar camps d’un formulari amb expressions com
+          <code>/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/</code>.
+          <br><em>💡 Objectiu específic:</em> aprendre a definir patrons de validació flexibles i reutilitzables per
+          controlar dades d’usuari.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">5.5. Disseny d’interfícies accessibles i amb feedback
+            visual</a><br>
+          Aplicarem conceptes d’<strong>accessibilitat web</strong> (WAI-ARIA) per garantir que les interaccions siguin
+          accessibles per a tothom.
+          Incorporarem <strong>feedback visual</strong> en temps real (colors, missatges, animacions) per informar
+          l’usuari del resultat de les seves accions.
+          <br><em>🎨 Activitat:</em> “Formulari amb accessibilitat total” — combinació de validació, focus automàtic i
+          indicadors visuals.
+          <br><em>💡 Objectiu específic:</em> crear interfícies intuïtives i inclusives que ofereixin una experiència
+          d’usuari fluida i agradable.
+        </li>
+      </ul>
+    </section>
+    <!-- ============================= -->
+    <!-- TEMA 6 -->
+    <!-- ============================= -->
+    <section id="tema6">
+      <h2>🌿 Tema 6 – RA6: Utilització del Model d’Objectes del Document (DOM)</h2>
+      <p><strong>Durada:</strong> 18 h</p>
+
+      <p><strong>Objectiu general:</strong> Manipular de manera <strong>dinàmica i programàtica</strong> el contingut,
+        l’estructura i l’estil d’una pàgina web mitjançant el <strong>DOM (Document Object Model)</strong>. L’alumnat
+        aprendrà a seleccionar, crear, modificar i eliminar elements HTML des del codi JavaScript, aconseguint que la
+        pàgina reaccioni automàticament a les accions de l’usuari o a dades externes. 💻</p>
+
+      <p>En aquest tema descobrirem com JavaScript pot prendre el control total d’una pàgina web. El DOM actua com el
+        pont entre l’estructura HTML i la lògica del nostre codi. Aprendrem a manipular-lo de forma eficaç, respectant
+        les bones pràctiques de rendiment i manteniment del codi.</p>
+
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">6.1. Estructura del DOM i mètodes de selecció
+            (<code>getElementById</code>, <code>querySelector</code>)</a><br>
+          Analitzarem l’<strong>estructura jeràrquica del DOM</strong>: nodes, elements, atributs i text.
+          Aprendrem a navegar per aquesta estructura i a seleccionar elements amb mètodes com
+          <code>getElementById()</code>, <code>getElementsByClassName()</code> i <code>querySelector()</code>.
+          Veurem com obtenir propietats com <code>innerText</code> o <code>textContent</code> i com explorar els fills i
+          pares d’un node.
+          <br><em>🧩 Pràctica:</em> “Explorador del DOM” — mostrar per consola la jerarquia d’elements d’una pàgina.
+          <br><em>💡 Objectiu específic:</em> entendre la representació d’una pàgina com un arbre d’objectes navegables.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">6.2. Modificació d’atributs, continguts i estils
+            (<code>innerHTML</code>, <code>classList</code>, <code>style</code>)</a><br>
+          Manipularem els elements existents del DOM per canviar-ne els valors, el contingut o l’aparença.
+          Utilitzarem <code>setAttribute()</code> i <code>removeAttribute()</code> per editar atributs, i modificarem
+          textos amb <code>innerText</code> i <code>innerHTML</code>.
+          Controlarem estils i classes CSS mitjançant <code>classList.add()</code>, <code>classList.toggle()</code> i
+          <code>element.style</code>.
+          <br><em>🎨 Activitat:</em> “Galeria interactiva” — canviar dinàmicament imatges, títols i estils al fer clic.
+          <br><em>💡 Objectiu específic:</em> aprendre a actualitzar continguts web en temps real sense recarregar la
+          pàgina.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">6.3. Creació i eliminació de nodes (<code>createElement</code>,
+            <code>appendChild</code>, <code>removeChild</code>)</a><br>
+          Aprendrem a <strong>crear i inserir elements nous</strong> dins del document mitjançant
+          <code>createElement()</code> i <code>appendChild()</code>.
+          També veurem com eliminar o substituir elements existents amb <code>removeChild()</code> o
+          <code>replaceChild()</code>.
+          Entendrem el flux d’inserció i com mantenir la jerarquia del DOM.
+          <br><em>🧱 Exercici pràctic:</em> “Llista dinàmica” — afegir i eliminar tasques en temps real des d’un
+          formulari.
+          <br><em>💡 Objectiu específic:</em> dominar la creació i gestió dinàmica d’elements HTML amb JavaScript.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">6.4. Compatibilitat multi-navegador</a><br>
+          Analitzarem les <strong>diferències d’implementació del DOM</strong> entre navegadors (Chrome, Firefox, Edge,
+          Safari).
+          Veurem com detectar compatibilitats i aplicar solucions universals amb <code>querySelector()</code> i
+          <code>addEventListener()</code>.
+          <br><em>🧠 Discussió guiada:</em> revisar exemples on funcions antigues com <code>attachEvent()</code> o
+          <code>innerText</code> causen errors en navegadors moderns.
+          <br><em>💡 Objectiu específic:</em> assegurar un comportament coherent i estable del nostre codi en qualsevol
+          entorn.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">6.5. Separació de capes (HTML / CSS / JS)</a><br>
+          Treballarem el concepte de <strong>separació de responsabilitats</strong> per mantenir un projecte organitzat.
+          HTML per a l’estructura, CSS per a l’estil i JavaScript per a la lògica.
+          Aprendrem com modularitzar el codi JavaScript per evitar duplicacions i millorar la llegibilitat.
+          <br><em>📦 Activitat:</em> “Refactoritza el caos” — separar correctament un fitxer HTML amb CSS i JS externs.
+          <br><em>💡 Objectiu específic:</em> comprendre la importància d’un projecte web ben estructurat i mantenible.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">6.6. Pràctica final: CRUD sobre DOM</a><br>
+          Desenvoluparem un projecte complet basat en el concepte CRUD (<strong>Create, Read, Update, Delete</strong>)
+          aplicat al DOM.
+          L’alumnat crearà una aplicació on podrà afegir, modificar i eliminar elements visualment.
+          També documentarem el projecte amb JSDoc i depurarem el codi utilitzant les eines del navegador.
+          <br><em>💻 Mini projecte final:</em> “Gestor de contactes DOM” — formulari per crear fitxes de contactes,
+          editar-les i eliminar-les.
+          <br><em>🎯 Objectiu final:</em> integrar tot el que s’ha après sobre el DOM en un projecte complet, funcional
+          i ben documentat.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TEMA 7 -->
+    <!-- ============================= -->
+    <section id="tema7">
+      <h2>🔄 Tema 7 – RA7: Desenvolupament d’aplicacions web dinàmiques amb comunicació asíncrona</h2>
+      <p><strong>Durada:</strong> 18 h</p>
+
+      <p><strong>Objectiu general:</strong> Implementar <strong>aplicacions web dinàmiques</strong> capaces
+        d’intercanviar dades amb el servidor mitjançant mecanismes <strong>asíncrons</strong>. L’alumnat aprendrà a
+        enviar i rebre informació sense recarregar la pàgina, utilitzant <strong>Fetch API, JSON, Promises</strong> i
+        altres eines modernes per construir aplicacions web fluides i eficients. 🌍</p>
+
+      <p>En aquest últim tema integrarem tot el que s’ha après al llarg del mòdul. Farem que les aplicacions siguin
+        realment “vives”, connectant-les amb dades externes i APIs. Treballarem amb formats JSON, asincronia, gestió
+        d’errors i connexió amb un backend senzill. El resultat serà una aplicació CRUD completa que comuniqui el client
+        i el servidor de manera professional.</p>
+
+      <ul>
+        <li>
+          <a href="#" class="subtema" target="_blank">7.1. Comunicació asíncrona: concepte i avantatges</a><br>
+          Introduirem el concepte d’<strong>asincronia</strong> en el context web: com executar processos sense
+          bloquejar la interfície d’usuari.
+          Entendrem la diferència entre execució <em>síncrona</em> i <em>asíncrona</em> i analitzarem els avantatges
+          d’aquest enfocament.
+          Farem peticions HTTP bàsiques (GET, POST) per enviar i rebre informació del servidor.
+          <br><em>💡 Objectiu específic:</em> comprendre el funcionament del model de concurrència de JavaScript i els
+          beneficis de l’asincronia.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.2. Fetch API i XMLHttpRequest</a><br>
+          Compararem <strong>Fetch API</strong> amb l’antic <code>XMLHttpRequest</code> per entendre com ha evolucionat
+          la comunicació web.
+          Crearem peticions amb <code>fetch()</code>, analitzarem respostes i aprendrem a detectar errors de xarxa o
+          codi HTTP.
+          <br><em>🧩 Pràctica:</em> “Obtenir dades d’un API públic” — descarregar dades de
+          <code>jsonplaceholder.typicode.com</code> i mostrar-les en una taula.
+          <br><em>💡 Objectiu específic:</em> dominar Fetch API per realitzar crides HTTP de forma senzilla i moderna.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.3. Format JSON: <code>parse</code> i
+            <code>stringify</code></a><br>
+          Estudiarem el <strong>format JSON</strong> com a estàndard per a l’intercanvi de dades.
+          Aprendrem a convertir objectes JavaScript a JSON amb <code>JSON.stringify()</code> i a interpretar respostes
+          amb <code>JSON.parse()</code>.
+          <br><em>🧠 Activitat:</em> “Conversor d’objectes” — guardar dades en localStorage després de convertir-les a
+          JSON.
+          <br><em>💡 Objectiu específic:</em> entendre com emmagatzemar, transmetre i manipular informació estructurada.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.4. Actualització dinàmica del DOM amb dades remotes</a><br>
+          Utilitzarem la informació obtinguda d’un API per <strong>actualitzar el DOM dinàmicament</strong>.
+          Farem servir mètodes com <code>map()</code>, <code>forEach()</code> i <code>filter()</code> per processar
+          dades i mostrar-les visualment.
+          <br><em>📊 Activitat:</em> “Llista d’usuaris remots” — obtenir dades d’una API i generar targetes d’usuari
+          automàticament.
+          <br><em>💡 Objectiu específic:</em> aprendre a vincular dades externes amb el contingut visual del web.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.5. Llibreries de suport (Axios, jQuery AJAX)</a><br>
+          Explorarem llibreries que simplifiquen les crides HTTP: <strong>Axios</strong> i <strong>jQuery AJAX</strong>.
+          Aprendrem a utilitzar <code>axios.get()</code> i <code>axios.post()</code> per gestionar respostes, errors i
+          càrregues de dades.
+          <br><em>🧩 Exercici:</em> replicar la pràctica anterior amb Axios per comparar codi i rendiment.
+          <br><em>💡 Objectiu específic:</em> conèixer alternatives pràctiques per a la comunicació client-servidor.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.6. Asincronia amb TypeScript</a><br>
+          Aplicarem l’asincronia en un entorn amb <strong>tipatge estàtic</strong> mitjançant TypeScript.
+          Definirem funcions asíncrones amb <code>async</code> i <code>await</code>, i aprendrem a crear
+          <strong>Promeses tipades</strong> que garanteixen seguretat en la resposta.
+          <br><em>🧠 Activitat:</em> “Petició tipada” — definir un tipus <code>Usuari</code> i assegurar que la resposta
+          d’una API s’ajusti a aquest tipus.
+          <br><em>💡 Objectiu específic:</em> reforçar la fiabilitat i mantenibilitat del codi amb asincronia i tipatge.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.7. Connexió a MySQL via API</a><br>
+          Crearem una <strong>API REST</strong> senzilla en Node.js capaç de comunicar-se amb una base de dades MySQL.
+          Implementarem rutes <code>GET</code> i <code>POST</code> per obtenir i inserir dades mitjançant un middleware.
+          <br><em>💻 Exercici:</em> “Llista de productes” — connexió del front-end amb una base de dades real per llegir
+          i afegir registres.
+          <br><em>💡 Objectiu específic:</em> comprendre la interacció entre el client, l’API i la base de dades.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.8. Promeses i <code>async/await</code></a><br>
+          Analitzarem en profunditat el funcionament de les <strong>Promeses</strong> en JavaScript.
+          Aprendrem a encadenar operacions amb <code>then()</code> i <code>catch()</code>, i a simplificar-les amb
+          <code>async/await</code>.
+          Aplicarem <code>try/catch/finally</code> per gestionar errors i netejar processos asíncrons.
+          <br><em>🧩 Pràctica:</em> “Carregador de dades amb spinner” — mostrar un indicador mentre es carreguen dades
+          remotes.
+          <br><em>💡 Objectiu específic:</em> escriure codi asíncron net, llegible i fàcil de mantenir.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.9. JSON Server i simulació d’APIs REST</a><br>
+          Utilitzarem <strong>JSON Server</strong> per simular una API REST local amb dades fictícies.
+          Farem peticions CRUD (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>) per
+          practicar sense necessitat de backend real.
+          <br><em>🧠 Activitat:</em> “API fictícia de notes d’alumnes” — creació, edició i eliminació de dades locals
+          via JSON Server.
+          <br><em>💡 Objectiu específic:</em> entendre el funcionament d’una API REST sense dependre d’un servidor
+          extern.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.10. Introducció a Node.js i Express</a><br>
+          Farem una introducció pràctica a <strong>Node.js</strong> i <strong>Express</strong> com a entorns per crear
+          servidors web lleugers.
+          Crearem un petit backend capaç de respondre a peticions del client, gestionar rutes i enviar respostes JSON.
+          <br><em>💻 Exercici:</em> “Servidor bàsic Express” — configuració d’un servidor amb una ruta
+          <code>/usuaris</code> que retorna dades simulades.
+          <br><em>💡 Objectiu específic:</em> comprendre com Express connecta el front-end amb el backend i com
+          gestionar rutes i respostes.
+        </li>
+
+        <li>
+          <a href="#" class="subtema" target="_blank">7.11. Projecte final integrador CRUD + API REST</a><br>
+          Desenvoluparem un projecte complet que combini totes les competències del mòdul:
+          - Creació d’un CRUD complet (alta, llista, modificació i eliminació).
+          - Comunicació amb una API REST mitjançant Fetch o Axios.
+          - Representació dinàmica al DOM i validació d’entrades.
+          - Documentació amb JSDoc i bones pràctiques de codi net.
+          <br><em>🚀 Projecte final:</em> “Gestor d’alumnes” — aplicació que permet consultar, afegir, editar i eliminar
+          registres a través d’una API.
+          <br><em>🎯 Objectiu final:</em> integrar els coneixements de JavaScript, DOM i APIs per desenvolupar una
+          aplicació web professional completa.
+        </li>
+      </ul>
+    </section>
+  </main>
+  <!-- 🧩 FOOTER ACCESSIBLE I FIX -->
   <footer>
+    <!-- 🔝 Botó "Tornar amunt" funcional -->
+    <button class="back-top" aria-label="Tornar a l'inici de la pàgina"
+      onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+    <!-- 🏫 Text institucional -->
     Material didàctic d’ús docent · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
   </footer>
-  <script defer src="contenido.js"></script>
 </body>
 
 </html>
