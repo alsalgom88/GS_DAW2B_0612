@@ -1,124 +1,309 @@
-@import url('../style.css');
+/* =========================================================
+   🌐 Mòdul 0612 · Tema 2
+   Estil Matrix verd suau — Institut Puig Castellar
+   ---------------------------------------------------------
+   ▫ Verd menys intens i més llegible
+   ▫ Fons opacs per contrast òptim
+   ▫ Accessibilitat i coherència visual millorades
+   ========================================================= */
 
-body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  margin: 0;
-  background-color: #f5fbfb;
-  color: #013243;
-  line-height: 1.6;
+/* ────────────────────────────── */
+/* 🎨 PALETA DE COLORS GLOBALS */
+/* ────────────────────────────── */
+:root {
+  --verd-neon: #47f5b0;
+  /* Verd més suau i agradable */
+  --verd-clar: #b8ffe4;
+  /* Verd clar per textos i detalls */
+  --fons-fosc: #0b1110;
+  /* Fons fosc principal */
+  --text-clar: #e5edf2;
+  /* Text principal alt contrast */
+  --fons-seccio: rgba(255, 255, 255, 0.06);
+  /* Fons suau per seccions */
 }
 
-header {
-  background: linear-gradient(135deg, #007b83, #00a8a8);
-  color: white;
-  padding: 2.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  position: sticky;
+/* ────────────────────────────── */
+/* 🌌 FONS MATRIX */
+/* ────────────────────────────── */
+#matrix-bg {
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--fons-fosc);
+  z-index: -1;
+  filter: brightness(0.6) saturate(0.8);
 }
-.logo { width: 60px; }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ────────────────────────────── */
+/* 🧩 COS GLOBAL */
+/* ────────────────────────────── */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  color: var(--text-clar);
+  line-height: 1.6;
+  background: var(--fons-fosc);
+  overflow-x: hidden;
+  padding-top: 150px;
+}
+
+/* ────────────────────────────── */
+/* 🔝 HEADER FIX */
+/* ────────────────────────────── */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  /* més opac */
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 15px 0 45px;
+  box-shadow: 0 0 15px rgba(71, 245, 176, 0.15);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  height: 55px;
+  margin-bottom: 6px;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Títols */
+.hero h1 {
+  color: var(--verd-neon);
+  font-size: 1.35em;
+  margin: 2px 0;
+  text-shadow: 0 0 10px rgba(71, 245, 176, 0.3);
+}
+
+.hero p,
+.hero h2 {
+  color: var(--verd-clar);
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* Animació suau del logo */
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 var(--verd-neon));
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 8px var(--verd-neon));
+    transform: scale(1.04);
+  }
+}
+
+/* ────────────────────────────── */
+/* 🧭 MENÚ DE SUBTEMES */
+/* ────────────────────────────── */
+.menu-temes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.menu-temes a {
+  color: var(--verd-neon);
+  border: 1px solid var(--verd-neon);
+  padding: 7px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  transition: all 0.3s ease;
+}
+
+.menu-temes a:hover {
+  background: var(--verd-neon);
+  color: #0f172a;
+  box-shadow: 0 0 10px rgba(71, 245, 176, 0.5);
+}
+
+/* 🔙 Botó flotant "Tornar" */
+.btn-home {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  background: rgba(71, 245, 176, 0.1);
+  border: 1px solid var(--verd-neon);
+  color: var(--verd-neon);
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(71, 245, 176, 0.2);
+}
+
+.btn-home:hover {
+  background: var(--verd-neon);
+  color: #0a0f0d;
+  box-shadow: 0 0 20px rgba(71, 245, 176, 0.6);
+}
+
+/* ────────────────────────────── */
+/* 📘 COS PRINCIPAL */
+/* ────────────────────────────── */
+main {
+  max-width: 950px;
+  margin: 200px auto 80px;
+  padding: 25px;
+  background: var(--fons-seccio);
+  border: 1px solid rgba(71, 245, 176, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(71, 245, 176, 0.05);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Títols */
+h1,
+h2,
+h3 {
+  color: var(--verd-neon);
+  text-shadow: 0 0 6px rgba(71, 245, 176, 0.35);
 }
 
 h2 {
-  color: #007b83;
-  border-bottom: 2px solid #00a8a8;
-  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(71, 245, 176, 0.3);
+  padding-bottom: 6px;
+  margin-top: 30px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-ul li {
-  margin-bottom: 0.8rem;
-}
-ul li a {
-  color: #007b83;
-  font-weight: 600;
-  text-decoration: none;
-}
-ul li a:hover {
-  text-decoration: underline;
-  color: #005c6a;
+/* ────────────────────────────── */
+/* 💬 Consell Jedi */
+/* ────────────────────────────── */
+.consell-jedi {
+  margin: 25px 0;
+  background: rgba(71, 245, 176, 0.06);
+  border-left: 3px solid var(--verd-neon);
+  padding: 10px 15px;
+  font-style: italic;
+  border-radius: 6px;
+  color: var(--verd-clar);
 }
 
-/* Cards de subtemes */
-.card {
-  background: white;
-  padding: 1.5rem 2rem;
-  margin: 1.5rem 0;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+.consell-jedi .firma-jedi {
+  display: block;
+  text-align: right;
+  font-size: 0.85em;
+  color: var(--verd-neon);
 }
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.hidden { display: none; }
 
-/* Botons */
-.btn {
-  background: #00a8a8;
-  color: white;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-right: 0.8rem;
-  display: inline-block;
+/* ────────────────────────────── */
+/* 🌐 SECCIÓ DE RECURSOS */
+/* ────────────────────────────── */
+.recursos-tema {
+  margin-top: 50px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  /* més opac i menys verd */
+  border: 1px solid rgba(71, 245, 176, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(71, 245, 176, 0.05);
+}
+
+.recursos-tema h2 {
+  color: var(--verd-neon);
+  text-shadow: 0 0 10px rgba(71, 245, 176, 0.4);
+}
+
+.llista-recursos li {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--verd-neon);
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
-.btn:hover { background: #007b83; transform: scale(1.05); }
-.btn.small { font-size: 0.9rem; padding: 0.5rem 1rem; }
-.highlight { background: #007b83; }
 
+.llista-recursos li:hover {
+  background: rgba(71, 245, 176, 0.12);
+  transform: translateX(4px);
+}
+
+.llista-recursos a {
+  color: var(--verd-neon);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.llista-recursos a:hover {
+  color: #0f172a;
+  background: var(--verd-neon);
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(71, 245, 176, 0.4);
+}
+
+/* ────────────────────────────── */
+/* 🧠 FOOTER */
+/* ────────────────────────────── */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--verd-clar);
   text-align: center;
-  background: #013243;
-  color: white;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  padding: 8px 5px;
+  font-size: 0.85em;
+  border-top: 2px solid var(--verd-neon);
+  backdrop-filter: blur(5px);
 }
 
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ────────────────────────────── */
+/* 📱 RESPONSIVE */
+/* ────────────────────────────── */
+@media (max-width: 750px) {
+  .hero .logo {
+    height: 45px;
+  }
 
-a.active {
-  color: #00a8a8;
-  font-weight: 700;
-  text-decoration: underline;
-}
+  .hero h1 {
+    font-size: 1.1em;
+  }
 
-/* Header quan fas scroll */
-header.scrolled {
-  background: linear-gradient(135deg, #006d70, #00a8a8);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: all 0.4s ease;
-}
+  .btn-home {
+    position: static;
+    display: block;
+    margin: 8px auto;
+    transform: none;
+  }
 
-/* Frase motivadora */
-.frase-motivadora {
-  font-style: italic;
-  color: #b2f5f5;
-  margin-bottom: 1rem;
-  animation: fadeIn 2s ease;
+  main {
+    margin: 160px 10px 80px;
+    padding: 18px;
+  }
+
+  .recursos-tema {
+    padding: 18px;
+  }
 }

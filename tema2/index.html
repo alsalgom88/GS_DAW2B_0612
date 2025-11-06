@@ -1,85 +1,270 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tema 2 — Sintaxi bàsica de JavaScript | DAW2B</title>
+  <title>Tema 2 · RA2: Escriptura de sentències simples i sintaxi del llenguatge | Mòdul 0612</title>
+
+  <!-- 🔍 SEO -->
+  <meta name="description"
+    content="Tema 2 del Mòdul 0612 — Desenvolupament web en entorn client. Aprèn la sintaxi bàsica de JavaScript, variables, operadors, estructures i bones pràctiques amb exemples pràctics i accessibles.">
+  <meta name="keywords"
+    content="JavaScript, Sintaxi, Variables, Operadors, DAW, Puig Castellar, Desenvolupament web client, DOM, DAW2A">
+  <meta name="author" content="Institut Puig Castellar · Departament d’Informàtica">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00ff9d">
+
+  <!-- 🌐 Open Graph -->
+  <meta property="og:title"
+    content="Tema 2 · Sintaxi i estructures bàsiques de JavaScript | Mòdul 0612 · Institut Puig Castellar">
+  <meta property="og:description"
+    content="Aprèn a escriure codi JavaScript correcte i funcional: variables, bucles, estructures de decisió i bones pràctiques de codi.">
+  <meta property="og:image" content="assets/og-tema2.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- 🧩 Fonts i estils -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
+
+  <!-- 🖼️ Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <header>
-    <img src="../assets/logo.png" alt="Logo centre" class="logo">
-    <div>
-      <h1>🧩 Tema 2 — Sintaxi bàsica de JavaScript</h1>
-      <p>DAW2B · Mòdul 0612 — Desenvolupament Web en Entorn Client</p>
-    </div>
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- 🧱 HEADER FIX -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo Institut Puig Castellar" class="logo">
+    <h1>Institut Puig Castellar</h1>
+    <p>Cicle Formatiu de Grau Superior · Desenvolupament d’Aplicacions Web</p>
+    <h2 style="font-size:1.6em;margin-top:4px;">Tema 2 — RA2: Escriptura de sentències simples i sintaxi del llenguatge
+    </h2>
+
+    <!-- 🔗 Navegació del tema -->
+    <nav class="menu-temes" aria-label="Subtemes del tema 2">
+      <a href="subtema21.html">2.1 Variables i tipus</a>
+      <a href="subtema22.html">2.2 Operadors</a>
+      <a href="subtema23.html">2.3 Estructures de decisió</a>
+      <a href="subtema24.html">2.4 Bucles</a>
+      <a href="subtema25.html">2.5 Bones pràctiques</a>
+      <a href="examen/index.html" class="btn-examen">🧪 Examen del Tema 2</a>
+    </nav>
+
+    <!-- 🔙 Botó flotant cap a l’inici -->
+    <a href="https://alsalgom88.github.io/GS_DAW2A_0612/index.html" class="btn-home"
+      aria-label="Tornar a l’inici del curs">← Tornar a l’inici</a>
   </header>
 
-  <main class="container">
-    <section id="intro" class="visible">
-      <h2>🎯 Objectius del tema</h2>
-      <p>
-        Dominar la <strong>sintaxi bàsica de JavaScript</strong> per escriure codi clar, funcional i ben estructurat.
-        Aprendràs a crear <em>scripts senzills</em> que s’executin correctament al navegador,
-        treballant amb variables, operadors, condicions, bucles i bones pràctiques de codi.
-      </p>
-      <p class="nota">💡 “El teu codi és un llenguatge — fes-lo clar, coherent i elegant.”</p>
+  <!-- 🧩 CONTINGUT PRINCIPAL -->
+  <main>
+    <section class="benvinguda">
+      <h2>🧠 Introducció general</h2>
+      <p>En aquest segon tema del mòdul, entrarem de ple en el llenguatge <strong>JavaScript</strong>, l’eina essencial
+        per dotar de comportament i interactivitat al costat client d’una aplicació web.
+        Entendrem com escriure sentències bàsiques, la seva estructura i les normes sintàctiques que regeixen qualsevol
+        programa.</p>
+
+      <p>També aprendrem a <strong>analitzar i raonar el flux lògic</strong> d’un programa, utilitzant les estructures
+        bàsiques de control i els bucles com a instruments per fer que el codi respongui a l’usuari i prengui decisions.
+        L’objectiu és que siguis capaç d’escriure fragments de codi nets, llegibles i funcionals que segueixin les bones
+        pràctiques del desenvolupament professional.</p>
     </section>
 
-    <section id="continguts" class="visible">
-      <h2>📘 Continguts del tema</h2>
+    <!-- 🎯 OBJECTIUS -->
+    <section class="objectius">
+      <h2>🎯 Objectius específics del tema</h2>
       <ul>
-        <li><a href="#sec21">2.1 · Variables, constants i tipus de dades</a></li>
-        <li><a href="#sec22">2.2 · Operadors i conversions de tipus</a></li>
-        <li><a href="#sec23">2.3 · Estructures de decisió (<code>if</code>, <code>switch</code>)</a></li>
-        <li><a href="#sec24">2.4 · Estructures iteratives (<code>for</code>, <code>while</code>)</a></li>
-        <li><a href="#sec25">2.5 · Comentaris i bones pràctiques (JSDoc)</a></li>
+        <li>Dominar la sintaxi bàsica del llenguatge JavaScript i entendre el seu funcionament dins del navegador.</li>
+        <li>Aprendre a definir variables i constants de manera correcta i comprendre la diferència entre
+          <code>var</code>, <code>let</code> i <code>const</code>.
+        </li>
+        <li>Fer ús dels principals <strong>operadors aritmètics, lògics i de comparació</strong> per realitzar càlculs i
+          condicions.</li>
+        <li>Aplicar estructures de decisió com <code>if...else</code> o <code>switch</code> per controlar el flux del
+          programa.</li>
+        <li>Utilitzar bucles com <code>for</code>, <code>while</code> i <code>do...while</code> per automatitzar
+          processos repetitius.</li>
+        <li>Adoptar bones pràctiques d’estil, documentació i comentaris mitjançant <strong>JSDoc</strong> i convencions
+          de nom.</li>
+      </ul>
+    </section>
+
+    <!-- 💻 ESQUEMA VISUAL -->
+    <section>
+      <h2>🧩 Estructura lògica d’un programa</h2>
+      <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg"
+        style="max-width:100%;height:auto;display:block;margin:auto;">
+        <rect x="20" y="30" width="120" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="80" y="55" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">Entrada de
+          dades</text>
+
+        <line x1="140" y1="50" x2="220" y2="50" stroke="#00ff9d" stroke-width="2" marker-end="url(#arrow)" />
+        <rect x="220" y="30" width="120" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="280" y="55" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">Procés /
+          Càlcul</text>
+
+        <line x1="340" y1="50" x2="420" y2="50" stroke="#00ff9d" stroke-width="2" marker-end="url(#arrow)" />
+        <rect x="420" y="30" width="60" height="40" rx="8" fill="rgba(0,255,153,0.1)" stroke="#00ff9d" />
+        <text x="450" y="55" fill="#a8ffdf" font-family="Fira Code" font-size="12" text-anchor="middle">Sortida</text>
+
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0,0 8,3 0,6" fill="#00ff9d" />
+          </marker>
+        </defs>
+      </svg>
+
+      <p style="text-align:center;color:#a8ffdf;margin-top:5px;">
+        Tot programa segueix aquest esquema: <strong>Entrada → Procés → Sortida</strong>.
+        Durant aquest tema aprendrem a dissenyar i codificar aquesta seqüència mitjançant les estructures bàsiques del
+        llenguatge.
+      </p>
+    </section>
+
+    <!-- 📚 DESCRIPCIÓ DELS SUBTEMES -->
+    <section>
+      <h2>📘 Continguts i subtemes</h2>
+      <p>El tema es divideix en cinc subtemes, cadascun orientat a consolidar les competències bàsiques del
+        desenvolupament web en entorn client:</p>
+
+      <ul>
+        <li><strong>2.1 Variables, constants i tipus de dades:</strong> coneixerem com emmagatzemar i gestionar
+          informació en memòria. Aprendrem a distingir tipus de dades primitius i complexos i a fer conversions.</li>
+        <li><strong>2.2 Operadors:</strong> estudiarem els operadors aritmètics, lògics i de comparació. Aprendrem com
+          combinar-los per crear expressions potents que determinin el comportament del nostre programa.</li>
+        <li><strong>2.3 Estructures de decisió:</strong> introduirem condicions amb <code>if</code> i
+          <code>switch</code> per permetre que el programa prengui decisions segons les dades d’entrada.
+        </li>
+        <li><strong>2.4 Estructures iteratives:</strong> aprendrem a repetir instruccions mitjançant bucles, la clau per
+          automatitzar tasques o recórrer col·leccions de dades.</li>
+        <li><strong>2.5 Bones pràctiques i estil de codi:</strong> treballarem amb comentaris, documentació i normes
+          d’estil per mantenir el codi llegible i mantenible, utilitzant guies com les de Google o Airbnb.</li>
       </ul>
 
-      <div class="buttons">
-        <a href="../index.html" class="btn">⬅️ Tornar al mòdul</a>
-        <a href="examen/index.html" class="btn highlight">🧾 Anar a l’examen</a>
+      <div class="consell-jedi">
+        💡 <em>“Un codi clar és un codi que parla per si mateix. Escriu com si algú hagués de mantenir-lo demà.”</em>
+        <span class="firma-jedi">— Mestre del codi</span>
       </div>
     </section>
 
-    <!-- 🔹 Seccions de subtemes (cards amagades) -->
-    <section id="sec21" class="card hidden">
-      <h2>2.1 · Variables, constants i tipus de dades</h2>
-      <p>Aprendrem a declarar variables i constants amb <code>let</code> i <code>const</code>,
-      identificant tipus com <code>string</code>, <code>number</code>, <code>boolean</code>,
-      <code>object</code>, <code>null</code> i <code>undefined</code>.</p>
-      <p>També veurem conversions de tipus i com utilitzar <code>typeof</code>.</p>
-      <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Data_structures" class="btn small" target="_blank">🌐 Veure teoria</a>
+    <!-- 🧮 AVALUACIÓ -->
+    <section>
+      <h2>📊 Com s’avaluarà aquest tema</h2>
+      <p>L’avaluació combinarà teoria i pràctica. Es valorarà tant la comprensió de la sintaxi com la capacitat
+        d’aplicar-la a petits projectes o exercicis pràctics.</p>
+      <ul>
+        <li>✅ Exercicis d’aula: 40 % — resolució de casos pràctics amb JS.</li>
+        <li>✅ Mini projecte: 40 % — creació d’un petit programa funcional (calculadora o validador).</li>
+        <li>✅ Participació i entrega: 20 % — ús de bones pràctiques, documentació i netedat del codi.</li>
+      </ul>
+      <p>El resultat final reflectirà no només el domini de la sintaxi, sinó també la teva capacitat per <strong>pensar
+          com un desenvolupador</strong>.</p>
     </section>
+    <!-- 🌐 Recursos i documentació oficial del Tema 2 -->
+    <section id="recursos" class="recursos-tema">
+      <h2>🧰 Recursos i documentació oficial</h2>
+      <p>
+        Aquests recursos t’ajudaran a entendre millor els conceptes del Tema 2 i a millorar la qualitat del teu codi.
+        Tots els enllaços són oficials, actualitzats i recomanats per a l’aprenentatge de JavaScript, HTML i CSS.
+      </p>
 
-    <section id="sec22" class="card hidden">
-      <h2>2.2 · Operadors i conversions de tipus</h2>
-      <p>Explorarem els operadors aritmètics, lògics, de comparació i assignació. Entendrem el funcionament de <code>==</code> vs <code>===</code> i la importància de la coerció de tipus.</p>
-      <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Guide/Expressions_and_Operators" class="btn small" target="_blank">🌐 Veure teoria</a>
-    </section>
+      <ul class="llista-recursos">
+        <!-- 📘 JavaScript -->
+        <li>
+          <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+            📘 MDN JavaScript (documentació oficial)
+          </a> — Guia completa amb exemples i referències del llenguatge.
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Guide" target="_blank"
+            rel="noopener noreferrer">
+            📖 Guia bàsica de JavaScript (MDN)
+          </a> — Sintaxi, operadors, variables i estructures de control.
+        </li>
+        <li>
+          <a href="https://tc39.es/ecma262/" target="_blank" rel="noopener noreferrer">
+            ⚙️ Especificació oficial ECMAScript
+          </a> — Estàndard tècnic del llenguatge JavaScript.
+        </li>
 
-    <section id="sec23" class="card hidden">
-      <h2>2.3 · Estructures de decisió</h2>
-      <p>Els condicionals permeten prendre decisions dins del programa. Farem servir <code>if</code>, <code>else if</code> i <code>switch</code> per executar codi segons les dades de l’usuari.</p>
-      <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Reference/Statements/if...else" class="btn small" target="_blank">🌐 Veure teoria</a>
-    </section>
+        <!-- 🧩 HTML i CSS -->
+        <li>
+          <a href="https://developer.mozilla.org/ca/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+            🧩 Documentació HTML (MDN)
+          </a> — Estructura, elements i bones pràctiques.
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ca/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+            🎨 Documentació CSS (MDN)
+          </a> — Propietats, selectors i disseny responsive.
+        </li>
+        <li>
+          <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
+            ✅ Validador oficial de codi HTML (W3C)
+          </a> — Comprova que el teu HTML sigui correcte i semàntic.
+        </li>
+        <li>
+          <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">
+            🧾 Validador oficial de CSS (W3C)
+          </a> — Revisa la sintaxi i compatibilitat del teu full d’estils.
+        </li>
 
-    <section id="sec24" class="card hidden">
-      <h2>2.4 · Estructures iteratives</h2>
-      <p>Aprendrem a repetir accions amb bucles controlats i condicionats (<code>for</code>, <code>while</code>, <code>do...while</code>). Els aplicarem en exercicis de càlcul i validació.</p>
-      <a href="https://developer.mozilla.org/ca/docs/Web/JavaScript/Reference/Statements/for" class="btn small" target="_blank">🌐 Veure teoria</a>
-    </section>
+        <!-- 💡 Eines per practicar i provar -->
+        <li>
+          <a href="https://jsfiddle.net/" target="_blank" rel="noopener noreferrer">
+            🧪 JSFiddle
+          </a> — Entorn online per provar codi HTML, CSS i JavaScript.
+        </li>
+        <li>
+          <a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">
+            ✨ CodePen
+          </a> — Plataforma per experimentar i compartir projectes web.
+        </li>
+        <li>
+          <a href="https://regex101.com/" target="_blank" rel="noopener noreferrer">
+            🔍 Regex101
+          </a> — Prova i depura expressions regulars de manera visual.
+        </li>
+        <li>
+          <a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">
+            🧹 ESLint
+          </a> — Eina per detectar errors i mantenir un codi JavaScript net.
+        </li>
+        <li>
+          <a href="https://prettier.io/" target="_blank" rel="noopener noreferrer">
+            🎯 Prettier
+          </a> — Formatejador automàtic de codi per mantenir l’estil coherent.
+        </li>
 
-    <section id="sec25" class="card hidden">
-      <h2>2.5 · Comentaris i bones pràctiques</h2>
-      <p>Aprendrem a documentar el codi amb comentaris i amb JSDoc, seguint un estil coherent i net (indentació, camelCase, ús de <code>const</code> i <code>let</code>).</p>
-      <a href="https://jsdoc.app/about-getting-started.html" class="btn small" target="_blank">🌐 Veure teoria</a>
+        <!-- 🧠 Recursos addicionals -->
+        <li>
+          <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener noreferrer">
+            🧠 Documentació oficial de TypeScript
+          </a> — Expansió de JavaScript amb tipatge estàtic.
+        </li>
+        <li>
+          <a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer">
+            🌍 Can I Use
+          </a> — Comprova la compatibilitat de funcions web entre navegadors.
+        </li>
+        <li>
+          <a href="https://developer.chrome.com/docs/devtools/" target="_blank" rel="noopener noreferrer">
+            🧰 Chrome DevTools
+          </a> — Guia per depurar, inspeccionar i optimitzar aplicacions web.
+        </li>
+      </ul>
     </section>
   </main>
 
+  <!-- 🧠 FOOTER -->
   <footer>
-    Material didàctic · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
+    Material docent · Institut Puig Castellar · Desenvolupament d’Aplicacions Web © 2025
   </footer>
+
+  <!-- ⚙️ Scripts -->
+  <script defer src="main.js"></script>
 </body>
+
 </html>
