@@ -8,7 +8,7 @@ const ctx = canvas.getContext('2d');
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
-  canvas.height = 180;
+  canvas.height = 180; // Coincideix amb el CSS
 }
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
@@ -41,6 +41,9 @@ setInterval(drawMatrix, 50);
 /* ======================================================
    ⬆ Botó per tornar a dalt
    ====================================================== */
-document.getElementById('backTopBtn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+const backTopBtn = document.getElementById('backTopBtn');
+if (backTopBtn) {
+  backTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
